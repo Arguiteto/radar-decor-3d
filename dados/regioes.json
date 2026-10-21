@@ -79,6 +79,74 @@
    "atualizado": "2026-10-21",
    "estados": {},
    "cidades": []
+  },
+  "Esculturas e estatuetas": {
+   "termo": "escultura decorativa",
+   "atualizado": "2026-10-21",
+   "estados": {
+    "SP": 100,
+    "RJ": 83,
+    "MG": 83
+   },
+   "cidades": []
+  },
+  "Chaveiros personalizados": {
+   "termo": "chaveiro personalizado",
+   "atualizado": "2026-10-21",
+   "estados": {
+    "CE": 100,
+    "MG": 94,
+    "PB": 93,
+    "RJ": 91,
+    "MS": 89,
+    "SP": 89,
+    "BA": 87,
+    "RN": 86,
+    "AL": 80,
+    "SC": 77,
+    "PR": 77,
+    "DF": 76,
+    "AM": 75,
+    "PA": 75,
+    "ES": 73,
+    "MA": 72,
+    "MT": 72,
+    "PE": 72,
+    "RS": 63,
+    "GO": 62,
+    "PI": 56,
+    "RR": 20,
+    "SE": 12,
+    "RO": 11,
+    "AP": 11,
+    "TO": 8
+   },
+   "cidades": []
+  },
+  "Troféus": {
+   "termo": "troféu personalizado",
+   "atualizado": "2026-10-21",
+   "estados": {
+    "MG": 100,
+    "SP": 75,
+    "MT": 25,
+    "MA": 25
+   },
+   "cidades": []
+  },
+  "Medalhas": {
+   "termo": "medalha personalizada",
+   "atualizado": "2026-10-21",
+   "estados": {
+    "MG": 100,
+    "RJ": 87,
+    "SP": 87,
+    "PB": 12,
+    "CE": 12,
+    "BA": 12,
+    "PA": 12
+   },
+   "cidades": []
   }
  },
  "subindo": {
