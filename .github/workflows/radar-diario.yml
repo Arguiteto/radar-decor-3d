@@ -33,6 +33,8 @@ jobs:
           PINTEREST_APP_SECRET: ${{ secrets.PINTEREST_APP_SECRET }}
           PINTEREST_REFRESH_TOKEN: ${{ secrets.PINTEREST_REFRESH_TOKEN }}
           PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
+          CULTS_USUARIO: ${{ secrets.CULTS_USUARIO }}
+          CULTS_CHAVE: ${{ secrets.CULTS_CHAVE }}
           PAINEL_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python radar.py
 
