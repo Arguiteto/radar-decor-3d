@@ -51,6 +51,10 @@ No Cults, cada download de um arquivo pago é uma compra. O robô pega os arquiv
 
 Aparece em **Virais → Mais comprados no Cults** e em **Modelos → (uma linha) → No Cults**.
 
+## Opcional: Thingiverse
+
+O maior site de modelos grátis. Crie o secret `THINGIVERSE_TOKEN` com o **App Token** do seu app em thingiverse.com/developers (é só leitura). Aparece em **Virais → Populares no Thingiverse** (populares e novos) e em **Modelos → (uma linha) → No Thingiverse**. As listas do Thingiverse não trazem downloads, então o painel mostra curtidas e coleções (quantas pessoas salvaram o modelo).
+
 ## Opcional: Pinterest Trends (Brasil)
 
 O código já está pronto e fica desligado até existirem as chaves. Quando o app em developers.pinterest.com for aprovado, crie os secrets (Settings → Secrets and variables → Actions):

@@ -132,9 +132,17 @@
   .virais-grade { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 14px; align-items: start; }
   .virais-lado { display: grid; gap: 14px; }
   .cults-linha { margin-bottom: 14px; }
+  /* listas longas (até 100 itens): rolagem dentro do cartão */
+  #vendaveis, #sugestoes, #subindo, #youtube, #cults, #thingiverse, #pinterest, #ml, .cults-linha .lista { max-height: 560px; overflow-y: auto; padding-right: 6px; }
+  #tags, #temas-virais { max-height: 420px; overflow-y: auto; }
+  #cults-linha { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 14px; }
   #f-virais { margin: 0; padding: 0; }
   @media (max-width: 860px) { .virais-grade { grid-template-columns: 1fr; } }
   .sub-abas { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px; scrollbar-width: thin; }
+  /* sub-abas de Modelos: em grupos, quebrando linha (são dezenas) */
+  #sub-abas { flex-direction: column; gap: 10px; overflow: visible; }
+  .sub-grupo { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .sub-grupo > span { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--tx2); margin-right: 4px; min-width: 86px; }
   .sub-abas button { font: inherit; font-size: 13px; color: var(--navy); background: var(--card); border: 1px solid var(--linha); border-radius: 99px; padding: 5px 12px; cursor: pointer; white-space: nowrap; }
   .sub-abas button:hover { border-color: var(--navy); }
   .sub-abas button[aria-selected="true"] { background: var(--navy); color: var(--creme); border-color: var(--navy); }
@@ -168,7 +176,6 @@
       <button role="tab" data-aba="virais">Virais</button>
       <button role="tab" data-aba="linhas">Suas linhas</button>
       <button role="tab" data-aba="mapa">Mapa</button>
-      <button role="tab" data-aba="tendencias">Resumo</button>
       <button role="tab" data-aba="modelos">Modelos</button>
     </div>
   </div>
@@ -199,14 +206,28 @@
         <button role="tab" data-v="" aria-selected="false">Tudo</button>
       </div>
     </div>
-    <p class="dica">Modelos publicados no último mês com mais downloads por dia, em qualquer categoria. É onde aparecem as modas antes de chegar nas lojas. ▲ = subiu desde ontem.</p>
+    <p class="dica">Modelos publicados nos últimos 3 meses com mais downloads por dia, em qualquer categoria. É onde aparecem as modas antes de chegar nas lojas. ▲ = subiu desde ontem.</p>
     <div class="virais-grade">
       <div class="modelos" id="virais"></div>
       <aside class="virais-lado">
+        <section class="card">
+          <h2>Datas chegando</h2>
+          <p class="dica">Próximos 120 dias. Comece a produzir umas 3 semanas antes.</p>
+          <ul class="lista" id="datas-virais"></ul>
+        </section>
         <section class="card" id="card-cults" hidden>
           <h2>Mais comprados no Cults</h2>
           <p class="dica">Arquivos pagos com mais downloads (cada download de pago é uma compra). Mostra o que outros makers estão comprando para imprimir e vender.</p>
           <ul class="lista" id="cults"></ul>
+        </section>
+        <section class="card" id="card-thingiverse" hidden>
+          <h2>Populares no Thingiverse</h2>
+          <div class="sub-abas" id="f-thingiverse" role="tablist" aria-label="Lista do Thingiverse">
+            <button role="tab" data-t="populares" aria-selected="true">Populares</button>
+            <button role="tab" data-t="novos" aria-selected="false">Novos</button>
+          </div>
+          <p class="dica">♥ curtidas · coleções = quantas pessoas salvaram o modelo.</p>
+          <ul class="lista" id="thingiverse"></ul>
         </section>
         <section class="card" id="card-pinterest" hidden>
           <h2>No Pinterest (Brasil)</h2>
@@ -224,7 +245,7 @@
         </section>
         <section class="card">
           <h2>Subindo no Google</h2>
-          <p class="dica" id="dica-subindo">Buscas que mais cresceram no último mês (Google Trends).</p>
+          <p class="dica" id="dica-subindo">Buscas que mais cresceram nos últimos 3 meses (Google Trends).</p>
           <ul class="lista" id="subindo"></ul>
         </section>
         <section class="card">
@@ -238,7 +259,7 @@
 
   <section class="aba" id="aba-linhas" hidden>
     <h2>Suas linhas, da mais quente para a mais fria</h2>
-    <p class="dica">Conta quantos modelos de cada linha estão no ranking da semana, quantas buscas novas surgiram no Google e quanto os modelos dela cresceram. Toque numa linha para ver os modelos.</p>
+    <p class="dica">Conta quantos modelos de cada linha estão no ranking dos últimos 3 meses, quantas buscas novas surgiram no Google e quanto os modelos dela cresceram. Toque numa linha para ver os modelos.</p>
     <div class="linhas" id="linhas"></div>
   </section>
 
@@ -275,7 +296,7 @@
     </section>
     <section class="card">
       <h2>Temas em alta</h2>
-      <p class="dica">Pelo que mais se baixou na semana. ▲ = subiu desde ontem.</p>
+      <p class="dica">Pelo que mais se baixou nos últimos 3 meses. ▲ = subiu no ranking dentro desses 3 meses.</p>
       <div class="tags" id="tags"></div>
     </section>
     <section class="card">
@@ -294,7 +315,7 @@
   <section class="aba" id="aba-modelos" hidden>
   <div class="sub-abas" id="sub-abas" role="tablist" aria-label="Linhas"></div>
   <div class="filtros">
-    <h2 id="titulo-modelos">Modelos mais baixados da semana</h2>
+    <h2 id="titulo-modelos">Modelos mais baixados em 3 meses</h2>
     <input id="busca" type="search" placeholder="Filtrar (ex.: vaso, lamp)">
     <select id="f-licenca">
       <option value="">Todas as licenças</option>
@@ -309,7 +330,7 @@
   </section>
 </main>
 <footer>
-  Fontes: Printables (downloads e curtidas dos últimos 7 dias), Google (autocompletar no Brasil) e, se configurado, Mercado Livre.
+  Tudo comparado com os últimos 3 meses. Fontes: Printables (downloads e curtidas de 90 e 30 dias), Google Trends, Cults3D e Thingiverse, Google (autocompletar no Brasil) e, se configurado, Mercado Livre.
   Downloads mostram o que está na moda entre quem imprime, não vendas. Antes de vender, abra o modelo e confirme a licença.
 </footer>
 
@@ -343,9 +364,11 @@ const fmtData = iso => iso.split("-").reverse().join("/");
 let dados;
 
 /* abas: a escolhida fica no endereço (#mapa, #modelos...) para abrir direto */
+// a aba "tendencias" (Resumo) segue montada, mas escondida: não tem botão e o endereço #tendencias cai no Globo
 const ABAS = ["globo", "virais", "linhas", "mapa", "tendencias", "modelos"];
+const ABAS_VISIVEIS = ABAS.filter(a => a !== "tendencias");
 function abrirAba(nome) {
-  if (!ABAS.includes(nome)) nome = "globo";
+  if (!ABAS_VISIVEIS.includes(nome)) nome = "globo";
   for (const a of ABAS) el("aba-" + a).hidden = a !== nome;
   for (const b of document.querySelectorAll("[data-aba]")) b.setAttribute("aria-selected", b.dataset.aba === nome);
 }
@@ -385,12 +408,12 @@ function montar() {
   const porId = Object.fromEntries(d.printables.map(m => [m.id, m]));
   const max = Math.max(1, ...d.linhas.map(l => l.nota));
   el("linhas").innerHTML = d.linhas.map((l, i) => {
-    const extras = [`${l.em_alta_semana} na semana`];
+    const extras = [`${l.em_alta_semana} no ranking de 3 meses`];
     if (l.buscas_novas) extras.push(`${l.buscas_novas} busca(s) nova(s)`);
     if (l.ganho_downloads > 0) extras.push(`+${l.ganho_downloads} downloads`);
     const destaques = l.destaques_semana.map(id => porId[id]).filter(Boolean);
     const vistos = new Set(destaques.map(m => m.id));
-    const mostrar = [...destaques, ...l.modelos.filter(m => !vistos.has(m.id))].slice(0, 8);
+    const mostrar = [...destaques, ...l.modelos.filter(m => !vistos.has(m.id))].slice(0, 24);
     return `<details class="linha">
       <summary><span class="pos">${i + 1}</span><span class="nome">${esc(l.nome)}</span>
         <span class="barra"><i style="width:${Math.max(3, l.nota / max * 100)}%"></i></span>
@@ -400,17 +423,17 @@ function montar() {
     </details>`;
   }).join("");
 
-  el("datas").innerHTML = d.datas.length
+  el("datas").innerHTML = el("datas-virais").innerHTML = d.datas.length
     ? d.datas.map(x => `<li><span>${esc(x.nome)} <small>(${fmtData(x.data)})</small></span><b>${x.faltam_dias} dias</b></li>`).join("")
     : `<li class="vazio">Nenhuma data comercial nos próximos dias.</li>`;
 
-  const vend = d.printables.filter(m => m.pode_vender === "sim").slice(0, 8);
+  const vend = d.printables.filter(m => m.pode_vender === "sim").slice(0, 100);
   el("vendaveis").innerHTML = vend.map(m =>
     `<li><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.nome)}</a>` +
     (m.ganho_downloads > 0 ? `<span class="sobe">+${m.ganho_downloads}</span>` : `<small>${m.downloads}</small>`) + `</li>`
   ).join("") || `<li class="vazio">Nenhum hoje.</li>`;
 
-  el("tags").innerHTML = d.tags.slice(0, 28).map(t =>
+  el("tags").innerHTML = d.tags.slice(0, 100).map(t =>
     `<span title="${esc(t.tag)}">${esc(tr(t.tag))}${t.variacao > 0 ? ` <b>▲${t.variacao}</b>` : ""}${t.nova ? ` <b>novo</b>` : ""}</span>`
   ).join("");
 
@@ -420,7 +443,7 @@ function montar() {
 
   if (d.mercado_livre && d.mercado_livre.ativo) {
     el("card-ml").hidden = false;
-    el("ml").innerHTML = d.mercado_livre.tendencias.slice(0, 15).map(t =>
+    el("ml").innerHTML = d.mercado_livre.tendencias.slice(0, 100).map(t =>
       `<li><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.busca)}</a></li>`).join("");
   }
 
@@ -706,8 +729,8 @@ function montarVirais() {
 
   const sub = dados.regioes && dados.regioes.subindo;
   if (sub && sub.termos && sub.termos.length) {
-    el("dica-subindo").textContent = `Buscas que mais cresceram no último mês (Google Trends, ${fmtData(sub.atualizado)}).`;
-    el("subindo").innerHTML = sub.termos.slice(0, 15).map(t =>
+    el("dica-subindo").textContent = `Buscas que mais cresceram nos últimos 3 meses (Google Trends, ${fmtData(sub.atualizado)}).`;
+    el("subindo").innerHTML = sub.termos.slice(0, 100).map(t =>
       `<li><a href="https://www.google.com/search?q=${encodeURIComponent(t.busca)}" target="_blank" rel="noopener">${esc(t.busca)}</a>` +
       `<span class="sobe">${esc(t.alta === "Aumento repentino" ? "explodindo" : t.alta)}</span></li>`).join("");
   } else {
@@ -716,9 +739,10 @@ function montarVirais() {
 
   montarPinterest();
   montarCults();
+  montarThingiverse();
 
   const yt = (dados.youtube || []).slice().sort((a, b) => b.nova - a.nova);
-  el("youtube").innerHTML = yt.slice(0, 16).map(y =>
+  el("youtube").innerHTML = yt.slice(0, 100).map(y =>
     `<li><a href="https://www.youtube.com/results?search_query=${encodeURIComponent(y.busca)}" target="_blank" rel="noopener">${esc(y.busca)}</a>` +
     (y.nova ? `<span class="chip novo">nova</span>` : "") + `</li>`).join("") || `<li class="vazio">Nada hoje.</li>`;
 }
@@ -733,7 +757,36 @@ function montarCults() {
   if (!c || !c.ativo) return;
   el("card-cults").hidden = false;
   const lista = c.top_pagos.length ? c.top_pagos : c.top;
-  el("cults").innerHTML = lista.slice(0, 15).map(itemCults).join("") || `<li class="vazio">Nada hoje.</li>`;
+  el("cults").innerHTML = lista.slice(0, 100).map(itemCults).join("") || `<li class="vazio">Nada hoje.</li>`;
+}
+
+/* Thingiverse: só aparece quando o robô tiver o token */
+const itemThingiverse = m =>
+  `<li><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.nome)}</a>` +
+  `<span class="sobe">♥ ${m.curtidas.toLocaleString("pt-BR")} · ${m.colecoes.toLocaleString("pt-BR")}</span></li>`;
+
+function montarThingiverse() {
+  const t = dados.thingiverse;
+  if (!t || !t.ativo) return;
+  el("card-thingiverse").hidden = false;
+  const desenhar = qual => {
+    el("thingiverse").innerHTML = (t[qual] || []).slice(0, 100).map(itemThingiverse).join("")
+      || `<li class="vazio">Nada nesta lista hoje.</li>`;
+  };
+  for (const b of el("f-thingiverse").querySelectorAll("button")) b.addEventListener("click", () => {
+    for (const o of el("f-thingiverse").querySelectorAll("button")) o.setAttribute("aria-selected", o === b);
+    desenhar(b.dataset.t);
+  });
+  desenhar("populares");
+}
+
+function thingiverseDaLinha(nome) {
+  const t = dados.thingiverse;
+  const lista = t && t.ativo && t.linhas && t.linhas[nome];
+  if (!lista || !lista.length) return "";
+  return `<section class="card cults-linha"><h2>No Thingiverse: ${esc(nome.toLowerCase())}</h2>
+    <p class="dica">Mais populares na busca do Thingiverse (modelos grátis).</p>
+    <ul class="lista">${lista.slice(0, 30).map(itemThingiverse).join("")}</ul></section>`;
 }
 
 function cultsDaLinha(nome) {
@@ -742,7 +795,7 @@ function cultsDaLinha(nome) {
   if (!lista || !lista.length) return "";
   return `<section class="card cults-linha"><h2>No Cults: ${esc(nome.toLowerCase())}</h2>
     <p class="dica">Mais baixados na busca do Cults. Com preço = arquivo pago (download é compra).</p>
-    <ul class="lista">${lista.slice(0, 8).map(itemCults).join("")}</ul></section>`;
+    <ul class="lista">${lista.slice(0, 30).map(itemCults).join("")}</ul></section>`;
 }
 
 /* Pinterest Trends: só aparece quando o robô tiver a chave */
@@ -755,7 +808,7 @@ function montarPinterest() {
     const vistos = new Set();
     const lista = p.tendencias.filter(t => t.tipo === tipo && !vistos.has(t.busca) && vistos.add(t.busca))
       .sort((a, b) => a.posicao - b.posicao);
-    el("pinterest").innerHTML = lista.slice(0, 18).map(t =>
+    el("pinterest").innerHTML = lista.slice(0, 100).map(t =>
       `<li><a href="https://br.pinterest.com/search/pins/?q=${encodeURIComponent(t.busca)}" target="_blank" rel="noopener">${esc(t.busca)}</a>` +
       (t.mes != null ? `<span class="sobe">${t.mes > 0 ? "+" : ""}${Math.round(t.mes)}%</span>` : "") + `</li>`).join("")
       || `<li class="vazio">Nada nesta lista hoje.</li>`;
@@ -794,19 +847,28 @@ function sugestoes() {
   el("dica-google").textContent = dados.dias_de_historico
     ? `Autocompletar do Google. ${novas} busca(s) nova(s) neste mês.`
     : "Autocompletar do Google. Amanhã começam a aparecer as buscas novas.";
-  el("sugestoes").innerHTML = sug.slice(0, 14).map(s =>
+  el("sugestoes").innerHTML = sug.slice(0, 100).map(s =>
     `<li><a href="https://www.google.com/search?q=${encodeURIComponent(s.busca)}&tbm=shop" target="_blank" rel="noopener">${esc(s.busca)}</a>` +
     (s.nova ? `<span class="chip novo">nova</span>` : "") + `</li>`
   ).join("") || `<li class="vazio">Nada para esta linha.</li>`;
 }
 
-/* sub-abas de Modelos: "Em alta da semana" + uma por linha */
+/* sub-abas de Modelos: "Em alta em 3 meses" + uma por linha */
 let subAba = "";
 function montarSubAbas() {
-  const abas = [["", "Em alta da semana", dados.printables.length],
-                ...dados.linhas.filter(l => l.modelos.length).map(l => [l.nome, l.nome, modelosDaAba(l.nome).length])];
-  el("sub-abas").innerHTML = abas.map(([v, r, n]) =>
-    `<button role="tab" data-sub="${esc(v)}" aria-selected="${v === subAba}">${esc(r)}<small>${n}</small></button>`).join("");
+  const PREFIXO = "Profissão: ";
+  const comModelos = dados.linhas.filter(l => l.modelos.length);
+  const botao = (v, r, n) =>
+    `<button role="tab" data-sub="${esc(v)}" aria-selected="${v === subAba}">${esc(r)}<small>${n}</small></button>`;
+  // ordem alfabética dentro de cada grupo, para achar fácil entre dezenas de abas
+  const grupo = (titulo, lista, tirar) => lista.length ? `<div class="sub-grupo"><span>${titulo}</span>` +
+    lista.sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"))
+      .map(l => botao(l.nome, tirar ? l.nome.slice(PREFIXO.length) : l.nome, modelosDaAba(l.nome).length)).join("") +
+    `</div>` : "";
+  el("sub-abas").innerHTML =
+    `<div class="sub-grupo">${botao("", "Em alta em 3 meses", dados.printables.length)}</div>` +
+    grupo("Produtos", comModelos.filter(l => !l.nome.startsWith(PREFIXO)), false) +
+    grupo("Profissões", comModelos.filter(l => l.nome.startsWith(PREFIXO)), true);
   for (const b of el("sub-abas").querySelectorAll("button")) b.addEventListener("click", () => {
     subAba = b.dataset.sub;
     for (const o of el("sub-abas").querySelectorAll("button")) o.setAttribute("aria-selected", o === b);
@@ -815,7 +877,7 @@ function montarSubAbas() {
   });
 }
 
-// modelos de uma linha: os dela no ranking da semana primeiro, depois os mais populares
+// modelos de uma linha: os dela no ranking de 3 meses primeiro, depois os mais populares
 function modelosDaAba(nome) {
   if (!nome) return dados.printables;
   const l = dados.linhas.find(x => x.nome === nome);
@@ -828,13 +890,13 @@ function modelosDaAba(nome) {
 function modelos() {
   const q = el("busca").value.trim().toLowerCase();
   const lic = el("f-licenca").value, cat = subAba ? "" : el("f-cat").value;
-  el("titulo-modelos").textContent = subAba ? `${subAba}: em alta e mais populares` : "Modelos mais baixados da semana";
+  el("titulo-modelos").textContent = subAba ? `${subAba}: em alta e mais populares` : "Modelos mais baixados em 3 meses";
   const lista = modelosDaAba(subAba).filter(m =>
     (!lic || m.pode_vender === lic) && (!cat || m.categoria === cat) &&
     (!q || (m.nome + " " + m.tags.join(" ") + " " + m.tags.map(tr).join(" ")).toLowerCase().includes(q)));
   el("modelos").innerHTML = lista.slice(0, 120).map(m => cartao(m, false)).join("")
     || `<p class="vazio">Nada com esse filtro.</p>`;
-  el("cults-linha").innerHTML = subAba ? cultsDaLinha(subAba) : "";
+  el("cults-linha").innerHTML = subAba ? cultsDaLinha(subAba) + thingiverseDaLinha(subAba) : "";
 }
 </script>
 </body>

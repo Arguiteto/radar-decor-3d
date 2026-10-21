@@ -35,6 +35,7 @@ HISTORICO = DADOS / "historico"
 FUSO_BR = timezone(timedelta(hours=-3))
 UA = "radar-decor-3d/1.0 (+https://github.com)"
 DIAS_HISTORICO = 120
+JANELA_DIAS = 90  # "em alta" = comparado com até 3 meses atrás, em todos os canais
 
 
 # ---------- utilidades ----------
@@ -65,6 +66,18 @@ def ler_json(caminho, padrao=None):
 def gravar_json(caminho, obj):
     Path(caminho).parent.mkdir(parents=True, exist_ok=True)
     Path(caminho).write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def foto_antiga(fotos, chave):
+    """Valores de `chave` na foto mais antiga dentro da janela de 3 meses.
+
+    As fotos vêm da mais nova para a mais antiga; a mais antiga sobrescreve, e as mais
+    novas só completam o que não existia antes (item que apareceu depois).
+    """
+    base = {}
+    for foto in fotos[:JANELA_DIAS]:
+        base.update(foto.get(chave) or {})
+    return base
 
 
 def historico_anterior(hoje):
@@ -164,16 +177,17 @@ def montar_modelo(it, categoria):
 
 
 def coletar_printables(cfg):
-    """Modelos mais baixados/curtidos da semana, nas categorias do config."""
+    """Modelos mais baixados/curtidos dos últimos 3 meses (e 30 dias), nas categorias do config."""
     modelos = {}
     lim = cfg["printables_por_categoria"]
+    ordens = cfg.get("printables_ordens", ["-download_count_90_days", "-likes_count_90_days", "-download_count_30_days"])
     for cat_id, cat_nome in cfg["printables_categorias"].items():
-        for ordem in ("-download_count_7_days", "-likes_count_7_days"):
+        for ordem in ordens:
             print(f"Printables: {cat_nome} {ordem}")
             itens = consultar_printables(PRINTABLES_QUERY, {"cat": cat_id, "ord": ordem, "lim": lim}, "morePrints")
             for pos, it in enumerate(itens):
                 m = modelos.setdefault(str(it["id"]), montar_modelo(it, cat_nome))
-                # quanto mais alto no ranking da semana, mais pontos
+                # quanto mais alto no ranking, mais pontos (aparecer em 90 e em 30 dias soma)
                 m["pontos"] += lim - pos
     return sorted(modelos.values(), key=lambda m: m["pontos"], reverse=True)
 
@@ -182,17 +196,24 @@ def texto_modelo(m):
     return (m["nome"] + " " + " ".join(m["tags"])).lower()
 
 
+def termos_en(linha):
+    """Termos de busca em inglês da linha (aceita um texto ou uma lista)."""
+    t = linha.get("printables") or []
+    return [t] if isinstance(t, str) else list(t)
+
+
 def coletar_linhas(cfg):
-    """Para cada linha de produto: os modelos mais populares dela no Printables."""
+    """Para cada linha de produto: os modelos mais populares dela no Printables, somando todos os termos."""
     linhas = []
     for linha in cfg["linhas"]:
-        modelos = []
-        if linha["printables"]:
-            print(f"Printables: linha {linha['nome']}")
-            itens = consultar_printables(PRINTABLES_BUSCA, {"q": linha["printables"], "lim": cfg["printables_por_linha"]},
+        modelos = {}
+        for termo in termos_en(linha):
+            print(f"Printables: linha {linha['nome']} ({termo})")
+            itens = consultar_printables(PRINTABLES_BUSCA, {"q": termo, "lim": cfg["printables_por_linha"]},
                                          "searchPrints2")
-            modelos = [montar_modelo(it, linha["nome"]) for it in itens]
-        linhas.append({"nome": linha["nome"], "palavras": linha["palavras"], "modelos": modelos})
+            for it in itens:
+                modelos.setdefault(str(it["id"]), montar_modelo(it, linha["nome"]))
+        linhas.append({"nome": linha["nome"], "palavras": linha["palavras"], "modelos": list(modelos.values())})
     return linhas
 
 
@@ -206,7 +227,7 @@ def resumir_linhas(linhas, semana, sugestoes):
         ln["ganho_downloads"] = sum(m["ganho_downloads"] or 0 for m in ln["modelos"])
         ln["buscas_novas"] = sum(1 for s in sugestoes if s["termo"] == ln["nome"] and s["nova"])
         ln["modelos"].sort(key=lambda m: (m["ganho_downloads"] or 0, m["downloads"]), reverse=True)
-        ln["modelos"] = ln["modelos"][:16]
+        ln["modelos"] = ln["modelos"][:30]
         del ln["palavras"]
     # nota simples para ordenar: presença no ranking da semana pesa mais
     for ln in linhas:
@@ -216,10 +237,8 @@ def resumir_linhas(linhas, semana, sugestoes):
 
 
 def marcar_crescimento(modelos, fotos):
-    """Compara downloads de hoje com a foto mais antiga dos últimos 7 dias."""
-    base = {}
-    for foto in fotos[:7]:  # do mais recente ao de 7 dias atrás; o mais antigo sobrescreve
-        base.update(foto.get("printables", {}))
+    """Compara downloads de hoje com a foto mais antiga dos últimos 3 meses."""
+    base = foto_antiga(fotos, "printables")
     for m in modelos:
         antes = base.get(m["id"])
         if antes is None:
@@ -244,9 +263,10 @@ def tags_em_alta(modelos, fotos):
         for t in m["tags"]:
             if t not in TAGS_GENERICAS:
                 cont[t] += m["pontos"]
-    ontem = {t: i for i, t in enumerate((fotos[0].get("tags_top") if fotos else []) or [])}
+    antigas = [f for f in fotos[:JANELA_DIAS] if f.get("tags_top")]
+    ontem = {t: i for i, t in enumerate(antigas[-1]["tags_top"] if antigas else [])}
     saida = []
-    for pos, (tag, pts) in enumerate(cont.most_common(40)):
+    for pos, (tag, pts) in enumerate(cont.most_common(100)):
         pos_antes = ontem.get(tag)
         saida.append({
             "tag": tag,
@@ -286,7 +306,7 @@ YOUTUBE_TECNICO = re.compile(
 def coletar_virais(cfg, fotos, hoje):
     """Modelos novos com muitos downloads por dia, em qualquer categoria (é ali que nascem as modas)."""
     vistos = {}
-    for ordem in ("-download_count_7_days", "-likes_count_7_days"):
+    for ordem in cfg.get("virais_ordens", ["-download_count_30_days", "-download_count_90_days", "-likes_count_90_days"]):
         cursor = None
         for pagina in range(cfg.get("virais_paginas", 3)):
             print(f"Printables: virais {ordem} página {pagina + 1}")
@@ -307,7 +327,7 @@ def coletar_virais(cfg, fotos, hoje):
             if not cursor:
                 break
 
-    limite = cfg.get("virais_dias", 30)
+    limite = cfg.get("virais_dias", JANELA_DIAS)
     virais = []
     for m in vistos.values():
         try:
@@ -319,7 +339,7 @@ def coletar_virais(cfg, fotos, hoje):
             m["por_dia"] = round(m["downloads"] / max(1, dias))
             virais.append(m)
     virais.sort(key=lambda m: m["por_dia"], reverse=True)
-    virais = virais[:48]
+    virais = virais[:100]
 
     # posição de ontem, para marcar o que está subindo
     ontem = {mid: i for i, mid in enumerate((fotos[0].get("virais") if fotos else []) or [])}
@@ -334,7 +354,7 @@ def coletar_virais(cfg, fotos, hoje):
             if t not in TAGS_GENERICAS:
                 temas[t] += len(virais) - i
     print(f"Virais: {len(virais)} modelos dos últimos {limite} dias")
-    return {"modelos": virais, "temas": [t for t, _ in temas.most_common(24)]}
+    return {"modelos": virais, "temas": [t for t, _ in temas.most_common(60)]}
 
 
 def coletar_youtube(cfg, fotos):
@@ -357,7 +377,7 @@ def coletar_youtube(cfg, fotos):
                     achadas.setdefault(s, base)
             time.sleep(0.7)
     ja_vistas = set()
-    for foto in fotos[:30]:
+    for foto in fotos[:JANELA_DIAS]:
         ja_vistas.update(foto.get("youtube", []))
     print(f"YouTube: {len(achadas)} buscas")
     return [{"busca": s, "nova": bool(fotos) and s not in ja_vistas}
@@ -390,7 +410,7 @@ def coletar_sugestoes(cfg):
 
 def marcar_sugestoes_novas(sugestoes, fotos):
     ja_vistas = set()
-    for foto in fotos[:30]:
+    for foto in fotos[:JANELA_DIAS]:
         ja_vistas.update(foto.get("sugestoes", []))
     return [
         {"busca": s, "termo": t, "nova": bool(fotos) and s not in ja_vistas}
@@ -446,7 +466,8 @@ def interesse_regional(op, termo):
     geo = next(w for w in widgets if w["id"].startswith("GEO_MAP"))
     saida = {}
     for res in ("REGION", "CITY"):
-        time.sleep(6)
+        # a consulta por cidade é a que o Google mais bloqueia: espera mais antes dela
+        time.sleep(6 if res == "REGION" else 15)
         pedido = dict(geo["request"], resolution=res)
         try:
             dados = trends_json(op, "widgetdata/comparedgeo",
@@ -469,8 +490,8 @@ def interesse_regional(op, termo):
 
 
 def buscas_subindo(op, termo):
-    """As buscas relacionadas que mais cresceram ("em ascensão" no Google Trends)."""
-    req = {"comparisonItem": [{"keyword": termo, "geo": "BR", "time": "today 1-m"}], "category": 0, "property": ""}
+    """As buscas relacionadas que mais cresceram nos últimos 3 meses ("em ascensão" no Google Trends)."""
+    req = {"comparisonItem": [{"keyword": termo, "geo": "BR", "time": "today 3-m"}], "category": 0, "property": ""}
     widgets = trends_json(op, "explore", {"req": json.dumps(req)})["widgets"]
     rel = next(w for w in widgets if w["id"].startswith("RELATED_QUERIES"))
     time.sleep(6)
@@ -539,6 +560,77 @@ def coletar_regioes(cfg, hoje):
     return cache
 
 
+# ---------- Thingiverse (opcional) ----------
+#
+# O maior site de modelos grátis. Fica desligado até existir o secret THINGIVERSE_TOKEN
+# (o "App Token" do app em thingiverse.com/developers, só de leitura).
+# As listas não trazem downloads; usamos curtidas e "coleções" (quantos salvaram o modelo).
+
+THINGIVERSE_API = "https://api.thingiverse.com"
+
+
+def thingiverse(caminho, token, **params):
+    url = f"{THINGIVERSE_API}/{caminho}?" + urllib.parse.urlencode(params)
+    resp = baixar(url, cabecalhos={"Authorization": f"Bearer {token}"})
+    return resp.get("hits", []) if isinstance(resp, dict) else resp
+
+
+def modelo_thingiverse(t):
+    return {
+        "id": str(t.get("id", "")),
+        "nome": t.get("name") or "",
+        "url": t.get("public_url") or f"https://www.thingiverse.com/thing:{t.get('id', '')}",
+        "imagem": t.get("thumbnail") or t.get("preview_image") or "",
+        "curtidas": t.get("like_count") or 0,
+        "colecoes": t.get("collect_count") or 0,
+        "autor": (t.get("creator") or {}).get("name") or "",
+    }
+
+
+def coletar_thingiverse(cfg, fotos):
+    token = os.environ.get("THINGIVERSE_TOKEN")
+    if not token:
+        return {"ativo": False, "motivo": "sem chave (THINGIVERSE_TOKEN)"}
+    listas = {}
+    for nome, caminho in (("populares", "popular"), ("novos", "newest")):
+        print(f"Thingiverse: {nome}")
+        try:
+            listas[nome] = [modelo_thingiverse(t) for t in thingiverse(caminho, token, per_page=100)]
+        except Exception as e:  # noqa: BLE001
+            print(f"  falhou: {e}")
+            if "401" in str(e):
+                return {"ativo": False, "motivo": "token recusado pelo Thingiverse (gere outro no app)"}
+        finally:
+            time.sleep(1)
+
+    por_linha = {}
+    for linha in cfg["linhas"]:
+        termos = termos_en(linha)
+        if not termos:
+            continue
+        termo = termos[0]
+        print(f"Thingiverse: linha {linha['nome']}")
+        try:
+            achados = thingiverse(f"search/{urllib.parse.quote(termo)}/", token,
+                                  type="things", sort="popular", per_page=30)
+        except Exception as e:  # noqa: BLE001
+            print(f"  falhou: {e}")
+            continue
+        finally:
+            time.sleep(1)
+        por_linha[linha["nome"]] = [modelo_thingiverse(t) for t in achados][:30]
+
+    if not any(listas.values()) and not por_linha:
+        return {"ativo": False, "motivo": "o Thingiverse não devolveu dados"}
+    # crescimento em 3 meses: curtidas de hoje menos as da foto mais antiga da janela
+    base = foto_antiga(fotos, "thingiverse")
+    for m in [m for v in listas.values() for m in v] + [m for v in por_linha.values() for m in v]:
+        antes = base.get(m["id"])
+        m["ganho_3m"] = None if antes is None else m["curtidas"] - antes
+    print(f"Thingiverse: {sum(len(v) for v in listas.values())} nas listas, {len(por_linha)} linhas")
+    return {"ativo": True, **listas, "linhas": por_linha}
+
+
 # ---------- Cults3D (opcional) ----------
 #
 # Loja de arquivos 3D: em modelo pago, cada download é uma compra, então mostra o que os makers
@@ -581,7 +673,7 @@ def modelo_cults(c):
     }
 
 
-def coletar_cults(cfg):
+def coletar_cults(cfg, fotos):
     usuario, chave = os.environ.get("CULTS_USUARIO"), os.environ.get("CULTS_CHAVE")
     if not (usuario and chave):
         return {"ativo": False, "motivo": "sem chave (CULTS_USUARIO / CULTS_CHAVE)"}
@@ -591,7 +683,7 @@ def coletar_cults(cfg):
     top, ordem_usada, ultimo_erro = [], "", ""
     for ordem in cfg.get("cults_ordens", ["BY_DOWNLOADS", "BY_SALES", "BY_LIKES"]):
         try:
-            dados = cults(f"{{ creationsBatch(sort: {ordem}, limit: 60) {{ results {{ {CULTS_CAMPOS} }} }} }}", auth)
+            dados = cults(f"{{ creationsBatch(sort: {ordem}, limit: 100) {{ results {{ {CULTS_CAMPOS} }} }} }}", auth)
             top = [modelo_cults(c) for c in dados["creationsBatch"]["results"]]
             ordem_usada = ordem
             break
@@ -606,9 +698,10 @@ def coletar_cults(cfg):
     # por linha: busca pelo mesmo termo em inglês usado no Printables
     por_linha = {}
     for linha in cfg["linhas"]:
-        termo = linha["printables"]
-        if not termo:
+        termos = termos_en(linha)
+        if not termos:
             continue
+        termo = termos[0]
         print(f"Cults: linha {linha['nome']}")
         try:
             dados = cults(f'{{ creationsSearchBatch(query: {json.dumps(termo)}, limit: 30) '
@@ -620,13 +713,18 @@ def coletar_cults(cfg):
             time.sleep(1)
         modelos = [modelo_cults(c) for c in dados["creationsSearchBatch"]["results"]]
         modelos.sort(key=lambda m: m["downloads"], reverse=True)
-        por_linha[linha["nome"]] = modelos[:12]
+        por_linha[linha["nome"]] = modelos[:30]
 
     if not top and not por_linha:
         return {"ativo": False, "motivo": "o Cults não devolveu dados (confira a chave)"}
+    # crescimento em 3 meses: downloads de hoje menos os da foto mais antiga da janela
+    base = foto_antiga(fotos, "cults")
+    for m in top + [m for v in por_linha.values() for m in v]:
+        antes = base.get(m["url"])
+        m["ganho_3m"] = None if antes is None else m["downloads"] - antes
     pagos = sorted([m for m in top if not m["gratis"]], key=lambda m: m["downloads"], reverse=True)
     print(f"Cults: {len(top)} no ranking ({ordem_usada}), {len(por_linha)} linhas")
-    return {"ativo": True, "ordem": ordem_usada, "top": top[:40], "top_pagos": pagos[:30], "linhas": por_linha}
+    return {"ativo": True, "ordem": ordem_usada, "top": top[:100], "top_pagos": pagos[:100], "linhas": por_linha}
 
 
 # ---------- Pinterest Trends (opcional) ----------
@@ -772,6 +870,18 @@ def avisar_telegram(rel):
         print(f"Telegram falhou: {e}")
 
 
+def todos_cults(c):
+    if not c.get("ativo"):
+        return []
+    return c["top"] + c["top_pagos"] + [m for v in c["linhas"].values() for m in v]
+
+
+def todos_thingiverse(t):
+    if not t.get("ativo"):
+        return []
+    return t.get("populares", []) + t.get("novos", []) + [m for v in t["linhas"].values() for m in v]
+
+
 # ---------- principal ----------
 
 def main():
@@ -793,6 +903,7 @@ def main():
         "data": hoje.isoformat(),
         "gerado_em": datetime.now(FUSO_BR).strftime("%d/%m/%Y %H:%M"),
         "dias_de_historico": len(fotos),
+        "janela_dias": JANELA_DIAS,
         "linhas": resumir_linhas(linhas, modelos, lista_sugestoes),
         "printables": modelos,
         "tags": tags,
@@ -800,7 +911,8 @@ def main():
         "virais": virais,
         "youtube": youtube,
         "regioes": coletar_regioes(cfg, hoje),
-        "cults": coletar_cults(cfg),
+        "cults": coletar_cults(cfg, fotos),
+        "thingiverse": coletar_thingiverse(cfg, fotos),
         "pinterest": coletar_pinterest(cfg),
         "mercado_livre": coletar_mercado_livre(cfg),
         "datas": proximas_datas(cfg, hoje),
@@ -814,6 +926,8 @@ def main():
         "sugestoes": sorted(sugestoes),
         "virais": [m["id"] for m in virais["modelos"]],
         "youtube": [y["busca"] for y in youtube],
+        "cults": {m["url"]: m["downloads"] for m in todos_cults(rel["cults"])},
+        "thingiverse": {m["id"]: m["curtidas"] for m in todos_thingiverse(rel["thingiverse"])},
     })
 
     limite = (hoje - timedelta(days=DIAS_HISTORICO)).isoformat()
