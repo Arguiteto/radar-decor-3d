@@ -1,0 +1,46 @@
+name: Radar diário
+
+on:
+  schedule:
+    - cron: "0 10 * * *"   # 7h no horário de Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-diario
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rodar o radar
+        env:
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PAINEL_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python radar.py
+
+      - name: Salvar os dados do dia
+        run: |
+          if [ -z "$(git status --porcelain dados)" ]; then
+            echo "Sem mudanças."
+          else
+            git config user.name "radar-bot"
+            git config user.email "radar-bot@users.noreply.github.com"
+            git add dados
+            git commit -m "Radar: dados de $(TZ=America/Sao_Paulo date +%d/%m/%Y)"
+            git pull --rebase
+            git push
+          fi
