@@ -8,7 +8,11 @@ Robô que roda todo dia às 7h e mostra **o que está em alta em decoração par
 
 | Bloco | De onde vem | Para que serve |
 |-------|-------------|----------------|
-| **Suas linhas** | Printables + Google, por linha de produto | Ranking das suas 17 linhas (luminárias, cachepôs, chaveiros, 1/64, DTF...), da mais quente à mais fria |
+| **Globo** (aba inicial) | Google Trends, por estado e cidade, últimos 3 meses | Um ponto por estado (ou cidade). Passe o mouse para ver as linhas mais procuradas ali e o modelo em alta; clique para abrir o mapa. Feito com [cobe](https://github.com/shuding/cobe) |
+| **Virais** | Printables (todas as categorias), Google Trends e YouTube | O que está estourando agora: modelos do último mês com mais downloads por dia, buscas em ascensão e o que se procura em vídeo |
+| **Mapa** | Google Trends + contorno dos estados do IBGE | Onde cada linha é mais procurada e o que se destaca em cada estado |
+| **Modelos** | Printables | Uma aba por linha (troféus, medalhas, chaveiros...) além da aba "Em alta da semana" |
+| **Suas linhas** | Printables + Google, por linha de produto | Ranking das suas 30 linhas (luminárias, cachepôs, chaveiros, 1/64, DTF...), da mais quente à mais fria |
 | **Datas chegando** | Calendário comercial (`config.json`) | Lembra Natal, Dia das Mães etc. com antecedência |
 | **Em alta e pode vender** | Printables, últimos 7 dias | Modelos populares cuja licença permite vender a peça impressa |
 | **Temas em alta** | Tags dos modelos mais baixados | Estilos e temas subindo (▲ = subiu desde ontem) |
@@ -28,11 +32,25 @@ Robô que roda todo dia às 7h e mostra **o que está em alta em decoração par
 
 O que está **crescendo** começa a aparecer a partir do segundo dia, porque o robô compara com o histórico em `dados/historico/`.
 
+## Sobre o mapa
+
+O Google Trends não tem API oficial e bloqueia quem consulta rápido demais. Por isso o robô vai devagar, atualiza primeiro as linhas mais antigas e guarda o último dado bom em `dados/regioes.json`. Nos primeiros dias o mapa vai se completando aos poucos. As cidades são as que o Google mais segura: elas aparecem quando ele libera.
+
 ## Opcional: resumo no Telegram
 
 1. No Telegram, fale com **@BotFather**, mande `/newbot` e copie o token.
 2. Mande qualquer mensagem para o seu bot e abra `https://api.telegram.org/bot<TOKEN>/getUpdates` para ver o `chat.id`.
 3. No GitHub: **Settings → Secrets and variables → Actions → New repository secret**, crie `TELEGRAM_TOKEN` e `TELEGRAM_CHAT_ID`.
+
+## Opcional: Pinterest Trends (Brasil)
+
+O código já está pronto e fica desligado até existirem as chaves. Quando o app em developers.pinterest.com for aprovado, crie os secrets (Settings → Secrets and variables → Actions):
+
+- `PINTEREST_APP_ID` e `PINTEREST_APP_SECRET`: na página do app.
+- `PINTEREST_REFRESH_TOKEN`: gerado no app (permissão `user_accounts:read`). Com ele o robô renova o acesso sozinho.
+- Alternativa: só `PINTEREST_TOKEN` (token de acesso direto), que expira e precisa ser trocado à mão.
+
+Rode o robô uma vez: o bloco "No Pinterest (Brasil)" aparece na aba Virais, com as tendências crescendo, sazonais e do mês em decoração, DIY e design. Se o Pinterest mandar um refresh token novo, o painel avisa para atualizar o secret.
 
 ## Opcional: Mercado Livre
 

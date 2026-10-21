@@ -13,7 +13,10 @@
       "google": [
         "luminária 3d",
         "luminária decorativa",
-        "luminária personalizada"
+        "luminária personalizada",
+        "luminária lua",
+        "luminária de mesa",
+        "abajur 3d"
       ]
     },
     {
@@ -28,7 +31,27 @@
       "google": [
         "cachepot",
         "vaso decorativo",
-        "vaso impressão 3d"
+        "vaso impressão 3d",
+        "vaso geométrico",
+        "cachepot para suculentas",
+        "vaso para orquídea"
+      ]
+    },
+    {
+      "nome": "Porta-plantas e jardim",
+      "printables": "plant stand",
+      "palavras": [
+        "plant stand",
+        "planter stand",
+        "plant holder",
+        "succulent",
+        "self watering"
+      ],
+      "google": [
+        "suporte para plantas",
+        "porta plantas",
+        "vaso autoirrigável",
+        "plaquinha para jardim"
       ]
     },
     {
@@ -42,7 +65,24 @@
       ],
       "google": [
         "peça 3d pintada à mão",
-        "escultura pintada"
+        "escultura pintada",
+        "estatueta pintada"
+      ]
+    },
+    {
+      "nome": "Esculturas e estatuetas",
+      "printables": "sculpture",
+      "palavras": [
+        "sculpture",
+        "statue",
+        "figurine",
+        "bust"
+      ],
+      "google": [
+        "escultura decorativa",
+        "estatueta decorativa",
+        "escultura geométrica",
+        "busto decorativo"
       ]
     },
     {
@@ -55,7 +95,43 @@
       ],
       "google": [
         "chaveiro personalizado",
-        "chaveiro 3d"
+        "chaveiro 3d",
+        "chaveiro com nome",
+        "chaveiro de time",
+        "chaveiro pet",
+        "chaveiro lembrancinha",
+        "chaveiro empresa"
+      ]
+    },
+    {
+      "nome": "Troféus",
+      "printables": "trophy",
+      "palavras": [
+        "trophy",
+        "award",
+        "cup"
+      ],
+      "google": [
+        "troféu personalizado",
+        "troféu impressão 3d",
+        "troféu esportivo",
+        "troféu de premiação",
+        "troféu de futebol"
+      ]
+    },
+    {
+      "nome": "Medalhas",
+      "printables": "sports medal",
+      "palavras": [
+        "medal",
+        "medallion"
+      ],
+      "google": [
+        "medalha personalizada",
+        "medalha 3d",
+        "medalha de formatura",
+        "medalha de corrida",
+        "medalha esportiva"
       ]
     },
     {
@@ -69,7 +145,9 @@
       ],
       "google": [
         "número de casa",
-        "placa de porta personalizada"
+        "placa de porta personalizada",
+        "placa de endereço",
+        "placa de sala"
       ]
     },
     {
@@ -83,7 +161,54 @@
       ],
       "google": [
         "painel de nome",
-        "monograma personalizado"
+        "monograma personalizado",
+        "nome decorativo parede",
+        "letreiro personalizado"
+      ]
+    },
+    {
+      "nome": "Brindes e logos de empresa",
+      "printables": "logo sign",
+      "palavras": [
+        "logo",
+        "business card",
+        "company"
+      ],
+      "google": [
+        "brinde personalizado",
+        "logo 3d empresa",
+        "display de mesa empresa",
+        "porta cartão de visita"
+      ]
+    },
+    {
+      "nome": "Topo de bolo e festas",
+      "printables": "cake topper",
+      "palavras": [
+        "cake topper",
+        "party",
+        "birthday"
+      ],
+      "google": [
+        "topo de bolo personalizado",
+        "topo de bolo 3d",
+        "centro de mesa festa",
+        "decoração de festa personalizada"
+      ]
+    },
+    {
+      "nome": "Lembrancinhas",
+      "printables": "party favor",
+      "palavras": [
+        "favor",
+        "souvenir",
+        "giveaway"
+      ],
+      "google": [
+        "lembrancinha personalizada",
+        "lembrancinha de casamento",
+        "lembrancinha maternidade",
+        "lembrancinha de aniversário"
       ]
     },
     {
@@ -96,7 +221,22 @@
       ],
       "google": [
         "porta aliança",
-        "porta alianças casamento"
+        "porta alianças casamento",
+        "caixa para aliança"
+      ]
+    },
+    {
+      "nome": "Porta-joias e bijuterias",
+      "printables": "jewelry holder",
+      "palavras": [
+        "jewelry",
+        "earring",
+        "necklace"
+      ],
+      "google": [
+        "porta joias",
+        "porta brincos",
+        "organizador de bijuterias"
       ]
     },
     {
@@ -111,7 +251,41 @@
       ],
       "google": [
         "porta lápis",
-        "porta caneta personalizado"
+        "porta caneta personalizado",
+        "marcador de página",
+        "porta lápis professor"
+      ]
+    },
+    {
+      "nome": "Organizadores de mesa",
+      "printables": "desk organizer",
+      "palavras": [
+        "desk organizer",
+        "desktop organizer",
+        "desk tidy"
+      ],
+      "google": [
+        "organizador de mesa",
+        "organizador escritório",
+        "organizador de maquiagem",
+        "organizador de cabos"
+      ]
+    },
+    {
+      "nome": "Suportes (celular, fone, controle)",
+      "printables": "headphone stand",
+      "palavras": [
+        "phone stand",
+        "headphone stand",
+        "controller holder",
+        "stand"
+      ],
+      "google": [
+        "suporte para celular",
+        "suporte para headset",
+        "suporte para controle",
+        "suporte para alexa",
+        "suporte para notebook"
       ]
     },
     {
@@ -126,20 +300,42 @@
       ],
       "google": [
         "diorama 1/64",
-        "expositor hot wheels"
+        "expositor hot wheels",
+        "garagem hot wheels",
+        "diorama miniatura"
       ]
     },
     {
-      "nome": "Organizadores de mesa",
-      "printables": "desk organizer",
+      "nome": "Miniaturas e geek",
+      "printables": "miniature figure",
       "palavras": [
-        "desk organizer",
-        "desktop organizer",
-        "desk tidy"
+        "miniature",
+        "anime",
+        "figure",
+        "funko",
+        "geek"
       ],
       "google": [
-        "organizador de mesa",
-        "organizador escritório"
+        "miniatura personalizada",
+        "boneco 3d personalizado",
+        "action figure 3d",
+        "miniatura anime"
+      ]
+    },
+    {
+      "nome": "Brinquedos e fidget",
+      "printables": "fidget",
+      "palavras": [
+        "fidget",
+        "toy",
+        "articulated",
+        "flexi"
+      ],
+      "google": [
+        "fidget toy",
+        "dragão articulado",
+        "brinquedo impressão 3d",
+        "brinquedo educativo"
       ]
     },
     {
@@ -153,7 +349,9 @@
       ],
       "google": [
         "quadro geométrico",
-        "painel 3d parede"
+        "painel 3d parede",
+        "quadro decorativo 3d",
+        "painel hexagonal"
       ]
     },
     {
@@ -164,7 +362,8 @@
       ],
       "google": [
         "relógio de parede",
-        "relógio de parede decorativo"
+        "relógio de parede decorativo",
+        "relógio personalizado"
       ]
     },
     {
@@ -176,21 +375,8 @@
       ],
       "google": [
         "porta vela",
-        "castiçal decorativo"
-      ]
-    },
-    {
-      "nome": "Porta-plantas",
-      "printables": "plant stand",
-      "palavras": [
-        "plant stand",
-        "planter stand",
-        "plant holder",
-        "succulent"
-      ],
-      "google": [
-        "suporte para plantas",
-        "porta plantas"
+        "castiçal decorativo",
+        "porta vela personalizado"
       ]
     },
     {
@@ -203,7 +389,53 @@
       ],
       "google": [
         "porta copos",
-        "bandeja decorativa"
+        "bandeja decorativa",
+        "porta copos personalizado",
+        "porta copos de time"
+      ]
+    },
+    {
+      "nome": "Ímãs de geladeira",
+      "printables": "fridge magnet",
+      "palavras": [
+        "magnet",
+        "fridge"
+      ],
+      "google": [
+        "ímã de geladeira personalizado",
+        "imã de geladeira 3d"
+      ]
+    },
+    {
+      "nome": "Cozinha e cortadores",
+      "printables": "cookie cutter",
+      "palavras": [
+        "cookie cutter",
+        "kitchen",
+        "stamp"
+      ],
+      "google": [
+        "cortador de biscoito",
+        "carimbo para biscoito",
+        "porta temperos"
+      ]
+    },
+    {
+      "nome": "Natal e datas",
+      "printables": "christmas ornament",
+      "palavras": [
+        "christmas",
+        "ornament",
+        "xmas",
+        "halloween",
+        "easter"
+      ],
+      "google": [
+        "enfeite de natal",
+        "enfeite de natal personalizado",
+        "presépio 3d",
+        "decoração de halloween",
+        "decoração de páscoa"
       ]
     },
     {
@@ -219,7 +451,9 @@
       "google": [
         "presente personalizado",
         "presente pet personalizado",
-        "presente casal personalizado"
+        "presente casal personalizado",
+        "litofania",
+        "presente dia dos namorados"
       ]
     },
     {
@@ -229,7 +463,9 @@
       "google": [
         "dtf personalizado",
         "estampa dtf",
-        "camiseta personalizada"
+        "camiseta personalizada",
+        "caneca personalizada",
+        "arte personalizada"
       ]
     }
   ],
@@ -251,7 +487,7 @@
     "65": "Datas sazonais"
   },
   "printables_por_categoria": 24,
-  "printables_por_linha": 20,
+  "printables_por_linha": 24,
   "datas_comerciais": [
     {
       "data": "01-01",
@@ -310,5 +546,13 @@
       "nome": "Natal"
     }
   ],
-  "dias_alerta_data": 45
+  "dias_alerta_data": 45,
+  "trends_minutos": 8,
+  "virais_dias": 30,
+  "virais_paginas": 3,
+  "youtube_bases": ["impressão 3d", "feito em impressora 3d"],
+  "subindo_termos": ["impressão 3d", "decoração"],
+  "pinterest_regiao": "BR",
+  "pinterest_tipos": ["growing", "seasonal", "monthly"],
+  "pinterest_interesses": ["home_decor", "diy_and_crafts", "design"]
 }
