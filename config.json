@@ -1,0 +1,314 @@
+{
+  "linhas": [
+    {
+      "nome": "Luminárias",
+      "printables": "lamp",
+      "palavras": [
+        "lamp",
+        "lampshade",
+        "lantern",
+        "night light",
+        "luminaria"
+      ],
+      "google": [
+        "luminária 3d",
+        "luminária decorativa",
+        "luminária personalizada"
+      ]
+    },
+    {
+      "nome": "Cachepôs e vasos",
+      "printables": "planter vase",
+      "palavras": [
+        "planter",
+        "vase",
+        "pot",
+        "cachepot"
+      ],
+      "google": [
+        "cachepot",
+        "vaso decorativo",
+        "vaso impressão 3d"
+      ]
+    },
+    {
+      "nome": "Artes com tinta acrílica",
+      "printables": "painting figurine",
+      "palavras": [
+        "paint",
+        "painted",
+        "painting",
+        "acrylic"
+      ],
+      "google": [
+        "peça 3d pintada à mão",
+        "escultura pintada"
+      ]
+    },
+    {
+      "nome": "Chaveiros personalizados",
+      "printables": "keychain",
+      "palavras": [
+        "keychain",
+        "keyring",
+        "chaveiro"
+      ],
+      "google": [
+        "chaveiro personalizado",
+        "chaveiro 3d"
+      ]
+    },
+    {
+      "nome": "Placas de porta e números de casa",
+      "printables": "house number",
+      "palavras": [
+        "house number",
+        "door sign",
+        "address sign",
+        "door number"
+      ],
+      "google": [
+        "número de casa",
+        "placa de porta personalizada"
+      ]
+    },
+    {
+      "nome": "Painéis de nome e monogramas",
+      "printables": "name sign",
+      "palavras": [
+        "name sign",
+        "monogram",
+        "nameplate",
+        "name plate"
+      ],
+      "google": [
+        "painel de nome",
+        "monograma personalizado"
+      ]
+    },
+    {
+      "nome": "Porta-alianças",
+      "printables": "wedding ring box",
+      "palavras": [
+        "ring box",
+        "ring holder",
+        "wedding ring"
+      ],
+      "google": [
+        "porta aliança",
+        "porta alianças casamento"
+      ]
+    },
+    {
+      "nome": "Porta-lápis e papelaria",
+      "printables": "pen holder",
+      "palavras": [
+        "pen holder",
+        "pencil holder",
+        "pencil cup",
+        "stationery",
+        "pen cup"
+      ],
+      "google": [
+        "porta lápis",
+        "porta caneta personalizado"
+      ]
+    },
+    {
+      "nome": "Dioramas e suportes 1/64",
+      "printables": "1/64 diorama",
+      "palavras": [
+        "1/64",
+        "1:64",
+        "diorama",
+        "hot wheels",
+        "display"
+      ],
+      "google": [
+        "diorama 1/64",
+        "expositor hot wheels"
+      ]
+    },
+    {
+      "nome": "Organizadores de mesa",
+      "printables": "desk organizer",
+      "palavras": [
+        "desk organizer",
+        "desktop organizer",
+        "desk tidy"
+      ],
+      "google": [
+        "organizador de mesa",
+        "organizador escritório"
+      ]
+    },
+    {
+      "nome": "Quadros e painéis geométricos",
+      "printables": "geometric wall art",
+      "palavras": [
+        "wall art",
+        "geometric",
+        "hexagon",
+        "wall panel"
+      ],
+      "google": [
+        "quadro geométrico",
+        "painel 3d parede"
+      ]
+    },
+    {
+      "nome": "Relógios de parede",
+      "printables": "wall clock",
+      "palavras": [
+        "clock"
+      ],
+      "google": [
+        "relógio de parede",
+        "relógio de parede decorativo"
+      ]
+    },
+    {
+      "nome": "Porta-velas",
+      "printables": "candle holder",
+      "palavras": [
+        "candle",
+        "tealight"
+      ],
+      "google": [
+        "porta vela",
+        "castiçal decorativo"
+      ]
+    },
+    {
+      "nome": "Porta-plantas",
+      "printables": "plant stand",
+      "palavras": [
+        "plant stand",
+        "planter stand",
+        "plant holder",
+        "succulent"
+      ],
+      "google": [
+        "suporte para plantas",
+        "porta plantas"
+      ]
+    },
+    {
+      "nome": "Bandejas e porta-copos",
+      "printables": "coaster",
+      "palavras": [
+        "coaster",
+        "tray",
+        "trinket dish"
+      ],
+      "google": [
+        "porta copos",
+        "bandeja decorativa"
+      ]
+    },
+    {
+      "nome": "Presentes personalizados",
+      "printables": "lithophane",
+      "palavras": [
+        "personalized",
+        "lithophane",
+        "pet portrait",
+        "couple",
+        "customizable"
+      ],
+      "google": [
+        "presente personalizado",
+        "presente pet personalizado",
+        "presente casal personalizado"
+      ]
+    },
+    {
+      "nome": "DTF e design personalizado",
+      "printables": "",
+      "palavras": [],
+      "google": [
+        "dtf personalizado",
+        "estampa dtf",
+        "camiseta personalizada"
+      ]
+    }
+  ],
+  "sufixos_busca": [
+    "",
+    " para"
+  ],
+  "printables_categorias": {
+    "44": "Decoração",
+    "7": "Sala",
+    "14": "Esculturas",
+    "15": "Parede",
+    "16": "Placas e nomes",
+    "29": "Escritório",
+    "50": "Organizadores",
+    "53": "Jardim",
+    "57": "Pets",
+    "103": "Dioramas e cenários",
+    "65": "Datas sazonais"
+  },
+  "printables_por_categoria": 24,
+  "printables_por_linha": 20,
+  "datas_comerciais": [
+    {
+      "data": "01-01",
+      "nome": "Ano Novo"
+    },
+    {
+      "data": "02-14",
+      "nome": "Carnaval (data aproximada, confira o ano)"
+    },
+    {
+      "data": "03-08",
+      "nome": "Dia da Mulher"
+    },
+    {
+      "data": "04-05",
+      "nome": "Páscoa (data aproximada, confira o ano)"
+    },
+    {
+      "data": "05-10",
+      "nome": "Dia das Mães (2º domingo de maio, confira o ano)"
+    },
+    {
+      "data": "06-12",
+      "nome": "Dia dos Namorados"
+    },
+    {
+      "data": "06-24",
+      "nome": "Festa Junina"
+    },
+    {
+      "data": "08-09",
+      "nome": "Dia dos Pais (2º domingo de agosto, confira o ano)"
+    },
+    {
+      "data": "09-15",
+      "nome": "Dia do Cliente"
+    },
+    {
+      "data": "10-12",
+      "nome": "Dia das Crianças"
+    },
+    {
+      "data": "10-15",
+      "nome": "Dia do Professor"
+    },
+    {
+      "data": "10-31",
+      "nome": "Halloween"
+    },
+    {
+      "data": "11-28",
+      "nome": "Black Friday (data aproximada, confira o ano)"
+    },
+    {
+      "data": "12-25",
+      "nome": "Natal"
+    }
+  ],
+  "dias_alerta_data": 45
+}
