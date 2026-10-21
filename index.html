@@ -2,8 +2,17 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Radar Decor 3D</title>
+<link rel="icon" type="image/svg+xml" href="icone.svg">
+<!-- versão de celular: instala como app ("Adicionar à tela inicial") e abre em tela cheia -->
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="theme-color" content="#F0E4D0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Radar 3D">
 <style>
   /* Paleta do escritório. Regra: fundo creme e só 1 ou 2 cores primárias por tela.
      Aqui: navy (texto, estrutura, "pode vender") + vermelho (destaque, novidade, "não pode"). */
@@ -74,11 +83,53 @@
   .abas-dentro { max-width: 1180px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 18px; min-height: 54px; }
   .marca { font-weight: 700; font-size: 17px; letter-spacing: -.01em; text-decoration: none; white-space: nowrap; }
   .marca span, h1 span { color: var(--destaque); }
+  .marca { display: inline-flex; align-items: center; gap: 8px; }
+  .marca img { display: block; border-radius: 6px; }
+  /* selo da última atualização do robô */
+  .selo { font-size: 12px; white-space: nowrap; border: 1px solid var(--linha); border-radius: 99px; padding: 3px 10px; color: var(--tx2); background: var(--card); cursor: help; }
+  .selo::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--navy); margin-right: 6px; vertical-align: 1px; }
+  .selo.atrasado { color: var(--vermelho); border-color: var(--vermelho); }
+  .selo.atrasado::before { background: var(--vermelho); }
+  @media (max-width: 640px) {
+    .selo { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; margin-left: 10px; font-size: 11px; }
+  }
   .abas-botoes { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
   .abas-botoes::-webkit-scrollbar { display: none; }
   .abas-botoes button { font: inherit; font-size: 14px; color: var(--tx2); background: none; border: 0; border-bottom: 3px solid transparent; margin-bottom: -3px; padding: 16px 12px 13px; cursor: pointer; white-space: nowrap; }
   .abas-botoes button:hover { color: var(--navy); }
   .abas-botoes button[aria-selected="true"] { color: var(--navy); font-weight: 700; border-bottom-color: var(--vermelho); }
+  .abas-botoes .ico { display: none; width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ===== Versão de celular: barra de abas embaixo (estilo app), cabeçalho compacto ===== */
+  @media (max-width: 720px), (max-height: 500px) and (pointer: coarse) {
+    html, body { overflow-x: clip; max-width: 100%; }
+    body { padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
+    nav.abas { border-bottom-width: 2px; padding-top: env(safe-area-inset-top, 0px); }
+    .abas-dentro { min-height: 54px; gap: 10px; padding: 0 12px; flex-wrap: nowrap !important; }
+    .marca { font-size: 16px; }
+    .marca img { width: 30px; height: 30px; }
+    .abas-botoes {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; margin: 0 !important; width: auto !important;
+      display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; overflow: visible;
+      background: var(--card); border-top: 1px solid var(--linha); box-shadow: 0 -6px 20px rgba(27, 57, 107, .08);
+      padding: 4px 4px calc(4px + env(safe-area-inset-bottom, 0px));
+    }
+    .abas-botoes button {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+      min-height: 56px; padding: 6px 2px !important; margin: 0; border: 0; border-top: 3px solid transparent;
+      border-radius: 0 0 10px 10px; font-size: 11px; line-height: 1.1; white-space: nowrap;
+    }
+    .abas-botoes button span { overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+    .abas-botoes .ico { display: block; }
+    .abas-botoes button[aria-selected="true"] { border-top-color: var(--vermelho); border-bottom-color: transparent; background: rgba(27, 57, 107, .06); }
+    /* botões grandes para o dedo e campos sem zoom automático no iPhone */
+    input, select, textarea { font-size: 16px !important; }
+    select, input { min-height: 44px; }
+    .sub-abas button { min-height: 40px; }
+    .aba { padding-top: 16px; }
+    main, footer { padding-left: 14px; padding-right: 14px; }
+    .dica-globo { display: none !important; }  /* no toque, o clique na bolinha abre o mapa direto */
+  }
   .aba { padding-top: 22px; }
   .aba[hidden] { display: none !important; }
 
@@ -109,9 +160,6 @@
   .numeros b { font-size: clamp(26px, 3.4vw, 40px); line-height: 1.05; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
   .numeros span { font-size: 12px; color: var(--tx2); text-transform: uppercase; letter-spacing: .06em; }
   @media (max-width: 640px) {
-    .abas-dentro { flex-wrap: wrap; gap: 0; padding-top: 10px; }
-    .abas-botoes { margin-left: -12px; width: calc(100% + 24px); }
-    .abas-botoes button { padding: 10px 12px 11px; }
     .numeros { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 12px; }
   }
   #mapa-svg { width: 100%; height: auto; display: block; }
@@ -170,13 +218,14 @@
 <body>
 <nav class="abas" aria-label="Seções">
   <div class="abas-dentro">
-    <a class="marca" href="#globo">Radar Decor <span>3D</span></a>
+    <a class="marca" href="#globo"><img src="icone.svg" alt="" width="26" height="26">Radar Decor <span>3D</span></a>
+    <span class="selo" id="selo" hidden></span>
     <div class="abas-botoes" role="tablist">
-      <button role="tab" data-aba="globo">Globo</button>
-      <button role="tab" data-aba="virais">Virais</button>
-      <button role="tab" data-aba="linhas">Suas linhas</button>
-      <button role="tab" data-aba="mapa">Mapa</button>
-      <button role="tab" data-aba="modelos">Modelos</button>
+      <button role="tab" data-aba="globo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg><span>Globo</span></button>
+      <button role="tab" data-aba="virais"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.8 1.3 2.8 2.3 3C10.5 8.8 11.2 5.5 12 3z"/></svg><span>Virais</span></button>
+      <button role="tab" data-aba="linhas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span>Suas linhas</span></button>
+      <button role="tab" data-aba="mapa"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span>Mapa</span></button>
+      <button role="tab" data-aba="modelos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg><span>Modelos</span></button>
     </div>
   </div>
 </nav>
@@ -250,7 +299,7 @@
         </section>
         <section class="card">
           <h2>No YouTube</h2>
-          <p class="dica">O que o Brasil procura em vídeo sobre impressão 3D. "nova" = apareceu este mês.</p>
+          <p class="dica">O que o Brasil procura em vídeo sobre impressão 3D. "nova" = não aparecia nos últimos 3 meses.</p>
           <ul class="lista" id="youtube"></ul>
         </section>
       </aside>
@@ -399,8 +448,38 @@ function cartao(m, mini) {
     </a>`;
 }
 
+/* selo no topo: quando o robô rodou e como foi cada fonte */
+function montarSelo() {
+  const d = dados;
+  const hoje = new Date().toLocaleDateString("sv-SE", { timeZone: "America/Sao_Paulo" });  // AAAA-MM-DD
+  const hora = (d.gerado_em || "").split(" ")[1] || "";
+  const atrasado = d.data !== hoje;
+  const selo = el("selo");
+  selo.hidden = false;
+  selo.classList.toggle("atrasado", atrasado);
+  selo.textContent = atrasado
+    ? `Robô não rodou hoje · última: ${fmtData(d.data)} ${hora}`
+    : `Atualizado hoje às ${hora.replace(":", "h")}`;
+
+  const reg = (d.regioes && d.regioes.linhas) || {};
+  const doDia = Object.values(reg).filter(r => r.atualizado === d.data).length;
+  const fonte = (nome, f) => !f ? `${nome}: não configurado`
+    : f.ativo ? `${nome}: ok` : `${nome}: ${f.motivo || "sem dados"}`;
+  selo.title = [
+    `Última rodada: ${d.gerado_em}`,
+    `Printables: ${d.printables.length} modelos dos últimos 3 meses`,
+    `Google: ${d.sugestoes.length} buscas · YouTube: ${(d.youtube || []).length}`,
+    `Google Trends: ${doDia} linha(s) atualizada(s) hoje, ${Object.keys(reg).length} de ${d.linhas.length} no mapa`,
+    fonte("Cults3D", d.cults),
+    fonte("Thingiverse", d.thingiverse),
+    fonte("Pinterest", d.pinterest),
+    fonte("Mercado Livre", d.mercado_livre),
+  ].join("\n");
+}
+
 function montar() {
   const d = dados;
+  montarSelo();
   el("sub").textContent = `Atualizado em ${d.gerado_em}` +
     (d.dias_de_historico ? ` · comparando com ${d.dias_de_historico} dia(s) de histórico`
                          : " · primeiro dia: o que está crescendo aparece a partir de amanhã");
@@ -845,7 +924,7 @@ function sugestoes() {
   const sug = dados.sugestoes.filter(s => !linha || s.termo === linha).sort((a, b) => b.nova - a.nova);
   const novas = sug.filter(s => s.nova).length;
   el("dica-google").textContent = dados.dias_de_historico
-    ? `Autocompletar do Google. ${novas} busca(s) nova(s) neste mês.`
+    ? `Autocompletar do Google. ${novas} busca(s) nova(s) nos últimos 3 meses.`
     : "Autocompletar do Google. Amanhã começam a aparecer as buscas novas.";
   el("sugestoes").innerHTML = sug.slice(0, 100).map(s =>
     `<li><a href="https://www.google.com/search?q=${encodeURIComponent(s.busca)}&tbm=shop" target="_blank" rel="noopener">${esc(s.busca)}</a>` +

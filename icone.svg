@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Radar Decor 3D: fundo navy, ondas de radar creme e o ponto vermelho do que está em alta -->
+  <rect width="64" height="64" rx="14" fill="#1B396B"/>
+  <g fill="none" stroke="#F0E4D0" stroke-linecap="round" stroke-width="5">
+    <path d="M16 48 A24 24 0 0 1 40 24"/>
+    <path d="M16 48 A14 14 0 0 1 30 34" opacity=".75"/>
+  </g>
+  <circle cx="16" cy="48" r="4.5" fill="#F0E4D0"/>
+  <circle cx="45" cy="19" r="7" fill="#C1392B"/>
+</svg>
