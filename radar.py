@@ -489,6 +489,19 @@ def interesse_regional(op, termo):
     return saida
 
 
+def interesse_mundial(op, termo):
+    """Interesse por país (mundo todo) nos últimos 3 meses, para os pontos do globo fora do Brasil."""
+    req = {"comparisonItem": [{"keyword": termo, "geo": "", "time": "today 3-m"}], "category": 0, "property": ""}
+    widgets = trends_json(op, "explore", {"req": json.dumps(req)})["widgets"]
+    geo = next(w for w in widgets if w["id"].startswith("GEO_MAP"))
+    time.sleep(6)
+    pedido = dict(geo["request"], resolution="COUNTRY")
+    dados = trends_json(op, "widgetdata/comparedgeo",
+                        {"req": json.dumps(pedido, separators=(",", ":")), "token": geo["token"]})
+    itens = [g for g in dados["default"]["geoMapData"] if g.get("hasData", [True])[0] and g["value"][0] > 0]
+    return {g["geoCode"]: g["value"][0] for g in itens if g.get("geoCode")}
+
+
 def buscas_subindo(op, termo):
     """As buscas relacionadas que mais cresceram nos últimos 3 meses ("em ascensão" no Google Trends)."""
     req = {"comparisonItem": [{"keyword": termo, "geo": "BR", "time": "today 3-m"}], "category": 0, "property": ""}
@@ -506,7 +519,13 @@ def coletar_regioes(cfg, hoje):
     cache = ler_json(DADOS / "regioes.json", {"linhas": {}})
     cache.setdefault("subindo", {"atualizado": "", "termos": []})
     linhas = [ln for ln in cfg["linhas"] if ln["google"]]
-    linhas.sort(key=lambda ln: cache["linhas"].get(ln["nome"], {}).get("atualizado", ""))
+    # fila única de tarefas: cada linha no Brasil (por estado) e no mundo (por país, com o termo em inglês);
+    # as mais antigas vão primeiro, então Brasil e mundo se revezam ao longo dos dias
+    tarefas = [(ln, "brasil") for ln in linhas]
+    if cfg.get("trends_mundo", True):
+        tarefas += [(ln, "mundo") for ln in linhas if termos_en(ln)]
+    campo_data = {"brasil": "atualizado", "mundo": "atualizado_mundo"}
+    tarefas.sort(key=lambda t: cache["linhas"].get(t[0]["nome"], {}).get(campo_data[t[1]], ""))
     limite = time.time() + cfg.get("trends_minutos", 8) * 60
     op = abrir_trends()
     feitas = bloqueios = 0
@@ -528,13 +547,13 @@ def coletar_regioes(cfg, hoje):
         if termos:
             cache["subindo"] = {"atualizado": hoje.isoformat(), "termos": termos}
 
-    for ln in linhas:
+    for ln, escopo in tarefas:
         if time.time() > limite or bloqueios >= 2:
             break
-        termo = ln["google"][0]
-        print(f"Trends: {ln['nome']} ({termo})")
+        termo = ln["google"][0] if escopo == "brasil" else termos_en(ln)[0]
+        print(f"Trends ({escopo}): {ln['nome']} ({termo})")
         try:
-            novo = interesse_regional(op, termo)
+            novo = interesse_regional(op, termo) if escopo == "brasil" else interesse_mundial(op, termo)
         except Bloqueado:
             bloqueios += 1
             print("  bloqueado, pulando")
@@ -543,20 +562,26 @@ def coletar_regioes(cfg, hoje):
             print(f"  Trends falhou: {e}")
             continue
         bloqueios = 0
-        antigo = cache["linhas"].get(ln["nome"], {})
-        cache["linhas"][ln["nome"]] = {
-            "termo": termo,
-            "atualizado": hoje.isoformat(),
-            "estados": novo.get("estados", {}),
-            "cidades": novo.get("cidades", antigo.get("cidades", [])),
-        }
+        item = cache["linhas"].setdefault(ln["nome"], {"estados": {}, "cidades": [], "paises": {}})
+        if escopo == "brasil":
+            item.update({
+                "termo": termo,
+                "atualizado": hoje.isoformat(),
+                "estados": novo.get("estados", {}),
+                "cidades": novo.get("cidades", item.get("cidades", [])),
+            })
+        else:
+            item.update({"termo_mundo": termo, "atualizado_mundo": hoje.isoformat(), "paises": novo})
+        item.setdefault("termo", ln["google"][0])
+        item.setdefault("atualizado", "")
+        item.setdefault("estados", {})
         feitas += 1
         time.sleep(8)
     # linhas que saíram do config não ficam no mapa
     nomes = {ln["nome"] for ln in linhas}
     cache["linhas"] = {k: v for k, v in cache["linhas"].items() if k in nomes}
     gravar_json(DADOS / "regioes.json", cache)
-    print(f"Trends: {feitas} linha(s) atualizada(s), {len(cache['linhas'])} no mapa")
+    print(f"Trends: {feitas} consulta(s) feita(s), {len(cache['linhas'])} linha(s) no mapa")
     return cache
 
 

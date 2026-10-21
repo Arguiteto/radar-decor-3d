@@ -239,6 +239,10 @@
       <div class="dica-globo" id="dica-globo" hidden></div>
     </div>
     <div class="globo-controles">
+      <div class="sub-abas" id="f-escopo" role="tablist" aria-label="Brasil ou mundo">
+        <button role="tab" data-escopo="brasil" aria-selected="true">Brasil</button>
+        <button role="tab" data-escopo="mundo" aria-selected="false">Mundo</button>
+      </div>
       <select id="f-globo" aria-label="Linha mostrada no globo"><option value="">Todas as linhas (média)</option></select>
       <p class="legenda" id="legenda-globo"></p>
       <ol class="top-estados" id="top-estados"></ol>
@@ -548,6 +552,35 @@ const CAPITAIS = {
   RS: [-30.03, -51.23], RO: [-8.76, -63.9], RR: [2.82, -60.67], SC: [-27.6, -48.55], SP: [-23.55, -46.63],
   SE: [-10.91, -37.07], TO: [-10.18, -48.33],
 };
+// centro aproximado de cada país (código ISO do Google Trends) e o nome em português
+const PAISES = {
+  US: [39.8, -98.6, "Estados Unidos"], CA: [56.1, -106.3, "Canadá"], MX: [23.6, -102.5, "México"],
+  GT: [15.8, -90.2, "Guatemala"], CR: [9.7, -83.8, "Costa Rica"], PA: [8.5, -80.8, "Panamá"],
+  DO: [18.7, -70.2, "República Dominicana"], PR: [18.2, -66.6, "Porto Rico"], CU: [21.5, -77.8, "Cuba"],
+  CO: [4.6, -74.3, "Colômbia"], VE: [6.4, -66.6, "Venezuela"], EC: [-1.8, -78.2, "Equador"],
+  PE: [-9.2, -75.0, "Peru"], BO: [-16.3, -63.6, "Bolívia"], BR: [-14.2, -51.9, "Brasil"],
+  PY: [-23.4, -58.4, "Paraguai"], UY: [-32.5, -55.8, "Uruguai"], AR: [-38.4, -63.6, "Argentina"],
+  CL: [-35.7, -71.5, "Chile"], GB: [55.4, -3.4, "Reino Unido"], IE: [53.4, -8.2, "Irlanda"],
+  PT: [39.4, -8.2, "Portugal"], ES: [40.5, -3.7, "Espanha"], FR: [46.2, 2.2, "França"],
+  BE: [50.5, 4.5, "Bélgica"], NL: [52.1, 5.3, "Holanda"], DE: [51.2, 10.5, "Alemanha"],
+  CH: [46.8, 8.2, "Suíça"], AT: [47.5, 14.6, "Áustria"], IT: [41.9, 12.6, "Itália"],
+  DK: [56.3, 9.5, "Dinamarca"], NO: [60.5, 8.5, "Noruega"], SE: [60.1, 18.6, "Suécia"],
+  FI: [61.9, 25.7, "Finlândia"], PL: [51.9, 19.1, "Polônia"], CZ: [49.8, 15.5, "Tchéquia"],
+  SK: [48.7, 19.7, "Eslováquia"], HU: [47.2, 19.5, "Hungria"], RO: [45.9, 24.97, "Romênia"],
+  BG: [42.7, 25.5, "Bulgária"], GR: [39.1, 21.8, "Grécia"], HR: [45.1, 15.2, "Croácia"],
+  RS: [44.0, 21.0, "Sérvia"], UA: [48.4, 31.2, "Ucrânia"], RU: [61.5, 105.3, "Rússia"],
+  TR: [38.96, 35.2, "Turquia"], IL: [31.0, 34.9, "Israel"], SA: [23.9, 45.1, "Arábia Saudita"],
+  AE: [23.4, 53.8, "Emirados Árabes"], EG: [26.8, 30.8, "Egito"], MA: [31.8, -7.1, "Marrocos"],
+  DZ: [28.0, 1.7, "Argélia"], NG: [9.1, 8.7, "Nigéria"], KE: [-0.02, 37.9, "Quênia"],
+  ZA: [-30.6, 22.9, "África do Sul"], AO: [-11.2, 17.9, "Angola"], MZ: [-18.7, 35.5, "Moçambique"],
+  IN: [20.6, 78.96, "Índia"], PK: [30.4, 69.3, "Paquistão"], BD: [23.7, 90.4, "Bangladesh"],
+  CN: [35.9, 104.2, "China"], JP: [36.2, 138.3, "Japão"], KR: [35.9, 127.8, "Coreia do Sul"],
+  TW: [23.7, 121.0, "Taiwan"], HK: [22.4, 114.1, "Hong Kong"], PH: [12.9, 121.8, "Filipinas"],
+  VN: [14.1, 108.3, "Vietnã"], TH: [15.9, 100.99, "Tailândia"], MY: [4.2, 101.98, "Malásia"],
+  SG: [1.35, 103.8, "Singapura"], ID: [-0.8, 113.9, "Indonésia"], AU: [-25.3, 133.8, "Austrália"],
+  NZ: [-40.9, 174.9, "Nova Zelândia"],
+};
+let escopoGlobo = "brasil";  // "brasil" (estados/cidades) ou "mundo" (países)
 const VERMELHO = [0.757, 0.224, 0.169];
 // ângulos que deixam o Brasil de frente (lat -14, lng -52), pela fórmula da doc do cobe
 const BRASIL = { phi: Math.PI - ((-52 * Math.PI) / 180 - Math.PI / 2), theta: (-16 * Math.PI) / 180 };
@@ -585,7 +618,12 @@ function modeloDaLinha(nome) {
 function conteudoDica(id) {
   const reg = dados.regioes.linhas, p = pontosGlobo;
   let titulo, linhas;
-  if (id.startsWith("uf")) {
+  if (id.startsWith("pa")) {
+    const iso = id.slice(2);
+    titulo = PAISES[iso][2];
+    linhas = Object.entries(reg).map(([n, r]) => [n, (r.paises || {})[iso] || 0]).filter(x => x[1]).sort((a, b) => b[1] - a[1]);
+    if (p.linha) linhas = [[p.linha, p.val[iso] || 0], ...linhas.filter(x => x[0] !== p.linha)];
+  } else if (id.startsWith("uf")) {
     const uf = id.slice(2);
     titulo = geo.ufs[uf].nome;
     linhas = Object.entries(reg).map(([n, r]) => [n, r.estados[uf] || 0]).filter(x => x[1]).sort((a, b) => b[1] - a[1]);
@@ -600,7 +638,7 @@ function conteudoDica(id) {
   return `<strong>${esc(titulo)}</strong>
     <ol>${linhas.slice(0, 3).map(([n, v]) => `<li>${esc(n)} <b>${v}</b></li>`).join("")}</ol>
     ${m ? `<div class="dica-modelo"><img src="${esc(m.imagem)}" alt=""><span><small>Em alta em ${esc(campea.toLowerCase())}</small>${esc(m.nome)}</span></div>` : ""}
-    <small class="dica-rodape">Clique para abrir no mapa</small>`;
+    ${id.startsWith("uf") ? `<small class="dica-rodape">Clique para abrir no mapa</small>` : ""}`;
 }
 
 function ligarDicaGlobo() {
@@ -659,6 +697,12 @@ async function montarMapa() {
     if (uf) { ufAtiva = uf; desenharMapa(); }
   });
 
+  for (const b of el("f-escopo").querySelectorAll("button")) b.addEventListener("click", () => {
+    escopoGlobo = b.dataset.escopo;
+    for (const o of el("f-escopo").querySelectorAll("button")) o.setAttribute("aria-selected", o === b);
+    desenharMapa();
+  });
+
   ligarDicaGlobo();
   desenharMapa();
 }
@@ -681,15 +725,16 @@ function montarNumeros() {
   requestAnimationFrame(passo);
 }
 
-/* valores por estado da linha escolhida, ou média de todas */
-function valoresEstados(linha) {
+/* valores por estado (campo "estados") ou por país (campo "paises") da linha escolhida, ou média de todas */
+function valoresDe(campo, linha) {
   const reg = dados.regioes.linhas;
-  if (linha) return reg[linha].estados;
-  const soma = {}, nomes = Object.keys(reg);
-  for (const n of nomes) for (const [uf, v] of Object.entries(reg[n].estados)) soma[uf] = (soma[uf] || 0) + v;
+  if (linha) return reg[linha][campo] || {};
+  const soma = {};
+  for (const r of Object.values(reg)) for (const [k, v] of Object.entries(r[campo] || {})) soma[k] = (soma[k] || 0) + v;
   const max = Math.max(1, ...Object.values(soma));
-  return Object.fromEntries(Object.entries(soma).map(([uf, v]) => [uf, Math.round(v / max * 100)]));
+  return Object.fromEntries(Object.entries(soma).map(([k, v]) => [k, Math.round(v / max * 100)]));
 }
+const valoresEstados = linha => valoresDe("estados", linha);
 
 function desenharMapa() {
   const linha = el("f-mapa").value;
@@ -708,23 +753,40 @@ function desenharMapa() {
     p.querySelector("title").textContent = `${geo.ufs[p.dataset.uf].nome}: ${v || "sem dado"}`;
   }
 
-  // globo: cidades quando a linha tem, senão capitais dos estados
-  const cidades = info && info.cidades && info.cidades.filter(c => c.lat != null);
-  const pontos = cidades && cidades.length
-    ? cidades.map((c, i) => ({ id: "c" + i, location: [c.lat, c.lng], size: 0.008 + c.valor / 100 * 0.04 }))
-    : Object.entries(val).filter(([uf]) => CAPITAIS[uf]).map(([uf, v]) => ({ id: "uf" + uf, location: CAPITAIS[uf], size: 0.01 + v / 100 * 0.045 }));
-  pontosGlobo = { linha, cidades: cidades && cidades.length ? cidades : null, val };
-  el("legenda-globo").textContent = (cidades && cidades.length ? "Pontos = cidades" : "Pontos = estados") +
-    ", maior = mais busca · arraste para girar";
+  desenharGlobo(linha, val, info);
+  detalheEstado(linha, val);
+}
+
+/* pontos do globo: estados/cidades do Brasil ou países do mundo */
+function desenharGlobo(linha, valBrasil, info) {
+  let pontos, val, nomeDe, legenda;
+  if (escopoGlobo === "mundo") {
+    val = valoresDe("paises", linha);
+    pontos = Object.entries(val).filter(([iso]) => PAISES[iso])
+      .map(([iso, v]) => ({ id: "pa" + iso, location: PAISES[iso].slice(0, 2), size: 0.012 + v / 100 * 0.05 }));
+    pontosGlobo = { linha, cidades: null, val };
+    nomeDe = iso => PAISES[iso] ? PAISES[iso][2] : iso;
+    legenda = pontos.length ? "Pontos = países (termo em inglês), maior = mais busca · arraste para girar"
+                            : "Os países aparecem conforme o robô coleta (uma parte das linhas por dia)";
+  } else {
+    // cidades quando a linha tem, senão capitais dos estados
+    val = valBrasil;
+    const cidades = info && info.cidades && info.cidades.filter(c => c.lat != null);
+    pontos = cidades && cidades.length
+      ? cidades.map((c, i) => ({ id: "c" + i, location: [c.lat, c.lng], size: 0.008 + c.valor / 100 * 0.04 }))
+      : Object.entries(val).filter(([uf]) => CAPITAIS[uf]).map(([uf, v]) => ({ id: "uf" + uf, location: CAPITAIS[uf], size: 0.01 + v / 100 * 0.045 }));
+    pontosGlobo = { linha, cidades: cidades && cidades.length ? cidades : null, val };
+    nomeDe = uf => geo.ufs[uf] ? geo.ufs[uf].nome : uf;
+    legenda = (cidades && cidades.length ? "Pontos = cidades" : "Pontos = estados") + ", maior = mais busca · arraste para girar";
+  }
+  el("legenda-globo").textContent = legenda;
   // limpa e recria: assim os <div> do cobe ficam na mesma ordem da lista (usado no passar do mouse)
   if (globo) { globo.update({ markers: [] }); globo.update({ markers: pontos }); }
   idsGlobo = pontos.map(p => p.id);
 
   const top = Object.entries(val).sort((a, b) => b[1] - a[1]).slice(0, 5);
-  el("top-estados").innerHTML = top.map(([uf, v], i) =>
-    `<li title="${esc(geo.ufs[uf] ? geo.ufs[uf].nome : uf)}: ${v}"><b>${i + 1}º</b>${esc(geo.ufs[uf] ? geo.ufs[uf].nome : uf)}</li>`).join("");
-
-  detalheEstado(linha, val);
+  el("top-estados").innerHTML = top.map(([k, v], i) =>
+    `<li title="${esc(nomeDe(k))}: ${v}"><b>${i + 1}º</b>${esc(nomeDe(k))}</li>`).join("");
 }
 
 function detalheEstado(linha, val) {
@@ -775,11 +837,18 @@ function iniciarGlobo() {
   const quadro = agora => {
     // com outra aba aberta o globo fica parado (não gasta bateria)
     if (el("aba-globo").hidden) return requestAnimationFrame(quadro);
-    // sem ninguém arrastando, volta devagar para o Brasil e balança de leve
     if (!arrastando && agora - solto > 2000) {
-      const balanco = Math.sin(agora / 3000) * 0.12;
-      phi += (alvoPhi + balanco - phi) * 0.025;
-      theta += (alvoTheta - theta) * 0.025;
+      if (escopoGlobo === "mundo") {
+        // mundo: gira devagar para mostrar todos os países
+        phi += 0.0025;
+        theta += (0.25 - theta) * 0.02;
+      } else {
+        // Brasil: volta devagar para o Brasil e balança de leve
+        const balanco = Math.sin(agora / 3000) * 0.12;
+        const alvo = alvoPhi + balanco + Math.round((phi - alvoPhi) / (2 * Math.PI)) * 2 * Math.PI;
+        phi += (alvo - phi) * 0.025;
+        theta += (alvoTheta - theta) * 0.025;
+      }
     }
     globo.update({ phi, theta });
     requestAnimationFrame(quadro);
@@ -935,19 +1004,25 @@ function sugestoes() {
 /* sub-abas de Modelos: "Em alta em 3 meses" + uma por linha */
 let subAba = "";
 function montarSubAbas() {
-  const PREFIXO = "Profissão: ";
+  // grupos pelo prefixo do nome da linha ("Geek: Anime" → grupo Geek); sem prefixo = Produtos
+  const ROTULOS = { "Geek": "Geek", "Profissão": "Profissões", "Personalizado": "Personalizados" };
   const comModelos = dados.linhas.filter(l => l.modelos.length);
   const botao = (v, r, n) =>
     `<button role="tab" data-sub="${esc(v)}" aria-selected="${v === subAba}">${esc(r)}<small>${n}</small></button>`;
+  const grupos = new Map([["Produtos", []]]);
+  for (const l of comModelos) {
+    const [pre, resto] = l.nome.includes(": ") ? l.nome.split(": ") : ["", l.nome];
+    const g = ROTULOS[pre] || "Produtos";
+    if (!grupos.has(g)) grupos.set(g, []);
+    grupos.get(g).push({ nome: l.nome, rotulo: g === "Produtos" ? l.nome : resto });
+  }
   // ordem alfabética dentro de cada grupo, para achar fácil entre dezenas de abas
-  const grupo = (titulo, lista, tirar) => lista.length ? `<div class="sub-grupo"><span>${titulo}</span>` +
-    lista.sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"))
-      .map(l => botao(l.nome, tirar ? l.nome.slice(PREFIXO.length) : l.nome, modelosDaAba(l.nome).length)).join("") +
-    `</div>` : "";
   el("sub-abas").innerHTML =
     `<div class="sub-grupo">${botao("", "Em alta em 3 meses", dados.printables.length)}</div>` +
-    grupo("Produtos", comModelos.filter(l => !l.nome.startsWith(PREFIXO)), false) +
-    grupo("Profissões", comModelos.filter(l => l.nome.startsWith(PREFIXO)), true);
+    [...grupos].filter(([, lista]) => lista.length).map(([titulo, lista]) =>
+      `<div class="sub-grupo"><span>${titulo}</span>` +
+      lista.sort((a, b) => a.rotulo.localeCompare(b.rotulo, "pt-BR"))
+        .map(l => botao(l.nome, l.rotulo, modelosDaAba(l.nome).length)).join("") + `</div>`).join("");
   for (const b of el("sub-abas").querySelectorAll("button")) b.addEventListener("click", () => {
     subAba = b.dataset.sub;
     for (const o of el("sub-abas").querySelectorAll("button")) o.setAttribute("aria-selected", o === b);

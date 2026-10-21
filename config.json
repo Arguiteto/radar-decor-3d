@@ -986,6 +986,209 @@
       ]
     },
     {
+      "nome": "Geek: Anime e mangá",
+      "printables": [
+        "anime figure",
+        "anime decor",
+        "manga"
+      ],
+      "palavras": [
+        "anime",
+        "manga",
+        "otaku",
+        "chibi"
+      ],
+      "google": [
+        "decoração anime",
+        "luminária anime",
+        "boneco anime 3d",
+        "quadro anime",
+        "chaveiro anime",
+        "presente otaku",
+        "estatueta anime"
+      ]
+    },
+    {
+      "nome": "Geek: Games e consoles",
+      "printables": [
+        "game controller holder",
+        "gaming decor",
+        "retro game"
+      ],
+      "palavras": [
+        "gaming",
+        "gamer",
+        "controller",
+        "console",
+        "retro",
+        "arcade"
+      ],
+      "google": [
+        "decoração gamer",
+        "presente gamer",
+        "quadro gamer",
+        "luminária gamer",
+        "suporte para controle",
+        "decoração retrô games",
+        "mini fliperama"
+      ]
+    },
+    {
+      "nome": "Geek: Filmes e séries",
+      "printables": [
+        "movie prop",
+        "tv series decor",
+        "fan art"
+      ],
+      "palavras": [
+        "movie",
+        "film",
+        "series",
+        "fan art",
+        "fanart",
+        "prop"
+      ],
+      "google": [
+        "decoração geek",
+        "presente geek",
+        "presente nerd",
+        "decoração nerd",
+        "colecionáveis geek",
+        "réplica de filme"
+      ]
+    },
+    {
+      "nome": "Geek: Super-heróis",
+      "printables": [
+        "superhero",
+        "hero bust"
+      ],
+      "palavras": [
+        "superhero",
+        "hero",
+        "marvel",
+        "dc"
+      ],
+      "google": [
+        "decoração super-herói",
+        "boneco super-herói",
+        "luminária super-herói",
+        "quadro de super-herói",
+        "chaveiro super-herói"
+      ]
+    },
+    {
+      "nome": "Geek: Cosplay e réplicas",
+      "printables": [
+        "cosplay prop",
+        "cosplay helmet",
+        "mask"
+      ],
+      "palavras": [
+        "cosplay",
+        "helmet",
+        "mask",
+        "replica",
+        "armor"
+      ],
+      "google": [
+        "cosplay 3d",
+        "máscara cosplay",
+        "capacete cosplay",
+        "acessório de cosplay",
+        "réplica de capacete"
+      ]
+    },
+    {
+      "nome": "Geek: Colecionáveis e expositores",
+      "printables": [
+        "figure display stand",
+        "funko display",
+        "collectible display"
+      ],
+      "palavras": [
+        "display",
+        "stand",
+        "shelf",
+        "collectible",
+        "funko"
+      ],
+      "google": [
+        "expositor de funko",
+        "prateleira para colecionáveis",
+        "suporte para action figure",
+        "expositor de miniaturas",
+        "nicho para colecionáveis",
+        "base para estatueta"
+      ]
+    },
+    {
+      "nome": "Geek: Luminárias e letreiros",
+      "printables": [
+        "character lamp",
+        "pixel art lamp",
+        "logo lamp"
+      ],
+      "palavras": [
+        "lamp",
+        "light",
+        "pixel",
+        "led",
+        "neon"
+      ],
+      "google": [
+        "luminária geek",
+        "luminária 3d personagem",
+        "letreiro neon geek",
+        "luminária pixel art",
+        "luminária de personagem"
+      ]
+    },
+    {
+      "nome": "Geek: Pixel art e retrô",
+      "printables": [
+        "pixel art",
+        "8 bit"
+      ],
+      "palavras": [
+        "pixel",
+        "8bit",
+        "8-bit",
+        "retro"
+      ],
+      "google": [
+        "quadro pixel art",
+        "decoração pixel art",
+        "chaveiro pixel art",
+        "decoração retrô",
+        "porta copos pixel art"
+      ]
+    },
+    {
+      "nome": "Geek: Nerd e ciência",
+      "printables": [
+        "science decor",
+        "space",
+        "astronaut"
+      ],
+      "palavras": [
+        "space",
+        "astronaut",
+        "planet",
+        "rocket",
+        "science",
+        "nasa"
+      ],
+      "google": [
+        "decoração espacial",
+        "luminária planeta",
+        "astronauta decorativo",
+        "foguete decorativo",
+        "presente nerd ciência",
+        "sistema solar 3d"
+      ]
+    },
+    {
       "nome": "Profissão: Odontologia",
       "printables": [
         "tooth",
@@ -1696,7 +1899,8 @@
     }
   ],
   "dias_alerta_data": 120,
-  "trends_minutos": 15,
+  "trends_minutos": 18,
+  "trends_mundo": true,
   "virais_dias": 90,
   "virais_paginas": 5,
   "youtube_bases": [
