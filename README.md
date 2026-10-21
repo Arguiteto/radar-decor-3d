@@ -42,6 +42,15 @@ O Google Trends não tem API oficial e bloqueia quem consulta rápido demais. Po
 2. Mande qualquer mensagem para o seu bot e abra `https://api.telegram.org/bot<TOKEN>/getUpdates` para ver o `chat.id`.
 3. No GitHub: **Settings → Secrets and variables → Actions → New repository secret**, crie `TELEGRAM_TOKEN` e `TELEGRAM_CHAT_ID`.
 
+## Opcional: Cults3D (o que os makers compram)
+
+No Cults, cada download de um arquivo pago é uma compra. O robô pega os arquivos pagos com mais downloads e os mais baixados de cada linha. Fica desligado até existirem os secrets:
+
+- `CULTS_USUARIO`: o seu apelido no Cults.
+- `CULTS_CHAVE`: a chave criada em cults3d.com/en/api/keys, só com permissão **Read**.
+
+Aparece em **Virais → Mais comprados no Cults** e em **Modelos → (uma linha) → No Cults**.
+
 ## Opcional: Pinterest Trends (Brasil)
 
 O código já está pronto e fica desligado até existirem as chaves. Quando o app em developers.pinterest.com for aprovado, crie os secrets (Settings → Secrets and variables → Actions):

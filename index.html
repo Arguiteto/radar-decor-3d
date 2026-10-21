@@ -131,6 +131,7 @@
 
   .virais-grade { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 14px; align-items: start; }
   .virais-lado { display: grid; gap: 14px; }
+  .cults-linha { margin-bottom: 14px; }
   #f-virais { margin: 0; padding: 0; }
   @media (max-width: 860px) { .virais-grade { grid-template-columns: 1fr; } }
   .sub-abas { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px; scrollbar-width: thin; }
@@ -202,6 +203,11 @@
     <div class="virais-grade">
       <div class="modelos" id="virais"></div>
       <aside class="virais-lado">
+        <section class="card" id="card-cults" hidden>
+          <h2>Mais comprados no Cults</h2>
+          <p class="dica">Arquivos pagos com mais downloads (cada download de pago é uma compra). Mostra o que outros makers estão comprando para imprimir e vender.</p>
+          <ul class="lista" id="cults"></ul>
+        </section>
         <section class="card" id="card-pinterest" hidden>
           <h2>No Pinterest (Brasil)</h2>
           <div class="sub-abas" id="f-pinterest" role="tablist" aria-label="Tipo de tendência do Pinterest">
@@ -298,6 +304,7 @@
     </select>
     <select id="f-cat"><option value="">Todas as categorias</option></select>
   </div>
+  <div id="cults-linha"></div>
   <div class="modelos" id="modelos"></div>
   </section>
 </main>
@@ -708,11 +715,34 @@ function montarVirais() {
   }
 
   montarPinterest();
+  montarCults();
 
   const yt = (dados.youtube || []).slice().sort((a, b) => b.nova - a.nova);
   el("youtube").innerHTML = yt.slice(0, 16).map(y =>
     `<li><a href="https://www.youtube.com/results?search_query=${encodeURIComponent(y.busca)}" target="_blank" rel="noopener">${esc(y.busca)}</a>` +
     (y.nova ? `<span class="chip novo">nova</span>` : "") + `</li>`).join("") || `<li class="vazio">Nada hoje.</li>`;
+}
+
+/* Cults3D: só aparece quando o robô tiver a chave */
+const itemCults = m =>
+  `<li><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.nome)}</a>` +
+  `<span class="sobe">${m.downloads.toLocaleString("pt-BR")}${m.gratis ? "" : ` · US$ ${m.preco_usd.toFixed(2)}`}</span></li>`;
+
+function montarCults() {
+  const c = dados.cults;
+  if (!c || !c.ativo) return;
+  el("card-cults").hidden = false;
+  const lista = c.top_pagos.length ? c.top_pagos : c.top;
+  el("cults").innerHTML = lista.slice(0, 15).map(itemCults).join("") || `<li class="vazio">Nada hoje.</li>`;
+}
+
+function cultsDaLinha(nome) {
+  const c = dados.cults;
+  const lista = c && c.ativo && c.linhas && c.linhas[nome];
+  if (!lista || !lista.length) return "";
+  return `<section class="card cults-linha"><h2>No Cults: ${esc(nome.toLowerCase())}</h2>
+    <p class="dica">Mais baixados na busca do Cults. Com preço = arquivo pago (download é compra).</p>
+    <ul class="lista">${lista.slice(0, 8).map(itemCults).join("")}</ul></section>`;
 }
 
 /* Pinterest Trends: só aparece quando o robô tiver a chave */
@@ -804,6 +834,7 @@ function modelos() {
     (!q || (m.nome + " " + m.tags.join(" ") + " " + m.tags.map(tr).join(" ")).toLowerCase().includes(q)));
   el("modelos").innerHTML = lista.slice(0, 120).map(m => cartao(m, false)).join("")
     || `<p class="vazio">Nada com esse filtro.</p>`;
+  el("cults-linha").innerHTML = subAba ? cultsDaLinha(subAba) : "";
 }
 </script>
 </body>

@@ -539,6 +539,96 @@ def coletar_regioes(cfg, hoje):
     return cache
 
 
+# ---------- Cults3D (opcional) ----------
+#
+# Loja de arquivos 3D: em modelo pago, cada download é uma compra, então mostra o que os makers
+# estão comprando para imprimir. Desligado até existirem os secrets CULTS_USUARIO e CULTS_CHAVE
+# (chave de API só de leitura, criada em cults3d.com/en/api/keys). Doc: cults3d.com/en/pages/graphql
+
+CULTS_API = "https://cults3d.com/graphql"
+CULTS_CAMPOS = """
+  name(locale: EN) shortUrl illustrationImageUrl publishedAt
+  downloadsCount likesCount viewsCount tags(locale: EN)
+  price(currency: USD) { cents }
+  category { name(locale: EN) }
+  creator { nick }
+"""
+
+
+def cults(query, auth):
+    resp = baixar(CULTS_API, json.dumps({"query": query}),
+                  {"Content-Type": "application/json", "Authorization": f"Basic {auth}"})
+    if resp.get("errors"):
+        raise ValueError("; ".join(e.get("message", "?") for e in resp["errors"])[:200])
+    return resp["data"]
+
+
+def modelo_cults(c):
+    centavos = (c.get("price") or {}).get("cents") or 0
+    return {
+        "nome": c.get("name") or "",
+        "url": c.get("shortUrl") or "",
+        "imagem": c.get("illustrationImageUrl") or "",
+        "downloads": c.get("downloadsCount") or 0,
+        "curtidas": c.get("likesCount") or 0,
+        "visitas": c.get("viewsCount") or 0,
+        "preco_usd": round(centavos / 100, 2),
+        "gratis": centavos == 0,
+        "publicado": (c.get("publishedAt") or "")[:10],
+        "categoria": (c.get("category") or {}).get("name") or "",
+        "tags": [t.lower() for t in (c.get("tags") or [])][:10],
+        "autor": (c.get("creator") or {}).get("nick") or "",
+    }
+
+
+def coletar_cults(cfg):
+    usuario, chave = os.environ.get("CULTS_USUARIO"), os.environ.get("CULTS_CHAVE")
+    if not (usuario and chave):
+        return {"ativo": False, "motivo": "sem chave (CULTS_USUARIO / CULTS_CHAVE)"}
+    auth = base64.b64encode(f"{usuario}:{chave}".encode()).decode()
+
+    # ranking geral: tenta as ordenações da mais útil para a menos útil (a API não documenta todas)
+    top, ordem_usada, ultimo_erro = [], "", ""
+    for ordem in cfg.get("cults_ordens", ["BY_DOWNLOADS", "BY_SALES", "BY_LIKES"]):
+        try:
+            dados = cults(f"{{ creationsBatch(sort: {ordem}, limit: 60) {{ results {{ {CULTS_CAMPOS} }} }} }}", auth)
+            top = [modelo_cults(c) for c in dados["creationsBatch"]["results"]]
+            ordem_usada = ordem
+            break
+        except Exception as e:  # noqa: BLE001
+            ultimo_erro = str(e)
+            print(f"Cults: ordenação {ordem} não funcionou ({e})")
+        finally:
+            time.sleep(1)
+    if not top and "401" in ultimo_erro:
+        return {"ativo": False, "motivo": "chave recusada pelo Cults (confira usuário e chave)"}
+
+    # por linha: busca pelo mesmo termo em inglês usado no Printables
+    por_linha = {}
+    for linha in cfg["linhas"]:
+        termo = linha["printables"]
+        if not termo:
+            continue
+        print(f"Cults: linha {linha['nome']}")
+        try:
+            dados = cults(f'{{ creationsSearchBatch(query: {json.dumps(termo)}, limit: 30) '
+                          f'{{ results {{ {CULTS_CAMPOS} }} }} }}', auth)
+        except Exception as e:  # noqa: BLE001
+            print(f"  falhou: {e}")
+            continue
+        finally:
+            time.sleep(1)
+        modelos = [modelo_cults(c) for c in dados["creationsSearchBatch"]["results"]]
+        modelos.sort(key=lambda m: m["downloads"], reverse=True)
+        por_linha[linha["nome"]] = modelos[:12]
+
+    if not top and not por_linha:
+        return {"ativo": False, "motivo": "o Cults não devolveu dados (confira a chave)"}
+    pagos = sorted([m for m in top if not m["gratis"]], key=lambda m: m["downloads"], reverse=True)
+    print(f"Cults: {len(top)} no ranking ({ordem_usada}), {len(por_linha)} linhas")
+    return {"ativo": True, "ordem": ordem_usada, "top": top[:40], "top_pagos": pagos[:30], "linhas": por_linha}
+
+
 # ---------- Pinterest Trends (opcional) ----------
 #
 # Fica desligado até existirem os secrets no GitHub:
@@ -710,6 +800,7 @@ def main():
         "virais": virais,
         "youtube": youtube,
         "regioes": coletar_regioes(cfg, hoje),
+        "cults": coletar_cults(cfg),
         "pinterest": coletar_pinterest(cfg),
         "mercado_livre": coletar_mercado_livre(cfg),
         "datas": proximas_datas(cfg, hoje),
