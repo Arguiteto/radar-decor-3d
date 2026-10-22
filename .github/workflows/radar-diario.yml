@@ -2,7 +2,7 @@ name: Radar diário
 
 on:
   schedule:
-    - cron: "0 10 * * *"   # 7h no horário de Brasília
+    - cron: "17 9 * * *"   # ~6h17 em Brasília; GitHub pode atrasar
   workflow_dispatch:
 
 permissions:
