@@ -264,10 +264,505 @@
    "paises": {},
    "termo": "lembrancinha personalizada",
    "atualizado": "2026-10-21"
+  },
+  "Letreiros e logos de empresa": {
+   "estados": {
+    "RN": 100,
+    "PA": 62,
+    "SP": 51,
+    "PR": 51,
+    "MG": 51,
+    "RJ": 48,
+    "BA": 46,
+    "SC": 44,
+    "RS": 40,
+    "PE": 28,
+    "RO": 13,
+    "TO": 11,
+    "ES": 6,
+    "MT": 4,
+    "GO": 4,
+    "MS": 4,
+    "PB": 4,
+    "DF": 4,
+    "CE": 2
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "brinde personalizado",
+   "atualizado": "2026-10-22"
+  },
+  "Casamento": {
+   "estados": {
+    "MS": 100,
+    "MG": 68,
+    "ES": 55,
+    "BA": 53,
+    "MT": 47,
+    "PB": 47,
+    "DF": 47,
+    "SP": 46,
+    "GO": 44,
+    "CE": 39,
+    "PR": 36,
+    "SC": 33,
+    "RJ": 33,
+    "PE": 30,
+    "RS": 20,
+    "SE": 8,
+    "RO": 8,
+    "AL": 7,
+    "PI": 5,
+    "AM": 4,
+    "RN": 2,
+    "PA": 2,
+    "MA": 1
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "porta aliança",
+   "atualizado": "2026-10-22"
+  },
+  "Chá de bebê e maternidade": {
+   "estados": {
+    "SE": 100,
+    "PB": 76,
+    "PE": 54,
+    "GO": 47,
+    "SP": 33,
+    "PR": 27,
+    "BA": 27,
+    "SC": 25,
+    "MG": 21,
+    "RJ": 19,
+    "RS": 19,
+    "PI": 3,
+    "ES": 3,
+    "RN": 3,
+    "CE": 1,
+    "DF": 1,
+    "MS": 1,
+    "MA": 1,
+    "MT": 1,
+    "PA": 1
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "lembrancinha maternidade",
+   "atualizado": "2026-10-22"
+  },
+  "Porta-joias e bijuterias": {
+   "estados": {
+    "DF": 100,
+    "SP": 90,
+    "SC": 86,
+    "MG": 84,
+    "RJ": 82,
+    "PR": 80,
+    "GO": 78,
+    "AL": 74,
+    "PE": 72,
+    "RN": 71,
+    "PB": 71,
+    "MS": 68,
+    "RS": 68,
+    "MT": 64,
+    "ES": 64,
+    "BA": 61,
+    "MA": 60,
+    "CE": 53,
+    "PA": 49,
+    "AM": 49,
+    "SE": 9,
+    "PI": 7,
+    "RO": 5,
+    "TO": 5
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "porta joias",
+   "atualizado": "2026-10-22"
+  },
+  "Brincos e acessórios": {
+   "estados": {
+    "SC": 100,
+    "SP": 22
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "brinco 3d",
+   "atualizado": "2026-10-22"
+  },
+  "Porta-lápis e papelaria": {
+   "estados": {
+    "MA": 100,
+    "PE": 88,
+    "BA": 77,
+    "CE": 55,
+    "RJ": 55,
+    "SP": 48,
+    "MG": 48,
+    "PR": 33,
+    "RS": 33,
+    "PI": 11,
+    "PB": 11,
+    "RN": 7,
+    "DF": 7,
+    "AM": 3,
+    "PA": 3,
+    "SC": 3,
+    "ES": 3,
+    "GO": 3
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "porta lápis",
+   "atualizado": "2026-10-22"
+  },
+  "Marcadores de página e leitura": {
+   "estados": {
+    "RN": 100,
+    "DF": 92,
+    "RJ": 87,
+    "SC": 84,
+    "CE": 82,
+    "PA": 69,
+    "BA": 69,
+    "SP": 69,
+    "PE": 61,
+    "RS": 56,
+    "MG": 53,
+    "PR": 46,
+    "GO": 38,
+    "SE": 12,
+    "PB": 12,
+    "AM": 10,
+    "PI": 7,
+    "MS": 7,
+    "AL": 7,
+    "ES": 5,
+    "MA": 5,
+    "MT": 5
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "marcador de página",
+   "atualizado": "2026-10-22"
+  },
+  "Organizadores de mesa": {
+   "estados": {
+    "RO": 100,
+    "SP": 68,
+    "RJ": 64,
+    "PB": 62,
+    "BA": 54,
+    "PE": 54,
+    "DF": 53,
+    "SC": 51,
+    "MG": 49,
+    "MT": 49,
+    "RN": 48,
+    "PR": 46,
+    "CE": 46,
+    "GO": 45,
+    "RS": 44,
+    "ES": 41,
+    "MA": 36,
+    "MS": 7,
+    "AL": 3,
+    "SE": 3,
+    "PA": 3,
+    "AM": 2,
+    "PI": 2
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "organizador de mesa",
+   "atualizado": "2026-10-22"
+  },
+  "Organizadores de casa": {
+   "estados": {
+    "SC": 100,
+    "MT": 85,
+    "SP": 74,
+    "ES": 72,
+    "CE": 61,
+    "PR": 59,
+    "MG": 53,
+    "RS": 48,
+    "GO": 48,
+    "RJ": 46,
+    "PE": 44,
+    "BA": 44,
+    "SE": 8,
+    "TO": 8,
+    "MS": 8,
+    "DF": 8,
+    "PB": 8,
+    "RO": 6,
+    "PI": 6,
+    "MA": 4,
+    "AM": 4,
+    "AL": 4,
+    "RN": 4,
+    "PA": 2
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "organizador de cabos",
+   "atualizado": "2026-10-22"
+  },
+  "Suportes (celular, fone, controle)": {
+   "estados": {
+    "SP": 100,
+    "CE": 88,
+    "GO": 87,
+    "PB": 87,
+    "RJ": 86,
+    "PI": 85,
+    "PE": 83,
+    "MT": 83,
+    "RN": 81,
+    "AL": 80,
+    "DF": 79,
+    "SC": 78,
+    "MG": 78,
+    "PR": 76,
+    "ES": 74,
+    "SE": 74,
+    "MS": 71,
+    "BA": 70,
+    "RS": 70,
+    "TO": 68,
+    "MA": 64,
+    "RR": 64,
+    "PA": 63,
+    "AC": 63,
+    "RO": 56,
+    "AM": 56,
+    "AP": 53
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "suporte para celular",
+   "atualizado": "2026-10-22"
+  },
+  "Ganchos e cabideiros": {
+   "estados": {
+    "SP": 100,
+    "MG": 83,
+    "RJ": 75,
+    "SC": 16,
+    "MS": 16,
+    "RS": 8,
+    "DF": 8,
+    "PR": 8
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "porta chaves de parede",
+   "atualizado": "2026-10-22"
+  },
+  "Prateleiras": {
+   "estados": {
+    "MA": 100,
+    "RJ": 24,
+    "SP": 20,
+    "MG": 17
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "prateleira decorativa",
+   "atualizado": "2026-10-22"
+  },
+  "Porta-retratos e molduras": {
+   "estados": {
+    "RJ": 100,
+    "PB": 96,
+    "MG": 96,
+    "DF": 92,
+    "SC": 89,
+    "PR": 84,
+    "PE": 83,
+    "ES": 82,
+    "BA": 81,
+    "SP": 80,
+    "SE": 77,
+    "RN": 77,
+    "RS": 77,
+    "AL": 76,
+    "CE": 73,
+    "GO": 64,
+    "MS": 63,
+    "AP": 61,
+    "PI": 59,
+    "TO": 55,
+    "MT": 55,
+    "AM": 48,
+    "MA": 43,
+    "PA": 38,
+    "RO": 35,
+    "RR": 6,
+    "AC": 5
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "porta retrato",
+   "atualizado": "2026-10-22"
+  },
+  "Quadros e painéis geométricos": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "quadro geométrico",
+   "atualizado": "2026-10-22"
+  },
+  "Relógios de parede": {
+   "estados": {
+    "SE": 100,
+    "MG": 90,
+    "RJ": 85,
+    "SP": 81,
+    "ES": 80,
+    "SC": 79,
+    "PE": 75,
+    "RS": 73,
+    "PI": 71,
+    "CE": 70,
+    "PB": 67,
+    "PR": 65,
+    "BA": 65,
+    "AL": 64,
+    "GO": 62,
+    "MT": 61,
+    "AM": 59,
+    "MA": 56,
+    "PA": 55,
+    "MS": 43,
+    "RN": 42,
+    "DF": 41,
+    "RO": 9,
+    "TO": 4
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "relógio de parede",
+   "atualizado": "2026-10-22"
   }
  },
  "subindo": {
-  "atualizado": "",
-  "termos": []
+  "atualizado": "2026-10-22",
+  "termos": [
+   {
+    "busca": "makerword",
+    "alta": "Aumento repentino",
+    "base": "impressão 3d"
+   },
+   {
+    "busca": "maker word",
+    "alta": "Mais 3.700%",
+    "base": "impressão 3d"
+   },
+   {
+    "busca": "printables",
+    "alta": "Mais 50%",
+    "base": "impressão 3d"
+   },
+   {
+    "busca": "caneta de impressão 3d",
+    "alta": "Mais 50%",
+    "base": "impressão 3d"
+   },
+   {
+    "busca": "decoração setembro amarelo",
+    "alta": "Aumento repentino",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração outubro rosa",
+    "alta": "Mais 4.150%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração dia das crianças",
+    "alta": "Mais 1.700%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração halloween",
+    "alta": "Mais 1.050%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração de halloween",
+    "alta": "Mais 750%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração de natal 2026",
+    "alta": "Mais 700%",
+    "base": "decoração"
+   },
+   {
+    "busca": "natal decoração",
+    "alta": "Mais 650%",
+    "base": "decoração"
+   },
+   {
+    "busca": "natal",
+    "alta": "Mais 650%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração de natal",
+    "alta": "Mais 600%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração natalina",
+    "alta": "Mais 550%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração dia dos pais",
+    "alta": "Mais 450%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração para dia dos pais",
+    "alta": "Mais 400%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração para o dia dos pais",
+    "alta": "Mais 350%",
+    "base": "decoração"
+   },
+   {
+    "busca": "zara home",
+    "alta": "Mais 80%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração anos 80",
+    "alta": "Mais 80%",
+    "base": "decoração"
+   },
+   {
+    "busca": "camicado",
+    "alta": "Mais 60%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração toy story",
+    "alta": "Mais 50%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração rosa",
+    "alta": "Mais 40%",
+    "base": "decoração"
+   }
+  ]
  }
 }
