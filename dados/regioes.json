@@ -648,39 +648,412 @@
    "paises": {},
    "termo": "relógio de parede",
    "atualizado": "2026-10-22"
+  },
+  "Porta-velas e aromatizadores": {
+   "estados": {
+    "SP": 100,
+    "RJ": 100,
+    "DF": 95,
+    "SC": 95,
+    "MS": 88,
+    "PB": 86,
+    "MG": 84,
+    "RS": 75,
+    "PR": 75,
+    "MT": 68,
+    "CE": 61,
+    "BA": 61,
+    "PE": 54,
+    "PA": 50,
+    "GO": 47,
+    "TO": 11,
+    "PI": 11,
+    "RN": 9,
+    "SE": 9,
+    "AM": 9,
+    "AL": 6,
+    "ES": 6,
+    "MA": 4
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "porta vela",
+   "atualizado": "2026-10-23"
+  },
+  "Bandejas e porta-copos": {
+   "estados": {
+    "SC": 100,
+    "MS": 97,
+    "RS": 94,
+    "PI": 91,
+    "PR": 90,
+    "RO": 87,
+    "SP": 85,
+    "MG": 84,
+    "MT": 84,
+    "RJ": 82,
+    "RN": 81,
+    "DF": 75,
+    "ES": 72,
+    "GO": 71,
+    "PB": 60,
+    "CE": 52,
+    "BA": 48,
+    "AM": 46,
+    "PA": 45,
+    "PE": 39,
+    "TO": 11,
+    "SE": 8,
+    "AC": 8,
+    "AL": 8,
+    "MA": 5
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "porta copos",
+   "atualizado": "2026-10-23"
+  },
+  "Ímãs de geladeira": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "ímã de geladeira personalizado",
+   "atualizado": "2026-10-23"
+  },
+  "Cozinha e cortadores": {
+   "estados": {
+    "ES": 100,
+    "SP": 66,
+    "SC": 66,
+    "MG": 63,
+    "RJ": 60,
+    "PR": 50,
+    "GO": 46,
+    "RS": 36,
+    "MS": 10,
+    "DF": 6,
+    "PE": 6,
+    "RN": 6,
+    "MT": 3,
+    "BA": 3,
+    "CE": 3
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "cortador de biscoito",
+   "atualizado": "2026-10-23"
+  },
+  "Banheiro": {
+   "estados": {
+    "RR": 100,
+    "SP": 57,
+    "SC": 54,
+    "MG": 54,
+    "RJ": 47,
+    "PR": 47,
+    "RS": 44,
+    "GO": 42,
+    "MT": 40,
+    "DF": 35,
+    "BA": 35,
+    "PE": 34,
+    "CE": 33,
+    "AL": 33,
+    "RN": 31,
+    "MS": 27,
+    "PB": 26,
+    "ES": 25,
+    "SE": 25,
+    "AM": 25,
+    "MA": 21,
+    "PA": 19,
+    "PI": 18,
+    "TO": 4,
+    "AC": 3,
+    "RO": 2
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "saboneteira",
+   "atualizado": "2026-10-23"
+  },
+  "Bar e vinho": {
+   "estados": {
+    "AL": 100,
+    "PB": 76,
+    "SC": 74,
+    "RN": 70,
+    "RJ": 66,
+    "MS": 61,
+    "SP": 61,
+    "MG": 60,
+    "DF": 59,
+    "RS": 56,
+    "PR": 49,
+    "BA": 47,
+    "GO": 39,
+    "ES": 39,
+    "PE": 38,
+    "CE": 32,
+    "PA": 30,
+    "TO": 7,
+    "SE": 5,
+    "PI": 4,
+    "MT": 2,
+    "MA": 1
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "porta vinho",
+   "atualizado": "2026-10-23"
+  },
+  "Cofres": {
+   "estados": {
+    "AL": 100,
+    "BA": 24,
+    "MG": 14,
+    "RJ": 12,
+    "SP": 7,
+    "PB": 4,
+    "PE": 2,
+    "PA": 2
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "cofrinho personalizado",
+   "atualizado": "2026-10-23"
+  },
+  "Dioramas e suportes 1/64": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "diorama 1/64",
+   "atualizado": "2026-10-23"
+  },
+  "Miniaturas e geek": {
+   "estados": {
+    "RR": 100,
+    "PR": 2,
+    "MG": 1,
+    "SP": 1
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "miniatura personalizada",
+   "atualizado": "2026-10-23"
+  },
+  "RPG e jogos de tabuleiro": {
+   "estados": {
+    "RJ": 100,
+    "MG": 66,
+    "SP": 50
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "miniatura rpg",
+   "atualizado": "2026-10-23"
+  },
+  "Brinquedos e fidget": {
+   "estados": {
+    "RJ": 100,
+    "PR": 94,
+    "SP": 78,
+    "RS": 73,
+    "SC": 68,
+    "MG": 68,
+    "BA": 57,
+    "MS": 10,
+    "DF": 10,
+    "PE": 5,
+    "AM": 5,
+    "MT": 5,
+    "CE": 5,
+    "ES": 5,
+    "GO": 5,
+    "PA": 5
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "fidget toy",
+   "atualizado": "2026-10-23"
+  },
+  "Pets": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "placa de nome pet",
+   "atualizado": "2026-10-23"
+  },
+  "Times de futebol": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "escudo de time 3d",
+   "atualizado": "2026-10-23"
+  },
+  "Artigos religiosos": {
+   "estados": {
+    "ES": 100,
+    "PE": 84,
+    "MG": 64,
+    "CE": 56,
+    "BA": 56,
+    "PR": 48,
+    "SP": 36,
+    "RJ": 32,
+    "PI": 12,
+    "AL": 12,
+    "PB": 8,
+    "MA": 8,
+    "MT": 4,
+    "SC": 4,
+    "PA": 4,
+    "DF": 4,
+    "GO": 4
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "terço personalizado",
+   "atualizado": "2026-10-23"
+  },
+  "Natal": {
+   "estados": {
+    "RJ": 100,
+    "SP": 100,
+    "SC": 98,
+    "MG": 96,
+    "PR": 88,
+    "RS": 78,
+    "ES": 63,
+    "MS": 62,
+    "GO": 59,
+    "DF": 50,
+    "PA": 48,
+    "PE": 42,
+    "BA": 36,
+    "CE": 36,
+    "RO": 28,
+    "SE": 22,
+    "PB": 21,
+    "MT": 20,
+    "AL": 19,
+    "AM": 18,
+    "RN": 13,
+    "TO": 12,
+    "AP": 10,
+    "PI": 9,
+    "MA": 8
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "enfeite de natal",
+   "atualizado": "2026-10-23"
+  },
+  "Halloween": {
+   "estados": {
+    "PI": 100,
+    "RS": 63,
+    "SP": 46,
+    "PE": 44,
+    "SC": 34,
+    "RJ": 30,
+    "PR": 28,
+    "MG": 25,
+    "AP": 19,
+    "DF": 11,
+    "GO": 9,
+    "PA": 9,
+    "AL": 9,
+    "CE": 9,
+    "RO": 7,
+    "AM": 7,
+    "SE": 7,
+    "RN": 7,
+    "BA": 7,
+    "MS": 5,
+    "MT": 5,
+    "MA": 5,
+    "ES": 5,
+    "PB": 3
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "decoração de halloween",
+   "atualizado": "2026-10-23"
+  },
+  "Páscoa e outras datas": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "decoração de páscoa",
+   "atualizado": "2026-10-23"
+  },
+  "Carros e motos": {
+   "estados": {
+    "PI": 100
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "acessório para carro 3d",
+   "atualizado": "2026-10-23"
+  },
+  "Presentes personalizados": {
+   "estados": {
+    "SC": 100,
+    "RS": 83,
+    "MG": 80,
+    "SP": 73,
+    "PR": 70,
+    "MT": 69,
+    "RJ": 69,
+    "DF": 67,
+    "BA": 52,
+    "PB": 50,
+    "GO": 44,
+    "PE": 43,
+    "PA": 36,
+    "CE": 35,
+    "AL": 9,
+    "MS": 9,
+    "RO": 7,
+    "ES": 7,
+    "TO": 6,
+    "SE": 6,
+    "MA": 4,
+    "RN": 4
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente personalizado",
+   "atualizado": "2026-10-23"
   }
  },
  "subindo": {
-  "atualizado": "2026-10-22",
+  "atualizado": "2026-10-23",
   "termos": [
    {
     "busca": "makerword",
-    "alta": "Aumento repentino",
+    "alta": "Mais 500%",
     "base": "impressão 3d"
    },
    {
-    "busca": "maker word",
-    "alta": "Mais 3.700%",
+    "busca": "tripo",
+    "alta": "Mais 150%",
     "base": "impressão 3d"
    },
    {
     "busca": "printables",
-    "alta": "Mais 50%",
-    "base": "impressão 3d"
-   },
-   {
-    "busca": "caneta de impressão 3d",
-    "alta": "Mais 50%",
+    "alta": "Mais 90%",
     "base": "impressão 3d"
    },
    {
     "busca": "decoração setembro amarelo",
-    "alta": "Aumento repentino",
+    "alta": "Mais 4.350%",
     "base": "decoração"
    },
    {
     "busca": "decoração outubro rosa",
-    "alta": "Mais 4.150%",
+    "alta": "Mais 3.050%",
     "base": "decoração"
    },
    {
@@ -695,17 +1068,12 @@
    },
    {
     "busca": "decoração de halloween",
-    "alta": "Mais 750%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de natal 2026",
-    "alta": "Mais 700%",
+    "alta": "Mais 800%",
     "base": "decoração"
    },
    {
     "busca": "natal decoração",
-    "alta": "Mais 650%",
+    "alta": "Mais 700%",
     "base": "decoração"
    },
    {
@@ -714,8 +1082,13 @@
     "base": "decoração"
    },
    {
+    "busca": "decoração de natal 2026",
+    "alta": "Mais 650%",
+    "base": "decoração"
+   },
+   {
     "busca": "decoração de natal",
-    "alta": "Mais 600%",
+    "alta": "Mais 650%",
     "base": "decoração"
    },
    {
@@ -725,12 +1098,12 @@
    },
    {
     "busca": "decoração dia dos pais",
-    "alta": "Mais 450%",
+    "alta": "Mais 400%",
     "base": "decoração"
    },
    {
     "busca": "decoração para dia dos pais",
-    "alta": "Mais 400%",
+    "alta": "Mais 350%",
     "base": "decoração"
    },
    {
@@ -739,28 +1112,18 @@
     "base": "decoração"
    },
    {
-    "busca": "zara home",
-    "alta": "Mais 80%",
-    "base": "decoração"
-   },
-   {
     "busca": "decoração anos 80",
     "alta": "Mais 80%",
     "base": "decoração"
    },
    {
-    "busca": "camicado",
-    "alta": "Mais 60%",
+    "busca": "flor artificial para decoração",
+    "alta": "Mais 50%",
     "base": "decoração"
    },
    {
     "busca": "decoração toy story",
     "alta": "Mais 50%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração rosa",
-    "alta": "Mais 40%",
     "base": "decoração"
    }
   ]
