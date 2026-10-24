@@ -1026,44 +1026,420 @@
    "paises": {},
    "termo": "presente personalizado",
    "atualizado": "2026-10-23"
+  },
+  "Geek: Anime e mangá": {
+   "estados": {
+    "PI": 100,
+    "SP": 100,
+    "AM": 100
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "decoração anime",
+   "atualizado": "2026-10-24"
+  },
+  "Geek: Games e consoles": {
+   "estados": {
+    "SP": 100,
+    "PR": 100,
+    "MG": 57
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "decoração gamer",
+   "atualizado": "2026-10-24"
+  },
+  "Geek: Filmes e séries": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "decoração geek",
+   "atualizado": "2026-10-24"
+  },
+  "Geek: Super-heróis": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "decoração super-herói",
+   "atualizado": "2026-10-24"
+  },
+  "Geek: Cosplay e réplicas": {
+   "estados": {
+    "SP": 100,
+    "CE": 16,
+    "PR": 16
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "cosplay 3d",
+   "atualizado": "2026-10-24"
+  },
+  "Geek: Colecionáveis e expositores": {
+   "estados": {
+    "RJ": 100
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "expositor de funko",
+   "atualizado": "2026-10-24"
+  },
+  "Geek: Luminárias e letreiros": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "luminária geek",
+   "atualizado": "2026-10-24"
+  },
+  "Geek: Pixel art e retrô": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "quadro pixel art",
+   "atualizado": "2026-10-24"
+  },
+  "Geek: Nerd e ciência": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "decoração espacial",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Odontologia": {
+   "estados": {
+    "SP": 100
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para dentista",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Medicina": {
+   "estados": {
+    "GO": 100,
+    "PR": 50,
+    "MG": 44,
+    "SP": 38,
+    "RJ": 38,
+    "AM": 16,
+    "AL": 11,
+    "MA": 5,
+    "BA": 5,
+    "MT": 5,
+    "ES": 5,
+    "PA": 5,
+    "MS": 5,
+    "CE": 5,
+    "PE": 5
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para médico",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Enfermagem": {
+   "estados": {
+    "SC": 100
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para enfermeira",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Psicologia": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para psicóloga",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Fisioterapia": {
+   "estados": {
+    "CE": 100
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para fisioterapeuta",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Nutrição": {
+   "estados": {
+    "MT": 100,
+    "SP": 4
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para nutricionista",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Veterinária": {
+   "estados": {
+    "AC": 100
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para veterinário",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Farmácia": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para farmacêutico",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Direito": {
+   "estados": {
+    "RJ": 100,
+    "MG": 62,
+    "SP": 50,
+    "MS": 25,
+    "PA": 12,
+    "BA": 12
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para advogado",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Contabilidade e administração": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para contador",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Arquitetura e engenharia": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para arquiteto",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Professores": {
+   "estados": {
+    "PB": 100,
+    "RN": 94,
+    "MT": 70,
+    "CE": 68,
+    "PE": 66,
+    "SP": 64,
+    "RS": 62,
+    "MA": 62,
+    "MG": 60,
+    "PR": 60,
+    "BA": 58,
+    "ES": 58,
+    "SC": 58,
+    "RJ": 52,
+    "GO": 42,
+    "AP": 26,
+    "RR": 26,
+    "AL": 20,
+    "PI": 20,
+    "AC": 18,
+    "RO": 18,
+    "SE": 18,
+    "TO": 16,
+    "PA": 16,
+    "MS": 12,
+    "DF": 10,
+    "AM": 8
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para professor",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Beleza: salão e barbearia": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "decoração barbearia",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Beleza: unhas e estética": {
+   "estados": {
+    "SP": 100,
+    "GO": 90,
+    "RJ": 90,
+    "PR": 80,
+    "RS": 66,
+    "SC": 61,
+    "BA": 57,
+    "MG": 42,
+    "TO": 19,
+    "RN": 9,
+    "MS": 4,
+    "CE": 4,
+    "PB": 4,
+    "PA": 4,
+    "PE": 4,
+    "MA": 4,
+    "ES": 4,
+    "DF": 4
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "porta esmalte",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Confeitaria e gastronomia": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para confeiteira",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Segurança: polícia e bombeiros": {
+   "estados": {
+    "MG": 100,
+    "SP": 33
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para policial",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Tecnologia e programação": {
+   "estados": {
+    "ES": 100
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para programador",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Formatura (geral)": {
+   "estados": {
+    "PB": 100,
+    "PE": 83,
+    "ES": 57,
+    "CE": 54,
+    "BA": 42,
+    "RS": 26,
+    "MG": 21,
+    "RJ": 16,
+    "MA": 14,
+    "RN": 11,
+    "AL": 11,
+    "PI": 11,
+    "SE": 9,
+    "SP": 9,
+    "MS": 4,
+    "PA": 4,
+    "SC": 2,
+    "GO": 2,
+    "MT": 2,
+    "PR": 2,
+    "DF": 2
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "lembrancinha de formatura",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Influenciadores e criadores": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "presente para influenciadora",
+   "atualizado": "2026-10-24"
+  },
+  "Profissão: Streamers e setup gamer": {
+   "estados": {},
+   "cidades": [],
+   "paises": {},
+   "termo": "decoração setup streamer",
+   "atualizado": "2026-10-24"
+  },
+  "Personalizado: DTF e estampas": {
+   "estados": {
+    "PA": 100,
+    "RJ": 72,
+    "PE": 59,
+    "SP": 50,
+    "MG": 45,
+    "PB": 9,
+    "PR": 4,
+    "BA": 4,
+    "SC": 4,
+    "ES": 4,
+    "GO": 4,
+    "RS": 4
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "dtf personalizado",
+   "atualizado": "2026-10-24"
+  },
+  "Personalizado: Camisetas e moletons": {
+   "estados": {
+    "MT": 100,
+    "MS": 87,
+    "SP": 87,
+    "PR": 80,
+    "RS": 79,
+    "SC": 72,
+    "DF": 57,
+    "GO": 56,
+    "RO": 51,
+    "MG": 38,
+    "ES": 29,
+    "RN": 24,
+    "RJ": 23,
+    "BA": 19,
+    "PA": 19,
+    "CE": 13,
+    "PE": 12,
+    "TO": 6,
+    "PI": 2,
+    "PB": 2,
+    "AL": 2,
+    "SE": 2,
+    "MA": 1
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "camiseta personalizada",
+   "atualizado": "2026-10-24"
   }
  },
  "subindo": {
-  "atualizado": "2026-10-23",
+  "atualizado": "2026-10-24",
   "termos": [
    {
-    "busca": "makerword",
-    "alta": "Mais 500%",
+    "busca": "maker word",
+    "alta": "Mais 750%",
     "base": "impressão 3d"
    },
    {
-    "busca": "tripo",
+    "busca": "caneta de impressão 3d",
     "alta": "Mais 150%",
     "base": "impressão 3d"
    },
    {
-    "busca": "printables",
-    "alta": "Mais 90%",
+    "busca": "maker world",
+    "alta": "Mais 50%",
     "base": "impressão 3d"
    },
    {
-    "busca": "decoração setembro amarelo",
-    "alta": "Mais 4.350%",
+    "busca": "decoração outubro rosa",
+    "alta": "Mais 3.850%",
     "base": "decoração"
    },
    {
-    "busca": "decoração outubro rosa",
-    "alta": "Mais 3.050%",
+    "busca": "decoração setembro amarelo",
+    "alta": "Mais 3.550%",
     "base": "decoração"
    },
    {
     "busca": "decoração dia das crianças",
-    "alta": "Mais 1.700%",
+    "alta": "Mais 1.650%",
     "base": "decoração"
    },
    {
     "busca": "decoração halloween",
-    "alta": "Mais 1.050%",
+    "alta": "Mais 1.100%",
     "base": "decoração"
    },
    {
@@ -1072,18 +1448,18 @@
     "base": "decoração"
    },
    {
+    "busca": "natal",
+    "alta": "Mais 700%",
+    "base": "decoração"
+   },
+   {
     "busca": "natal decoração",
     "alta": "Mais 700%",
     "base": "decoração"
    },
    {
-    "busca": "natal",
-    "alta": "Mais 650%",
-    "base": "decoração"
-   },
-   {
     "busca": "decoração de natal 2026",
-    "alta": "Mais 650%",
+    "alta": "Mais 700%",
     "base": "decoração"
    },
    {
@@ -1097,18 +1473,18 @@
     "base": "decoração"
    },
    {
-    "busca": "decoração dia dos pais",
+    "busca": "decoração para o dia dos pais",
     "alta": "Mais 400%",
     "base": "decoração"
    },
    {
-    "busca": "decoração para dia dos pais",
+    "busca": "decoração dia dos pais",
     "alta": "Mais 350%",
     "base": "decoração"
    },
    {
-    "busca": "decoração para o dia dos pais",
-    "alta": "Mais 350%",
+    "busca": "decoração para dia dos pais",
+    "alta": "Mais 300%",
     "base": "decoração"
    },
    {
@@ -1117,13 +1493,18 @@
     "base": "decoração"
    },
    {
+    "busca": "decoração toy story",
+    "alta": "Mais 60%",
+    "base": "decoração"
+   },
+   {
     "busca": "flor artificial para decoração",
     "alta": "Mais 50%",
     "base": "decoração"
    },
    {
-    "busca": "decoração toy story",
-    "alta": "Mais 50%",
+    "busca": "decoração rosa",
+    "alta": "Mais 40%",
     "base": "decoração"
    }
   ]
