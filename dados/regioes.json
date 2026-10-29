@@ -862,26 +862,21 @@
   },
   "Chá de bebê e maternidade": {
    "estados": {
-    "SE": 100,
-    "PB": 76,
-    "PE": 54,
-    "GO": 47,
-    "SP": 33,
-    "PR": 27,
-    "BA": 27,
+    "PB": 100,
+    "GO": 55,
+    "PE": 55,
+    "SP": 39,
+    "BA": 34,
+    "MG": 32,
+    "PR": 30,
+    "RJ": 27,
     "SC": 25,
-    "MG": 21,
-    "RJ": 19,
-    "RS": 19,
-    "PI": 3,
-    "ES": 3,
-    "RN": 3,
-    "CE": 1,
-    "DF": 1,
-    "MS": 1,
-    "MA": 1,
-    "MT": 1,
-    "PA": 1
+    "RN": 6,
+    "PI": 6,
+    "MT": 4,
+    "ES": 2,
+    "CE": 2,
+    "RS": 2
    },
    "cidades": [],
    "paises": {
@@ -933,7 +928,7 @@
     "BR": 1
    },
    "termo": "lembrancinha maternidade",
-   "atualizado": "2026-10-22",
+   "atualizado": "2026-10-29",
    "termo_mundo": "baby shower",
    "atualizado_mundo": "2026-10-26"
   },
@@ -1508,33 +1503,33 @@
   },
   "Porta-retratos e molduras": {
    "estados": {
-    "RJ": 100,
-    "PB": 96,
-    "MG": 96,
-    "DF": 92,
-    "SC": 89,
-    "PR": 84,
-    "PE": 83,
-    "ES": 82,
+    "PB": 100,
+    "RJ": 98,
+    "MG": 95,
+    "SC": 91,
+    "DF": 89,
+    "PR": 83,
+    "PE": 81,
     "BA": 81,
-    "SP": 80,
-    "SE": 77,
-    "RN": 77,
-    "RS": 77,
-    "AL": 76,
-    "CE": 73,
-    "GO": 64,
-    "MS": 63,
-    "AP": 61,
-    "PI": 59,
-    "TO": 55,
-    "MT": 55,
-    "AM": 48,
-    "MA": 43,
-    "PA": 38,
-    "RO": 35,
-    "RR": 6,
-    "AC": 5
+    "SP": 81,
+    "AL": 81,
+    "RR": 81,
+    "SE": 78,
+    "ES": 78,
+    "CE": 77,
+    "RS": 75,
+    "RN": 71,
+    "MS": 67,
+    "AP": 66,
+    "GO": 63,
+    "PI": 61,
+    "MT": 57,
+    "AM": 49,
+    "TO": 48,
+    "MA": 46,
+    "RO": 42,
+    "PA": 36,
+    "AC": 6
    },
    "cidades": [],
    "paises": {
@@ -1570,7 +1565,7 @@
     "PL": 1
    },
    "termo": "porta retrato",
-   "atualizado": "2026-10-22",
+   "atualizado": "2026-10-29",
    "termo_mundo": "photo frame",
    "atualizado_mundo": "2026-10-26"
   },
@@ -1585,36 +1580,37 @@
     "CA": 2
    },
    "termo": "quadro geométrico",
-   "atualizado": "2026-10-22",
+   "atualizado": "2026-10-29",
    "termo_mundo": "geometric wall art",
    "atualizado_mundo": "2026-10-26"
   },
   "Relógios de parede": {
    "estados": {
     "SE": 100,
-    "MG": 90,
-    "RJ": 85,
-    "SP": 81,
-    "ES": 80,
-    "SC": 79,
-    "PE": 75,
-    "RS": 73,
-    "PI": 71,
-    "CE": 70,
-    "PB": 67,
-    "PR": 65,
-    "BA": 65,
-    "AL": 64,
-    "GO": 62,
-    "MT": 61,
-    "AM": 59,
-    "MA": 56,
-    "PA": 55,
-    "MS": 43,
-    "RN": 42,
-    "DF": 41,
-    "RO": 9,
-    "TO": 4
+    "MG": 70,
+    "SC": 70,
+    "PE": 70,
+    "SP": 64,
+    "RJ": 62,
+    "PI": 60,
+    "RS": 58,
+    "CE": 58,
+    "PR": 56,
+    "BA": 52,
+    "AL": 51,
+    "ES": 50,
+    "PA": 48,
+    "AM": 47,
+    "MA": 47,
+    "PB": 46,
+    "GO": 45,
+    "MT": 42,
+    "MS": 37,
+    "RN": 37,
+    "DF": 36,
+    "AP": 10,
+    "RO": 6,
+    "TO": 5
    },
    "cidades": [],
    "paises": {
@@ -1663,35 +1659,36 @@
     "BR": 1
    },
    "termo": "relógio de parede",
-   "atualizado": "2026-10-22",
+   "atualizado": "2026-10-29",
    "termo_mundo": "wall clock",
    "atualizado_mundo": "2026-10-26"
   },
   "Porta-velas e aromatizadores": {
    "estados": {
     "SP": 100,
-    "RJ": 100,
-    "DF": 95,
-    "SC": 95,
-    "MS": 88,
-    "PB": 86,
-    "MG": 84,
-    "RS": 75,
-    "PR": 75,
-    "MT": 68,
-    "CE": 61,
-    "BA": 61,
-    "PE": 54,
-    "PA": 50,
-    "GO": 47,
-    "TO": 11,
-    "PI": 11,
-    "RN": 9,
-    "SE": 9,
-    "AM": 9,
-    "AL": 6,
+    "DF": 91,
+    "RJ": 91,
+    "SC": 86,
+    "MG": 80,
+    "PA": 77,
+    "RS": 73,
+    "PR": 71,
+    "GO": 62,
+    "CE": 60,
+    "BA": 55,
+    "PE": 53,
+    "MS": 13,
+    "MT": 11,
+    "AL": 8,
+    "SE": 8,
+    "TO": 8,
+    "PB": 8,
+    "RN": 8,
+    "PI": 8,
+    "RO": 6,
     "ES": 6,
-    "MA": 4
+    "MA": 4,
+    "AM": 2
    },
    "cidades": [],
    "paises": {
@@ -1730,37 +1727,37 @@
     "ID": 1
    },
    "termo": "porta vela",
-   "atualizado": "2026-10-23",
+   "atualizado": "2026-10-29",
    "termo_mundo": "candle holder",
    "atualizado_mundo": "2026-10-26"
   },
   "Bandejas e porta-copos": {
    "estados": {
     "SC": 100,
-    "MS": 97,
-    "RS": 94,
-    "PI": 91,
-    "PR": 90,
-    "RO": 87,
-    "SP": 85,
-    "MG": 84,
-    "MT": 84,
-    "RJ": 82,
-    "RN": 81,
-    "DF": 75,
+    "RS": 95,
+    "MS": 90,
+    "PR": 89,
+    "RO": 88,
+    "MT": 83,
+    "MG": 82,
+    "SP": 80,
+    "RJ": 78,
+    "RN": 77,
+    "GO": 77,
+    "DF": 73,
     "ES": 72,
-    "GO": 71,
-    "PB": 60,
-    "CE": 52,
-    "BA": 48,
-    "AM": 46,
-    "PA": 45,
-    "PE": 39,
-    "TO": 11,
-    "SE": 8,
-    "AC": 8,
+    "PI": 66,
+    "PB": 59,
+    "BA": 53,
+    "CE": 51,
+    "AM": 43,
+    "PE": 43,
+    "PA": 41,
+    "TO": 13,
+    "AC": 9,
     "AL": 8,
-    "MA": 5
+    "MA": 6,
+    "SE": 5
    },
    "cidades": [],
    "paises": {
@@ -1819,7 +1816,7 @@
     "JP": 1
    },
    "termo": "porta copos",
-   "atualizado": "2026-10-23",
+   "atualizado": "2026-10-29",
    "termo_mundo": "coaster",
    "atualizado_mundo": "2026-10-26"
   },
@@ -1879,27 +1876,30 @@
     "BR": 1
    },
    "termo": "ímã de geladeira personalizado",
-   "atualizado": "2026-10-23",
+   "atualizado": "2026-10-29",
    "termo_mundo": "fridge magnet",
    "atualizado_mundo": "2026-10-26"
   },
   "Cozinha e cortadores": {
    "estados": {
-    "ES": 100,
-    "SP": 66,
-    "SC": 66,
-    "MG": 63,
-    "RJ": 60,
-    "PR": 50,
-    "GO": 46,
-    "RS": 36,
-    "MS": 10,
-    "DF": 6,
-    "PE": 6,
-    "RN": 6,
-    "MT": 3,
-    "BA": 3,
-    "CE": 3
+    "SP": 100,
+    "SC": 95,
+    "RJ": 81,
+    "PR": 81,
+    "MG": 68,
+    "GO": 68,
+    "BA": 54,
+    "RS": 13,
+    "RN": 9,
+    "MS": 9,
+    "PE": 9,
+    "AL": 9,
+    "CE": 9,
+    "DF": 9,
+    "PB": 4,
+    "MT": 4,
+    "PA": 4,
+    "ES": 4
    },
    "cidades": [],
    "paises": {
@@ -1957,38 +1957,37 @@
     "TW": 2
    },
    "termo": "cortador de biscoito",
-   "atualizado": "2026-10-23",
+   "atualizado": "2026-10-29",
    "termo_mundo": "cookie cutter",
    "atualizado_mundo": "2026-10-26"
   },
   "Banheiro": {
    "estados": {
-    "RR": 100,
-    "SP": 57,
-    "SC": 54,
-    "MG": 54,
-    "RJ": 47,
-    "PR": 47,
-    "RS": 44,
-    "GO": 42,
-    "MT": 40,
-    "DF": 35,
-    "BA": 35,
-    "PE": 34,
-    "CE": 33,
-    "AL": 33,
-    "RN": 31,
-    "MS": 27,
-    "PB": 26,
-    "ES": 25,
-    "SE": 25,
-    "AM": 25,
-    "MA": 21,
-    "PA": 19,
-    "PI": 18,
-    "TO": 4,
-    "AC": 3,
-    "RO": 2
+    "SP": 100,
+    "SC": 94,
+    "MG": 92,
+    "PR": 85,
+    "RJ": 83,
+    "RS": 78,
+    "GO": 74,
+    "MS": 69,
+    "MT": 69,
+    "ES": 68,
+    "DF": 67,
+    "PE": 63,
+    "SE": 61,
+    "PB": 61,
+    "BA": 60,
+    "RN": 56,
+    "AL": 49,
+    "CE": 47,
+    "AM": 39,
+    "PI": 38,
+    "MA": 32,
+    "PA": 32,
+    "AC": 7,
+    "TO": 7,
+    "RO": 7
    },
    "cidades": [],
    "paises": {
@@ -2025,34 +2024,34 @@
     "TR": 1
    },
    "termo": "saboneteira",
-   "atualizado": "2026-10-23",
+   "atualizado": "2026-10-29",
    "termo_mundo": "soap dish",
    "atualizado_mundo": "2026-10-26"
   },
   "Bar e vinho": {
    "estados": {
-    "AL": 100,
-    "PB": 76,
-    "SC": 74,
-    "RN": 70,
-    "RJ": 66,
-    "MS": 61,
-    "SP": 61,
-    "MG": 60,
-    "DF": 59,
-    "RS": 56,
-    "PR": 49,
-    "BA": 47,
-    "GO": 39,
-    "ES": 39,
-    "PE": 38,
-    "CE": 32,
-    "PA": 30,
-    "TO": 7,
-    "SE": 5,
-    "PI": 4,
-    "MT": 2,
-    "MA": 1
+    "PB": 100,
+    "MS": 90,
+    "AL": 88,
+    "SC": 83,
+    "SP": 72,
+    "RJ": 70,
+    "MG": 65,
+    "DF": 63,
+    "ES": 62,
+    "RS": 62,
+    "RN": 59,
+    "PR": 57,
+    "BA": 55,
+    "MT": 45,
+    "GO": 42,
+    "MA": 39,
+    "CE": 37,
+    "PE": 36,
+    "SE": 9,
+    "TO": 6,
+    "PA": 3,
+    "AM": 3
    },
    "cidades": [],
    "paises": {
@@ -2073,20 +2072,19 @@
     "IT": 2
    },
    "termo": "porta vinho",
-   "atualizado": "2026-10-23",
+   "atualizado": "2026-10-29",
    "termo_mundo": "wine holder",
    "atualizado_mundo": "2026-10-26"
   },
   "Cofres": {
    "estados": {
-    "AL": 100,
-    "BA": 24,
-    "MG": 14,
-    "RJ": 12,
-    "SP": 7,
-    "PB": 4,
-    "PE": 2,
-    "PA": 2
+    "BA": 100,
+    "MG": 50,
+    "SP": 20,
+    "PE": 10,
+    "PB": 10,
+    "PA": 10,
+    "CE": 10
    },
    "cidades": [],
    "paises": {
@@ -2140,12 +2138,14 @@
     "JP": 1
    },
    "termo": "cofrinho personalizado",
-   "atualizado": "2026-10-23",
+   "atualizado": "2026-10-29",
    "termo_mundo": "piggy bank",
    "atualizado_mundo": "2026-10-26"
   },
   "Dioramas e suportes 1/64": {
-   "estados": {},
+   "estados": {
+    "SP": 100
+   },
    "cidades": [],
    "paises": {
     "NL": 100,
@@ -2155,7 +2155,7 @@
     "US": 33
    },
    "termo": "diorama 1/64",
-   "atualizado": "2026-10-23",
+   "atualizado": "2026-10-29",
    "termo_mundo": "1/64 diorama",
    "atualizado_mundo": "2026-10-26"
   },
@@ -4567,106 +4567,96 @@
   }
  },
  "subindo": {
-  "atualizado": "2026-10-28",
+  "atualizado": "2026-10-29",
   "termos": [
    {
-    "busca": "makerword",
-    "alta": "Aumento repentino",
-    "base": "impressão 3d"
-   },
-   {
-    "busca": "freecad",
-    "alta": "Aumento repentino",
-    "base": "impressão 3d"
-   },
-   {
-    "busca": "printables",
-    "alta": "Mais 250%",
-    "base": "impressão 3d"
-   },
-   {
     "busca": "maker word",
-    "alta": "Mais 100%",
+    "alta": "Mais 200%",
     "base": "impressão 3d"
    },
    {
-    "busca": "snapmaker u1",
-    "alta": "Mais 80%",
+    "busca": "thangs",
+    "alta": "Mais 150%",
+    "base": "impressão 3d"
+   },
+   {
+    "busca": "ultimaker cura",
+    "alta": "Mais 90%",
+    "base": "impressão 3d"
+   },
+   {
+    "busca": "tripo",
+    "alta": "Mais 70%",
     "base": "impressão 3d"
    },
    {
     "busca": "caneta de impressão 3d",
-    "alta": "Mais 60%",
-    "base": "impressão 3d"
-   },
-   {
-    "busca": "caneta acrilica",
     "alta": "Mais 50%",
     "base": "impressão 3d"
    },
    {
-    "busca": "cults3d",
-    "alta": "Mais 40%",
-    "base": "impressão 3d"
+    "busca": "vila natalina decoração",
+    "alta": "Mais 4.050%",
+    "base": "decoração"
    },
    {
-    "busca": "decoração outubro rosa",
-    "alta": "Mais 3.300%",
+    "busca": "decoração para outubro rosa",
+    "alta": "Mais 2.400%",
     "base": "decoração"
    },
    {
     "busca": "decoração setembro amarelo",
-    "alta": "Mais 2.800%",
+    "alta": "Mais 2.400%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração outubro rosa",
+    "alta": "Mais 2.300%",
     "base": "decoração"
    },
    {
     "busca": "decoração dia das crianças",
-    "alta": "Mais 1.500%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração halloween",
-    "alta": "Mais 1.150%",
+    "alta": "Mais 1.850%",
     "base": "decoração"
    },
    {
     "busca": "decoração arvore de natal",
-    "alta": "Mais 950%",
+    "alta": "Mais 1.250%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração halloween",
+    "alta": "Mais 1.250%",
     "base": "decoração"
    },
    {
     "busca": "decoração de halloween",
-    "alta": "Mais 900%",
-    "base": "decoração"
-   },
-   {
-    "busca": "vila natalina decoração",
-    "alta": "Mais 850%",
+    "alta": "Mais 950%",
     "base": "decoração"
    },
    {
     "busca": "decoração de natal",
-    "alta": "Mais 700%",
-    "base": "decoração"
-   },
-   {
-    "busca": "natal decoração",
-    "alta": "Mais 700%",
-    "base": "decoração"
-   },
-   {
-    "busca": "natal",
-    "alta": "Mais 700%",
+    "alta": "Mais 800%",
     "base": "decoração"
    },
    {
     "busca": "decoração de natal 2026",
-    "alta": "Mais 650%",
+    "alta": "Mais 750%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração natal",
+    "alta": "Mais 750%",
+    "base": "decoração"
+   },
+   {
+    "busca": "natal",
+    "alta": "Mais 750%",
     "base": "decoração"
    },
    {
     "busca": "decoração natalina",
-    "alta": "Mais 600%",
+    "alta": "Mais 550%",
     "base": "decoração"
    },
    {
@@ -4675,13 +4665,18 @@
     "base": "decoração"
    },
    {
-    "busca": "decoração dia dos pais",
+    "busca": "quando começa a decoração de natal",
     "alta": "Mais 200%",
     "base": "decoração"
    },
    {
+    "busca": "decoração dia dos pais",
+    "alta": "Mais 180%",
+    "base": "decoração"
+   },
+   {
     "busca": "decoração anos 80",
-    "alta": "Mais 70%",
+    "alta": "Mais 80%",
     "base": "decoração"
    },
    {
@@ -4690,22 +4685,7 @@
     "base": "decoração"
    },
    {
-    "busca": "decoração formatura",
-    "alta": "Mais 50%",
-    "base": "decoração"
-   },
-   {
-    "busca": "flor artificial para decoração",
-    "alta": "Mais 40%",
-    "base": "decoração"
-   },
-   {
     "busca": "decoração rosa",
-    "alta": "Mais 40%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração toy story",
     "alta": "Mais 40%",
     "base": "decoração"
    }
