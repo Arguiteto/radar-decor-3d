@@ -3405,7 +3405,9 @@
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Farmácia": {
-   "estados": {},
+   "estados": {
+    "MG": 100
+   },
    "cidades": [],
    "paises": {
     "MT": 100,
@@ -3445,18 +3447,17 @@
     "MX": 1
    },
    "termo": "presente para farmacêutico",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "pharmacy",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Direito": {
    "estados": {
     "RJ": 100,
-    "MG": 62,
-    "SP": 50,
-    "MS": 25,
-    "PA": 12,
-    "BA": 12
+    "MG": 45,
+    "SP": 36,
+    "MA": 9,
+    "RS": 9
    },
    "cidades": [],
    "paises": {
@@ -3468,12 +3469,14 @@
     "CA": 44
    },
    "termo": "presente para advogado",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "scales of justice",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Contabilidade e administração": {
-   "estados": {},
+   "estados": {
+    "SP": 100
+   },
    "cidades": [],
    "paises": {
     "SH": 100,
@@ -3526,12 +3529,14 @@
     "JP": 1
    },
    "termo": "presente para contador",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "calculator",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Arquitetura e engenharia": {
-   "estados": {},
+   "estados": {
+    "SP": 100
+   },
    "cidades": [],
    "paises": {
     "SH": 100,
@@ -3593,39 +3598,36 @@
     "IR": 2
    },
    "termo": "presente para arquiteto",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "architect",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Professores": {
    "estados": {
-    "PB": 100,
-    "RN": 94,
-    "MT": 70,
-    "CE": 68,
-    "PE": 66,
-    "SP": 64,
-    "RS": 62,
-    "MA": 62,
-    "MG": 60,
-    "PR": 60,
-    "BA": 58,
-    "ES": 58,
-    "SC": 58,
-    "RJ": 52,
-    "GO": 42,
-    "AP": 26,
-    "RR": 26,
-    "AL": 20,
-    "PI": 20,
-    "AC": 18,
-    "RO": 18,
-    "SE": 18,
-    "TO": 16,
-    "PA": 16,
-    "MS": 12,
-    "DF": 10,
-    "AM": 8
+    "AL": 100,
+    "MT": 63,
+    "CE": 62,
+    "ES": 59,
+    "PE": 55,
+    "MA": 55,
+    "SP": 54,
+    "SC": 54,
+    "PR": 49,
+    "RS": 49,
+    "MG": 47,
+    "RJ": 47,
+    "BA": 45,
+    "PA": 42,
+    "GO": 24,
+    "PI": 11,
+    "SE": 9,
+    "MS": 9,
+    "RO": 9,
+    "RN": 8,
+    "PB": 6,
+    "TO": 6,
+    "AM": 6,
+    "DF": 3
    },
    "cidades": [],
    "paises": {
@@ -3659,12 +3661,14 @@
     "TW": 2
    },
    "termo": "presente para professor",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "teacher gift",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Beleza: salão e barbearia": {
-   "estados": {},
+   "estados": {
+    "SE": 100
+   },
    "cidades": [],
    "paises": {
     "SK": 100,
@@ -3727,30 +3731,25 @@
     "RU": 2
    },
    "termo": "decoração barbearia",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "barber",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Beleza: unhas e estética": {
    "estados": {
     "SP": 100,
-    "GO": 90,
     "RJ": 90,
-    "PR": 80,
-    "RS": 66,
-    "SC": 61,
-    "BA": 57,
-    "MG": 42,
-    "TO": 19,
-    "RN": 9,
-    "MS": 4,
+    "PR": 72,
+    "RS": 63,
+    "PE": 63,
+    "MG": 54,
+    "SC": 45,
+    "BA": 45,
+    "GO": 4,
+    "DF": 4,
     "CE": 4,
-    "PB": 4,
     "PA": 4,
-    "PE": 4,
-    "MA": 4,
-    "ES": 4,
-    "DF": 4
+    "MA": 4
    },
    "cidades": [],
    "paises": {
@@ -3762,12 +3761,14 @@
     "CA": 6
    },
    "termo": "porta esmalte",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "nail polish holder",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Confeitaria e gastronomia": {
-   "estados": {},
+   "estados": {
+    "BA": 100
+   },
    "cidades": [],
    "paises": {
     "ZM": 100,
@@ -3837,14 +3838,15 @@
     "JP": 1
    },
    "termo": "presente para confeiteira",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "chef",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Segurança: polícia e bombeiros": {
    "estados": {
-    "MG": 100,
-    "SP": 33
+    "MA": 100,
+    "MG": 21,
+    "SP": 8
    },
    "cidades": [],
    "paises": {
@@ -3902,14 +3904,12 @@
     "JP": 1
    },
    "termo": "presente para policial",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "police",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Tecnologia e programação": {
-   "estados": {
-    "ES": 100
-   },
+   "estados": {},
    "cidades": [],
    "paises": {
     "DK": 100,
@@ -3978,33 +3978,34 @@
     "JP": 1
    },
    "termo": "presente para programador",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "programmer",
    "atualizado_mundo": "2026-10-27"
   },
   "Profissão: Formatura (geral)": {
    "estados": {
-    "PB": 100,
-    "PE": 83,
-    "ES": 57,
-    "CE": 54,
-    "BA": 42,
-    "RS": 26,
-    "MG": 21,
-    "RJ": 16,
-    "MA": 14,
-    "RN": 11,
-    "AL": 11,
-    "PI": 11,
-    "SE": 9,
-    "SP": 9,
-    "MS": 4,
-    "PA": 4,
-    "SC": 2,
-    "GO": 2,
-    "MT": 2,
-    "PR": 2,
-    "DF": 2
+    "SE": 100,
+    "PE": 79,
+    "PB": 67,
+    "CE": 31,
+    "BA": 29,
+    "SC": 18,
+    "RS": 13,
+    "MG": 13,
+    "PI": 12,
+    "RN": 10,
+    "MA": 10,
+    "AL": 10,
+    "SP": 6,
+    "ES": 3,
+    "GO": 3,
+    "PA": 3,
+    "AM": 3,
+    "MS": 1,
+    "DF": 1,
+    "MT": 1,
+    "RJ": 1,
+    "PR": 1
    },
    "cidades": [],
    "paises": {
@@ -4053,7 +4054,7 @@
     "PL": 1
    },
    "termo": "lembrancinha de formatura",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "graduation",
    "atualizado_mundo": "2026-10-27"
   },
@@ -4070,7 +4071,7 @@
     "IN": 5
    },
    "termo": "presente para influenciadora",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "phone tripod mount",
    "atualizado_mundo": "2026-10-27"
   },
@@ -4148,258 +4149,272 @@
     "IR": 3
    },
    "termo": "decoração setup streamer",
-   "atualizado": "2026-10-24",
+   "atualizado": "2026-10-31",
    "termo_mundo": "streamer",
    "atualizado_mundo": "2026-10-27"
   },
   "Personalizado: DTF e estampas": {
    "estados": {
-    "PA": 100,
-    "RJ": 72,
-    "PE": 59,
-    "SP": 50,
-    "MG": 45,
-    "PB": 9,
-    "PR": 4,
-    "BA": 4,
-    "SC": 4,
-    "ES": 4,
-    "GO": 4,
-    "RS": 4
+    "SC": 100,
+    "RJ": 84,
+    "MG": 84,
+    "SP": 76,
+    "ES": 7,
+    "MT": 7,
+    "BA": 7,
+    "PE": 7,
+    "PR": 7,
+    "GO": 7,
+    "RS": 7
    },
    "cidades": [],
    "paises": {},
    "termo": "dtf personalizado",
-   "atualizado": "2026-10-24"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Camisetas e moletons": {
    "estados": {
     "MT": 100,
-    "MS": 87,
-    "SP": 87,
-    "PR": 80,
-    "RS": 79,
-    "SC": 72,
-    "DF": 57,
-    "GO": 56,
-    "RO": 51,
+    "SP": 91,
+    "MS": 85,
+    "PR": 84,
+    "RS": 82,
+    "SC": 79,
+    "DF": 65,
+    "GO": 52,
     "MG": 38,
-    "ES": 29,
-    "RN": 24,
-    "RJ": 23,
-    "BA": 19,
+    "ES": 22,
+    "RJ": 21,
     "PA": 19,
-    "CE": 13,
-    "PE": 12,
+    "BA": 17,
+    "PE": 16,
+    "CE": 11,
     "TO": 6,
+    "RO": 5,
+    "RN": 2,
     "PI": 2,
     "PB": 2,
-    "AL": 2,
     "SE": 2,
+    "AL": 1,
     "MA": 1
    },
    "cidades": [],
    "paises": {},
    "termo": "camiseta personalizada",
-   "atualizado": "2026-10-24"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Uniformes": {
    "estados": {
-    "PA": 100,
-    "GO": 90,
-    "MG": 85,
-    "SC": 66,
-    "SP": 66,
-    "BA": 57,
-    "PR": 57,
-    "RS": 52,
-    "RJ": 47,
-    "AM": 19,
-    "MT": 9,
-    "MS": 9,
-    "CE": 4,
-    "ES": 4
+    "AM": 100,
+    "MT": 75,
+    "PA": 50,
+    "MG": 47,
+    "GO": 38,
+    "SP": 38,
+    "RS": 36,
+    "RJ": 33,
+    "PR": 30,
+    "SC": 30,
+    "BA": 25,
+    "MS": 5,
+    "ES": 2,
+    "DF": 2,
+    "CE": 2
    },
    "cidades": [],
    "paises": {},
    "termo": "uniforme personalizado",
-   "atualizado": "2026-10-25"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Canecas e copos": {
    "estados": {
     "ES": 100,
-    "MG": 94,
-    "RJ": 93,
-    "SC": 90,
-    "PR": 88,
-    "SP": 82,
+    "AC": 96,
+    "MG": 91,
+    "SC": 91,
+    "RJ": 91,
+    "RO": 89,
+    "PR": 83,
     "BA": 81,
-    "DF": 79,
-    "RO": 78,
-    "CE": 78,
-    "PI": 78,
-    "RN": 77,
-    "PA": 76,
-    "MT": 76,
-    "AL": 75,
-    "PB": 75,
+    "SP": 79,
+    "CE": 79,
+    "PB": 77,
+    "RN": 73,
     "RS": 73,
-    "PE": 72,
-    "MA": 72,
-    "GO": 70,
-    "AM": 66,
+    "DF": 73,
+    "PA": 72,
+    "MT": 71,
+    "PE": 70,
+    "GO": 69,
+    "AL": 68,
+    "PI": 68,
+    "MA": 65,
     "TO": 64,
-    "MS": 58,
-    "SE": 56,
-    "AC": 11,
-    "AP": 8,
-    "RR": 7
+    "AM": 58,
+    "MS": 53,
+    "SE": 44,
+    "AP": 6
    },
-   "cidades": [],
+   "cidades": [
+    {
+     "nome": "Itaúna",
+     "valor": 100,
+     "lat": -20.0822785,
+     "lng": -44.5805309
+    },
+    {
+     "nome": "Barbacena",
+     "valor": 97,
+     "lat": -21.2219344,
+     "lng": -43.7706811
+    }
+   ],
    "paises": {},
    "termo": "caneca personalizada",
-   "atualizado": "2026-10-25"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Garrafas e squeezes": {
    "estados": {
-    "SP": 100
+    "SC": 100,
+    "SP": 88
    },
    "cidades": [],
    "paises": {},
    "termo": "squeeze personalizado",
-   "atualizado": "2026-10-25"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Ecobags e sacolas": {
    "estados": {
-    "RJ": 100,
-    "ES": 73,
-    "SP": 70,
-    "DF": 67,
-    "PE": 64,
-    "RS": 64,
-    "BA": 55,
-    "MG": 52,
-    "CE": 50,
-    "PR": 38,
-    "SC": 38,
-    "RN": 8,
-    "PB": 8,
+    "PB": 100,
+    "RN": 75,
+    "RJ": 71,
+    "ES": 68,
+    "PE": 57,
+    "SP": 53,
+    "RS": 53,
+    "DF": 51,
+    "BA": 40,
+    "MG": 40,
+    "SC": 40,
+    "GO": 33,
+    "PR": 26,
     "AL": 8,
-    "PI": 5,
-    "MA": 5,
-    "MT": 2,
-    "MS": 2,
-    "GO": 2
+    "CE": 6,
+    "MS": 4,
+    "MA": 4,
+    "PA": 2,
+    "MT": 2
    },
    "cidades": [],
    "paises": {},
    "termo": "ecobag personalizada",
-   "atualizado": "2026-10-25"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Almofadas e têxteis": {
    "estados": {
+    "SP": 100,
+    "RS": 100,
     "SC": 100,
-    "SP": 68,
-    "RS": 62,
-    "RJ": 62,
-    "MG": 56,
-    "PR": 50,
-    "PA": 12,
-    "DF": 6,
-    "MT": 6,
-    "BA": 6
+    "RJ": 90,
+    "MG": 90,
+    "PR": 72,
+    "PB": 9,
+    "DF": 9,
+    "BA": 9,
+    "GO": 9
    },
    "cidades": [],
    "paises": {},
    "termo": "almofada personalizada",
-   "atualizado": "2026-10-25"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Bonés e acessórios": {
    "estados": {
-    "MG": 100,
-    "SC": 93,
-    "RS": 87,
-    "RJ": 75,
-    "SP": 68,
-    "BA": 62,
-    "AL": 18,
-    "RN": 12,
-    "ES": 12,
-    "CE": 12,
-    "PE": 6,
-    "PB": 6,
-    "GO": 6,
-    "PR": 6,
-    "DF": 6,
-    "MT": 6,
-    "PA": 6
+    "SC": 100,
+    "MG": 82,
+    "PE": 82,
+    "RJ": 76,
+    "BA": 76,
+    "RS": 70,
+    "SP": 64,
+    "AL": 11,
+    "ES": 11,
+    "PA": 5,
+    "CE": 5,
+    "RN": 5,
+    "MS": 5,
+    "PR": 5,
+    "GO": 5,
+    "PB": 5,
+    "DF": 5
    },
    "cidades": [],
    "paises": {},
    "termo": "boné personalizado",
-   "atualizado": "2026-10-25"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Quadros, pôsteres e azulejos": {
    "estados": {
     "DF": 100,
-    "SC": 87,
-    "ES": 83,
-    "SP": 80,
-    "RJ": 80,
-    "RS": 77,
-    "MG": 74,
-    "BA": 67,
-    "GO": 67,
-    "PR": 64,
-    "CE": 54,
-    "SE": 16,
-    "MT": 9,
+    "RJ": 84,
+    "ES": 84,
+    "SC": 81,
+    "RS": 78,
+    "SP": 75,
+    "GO": 75,
+    "MG": 75,
+    "MA": 75,
+    "BA": 68,
+    "PR": 62,
+    "PA": 59,
+    "CE": 56,
+    "SE": 15,
+    "MT": 12,
+    "TO": 12,
+    "RN": 9,
+    "PI": 9,
+    "AM": 9,
     "PB": 6,
-    "PA": 6,
-    "MA": 6,
-    "RN": 6,
     "PE": 6,
-    "MS": 3,
-    "AM": 3
+    "MS": 6
    },
    "cidades": [],
    "paises": {},
    "termo": "quadro personalizado",
-   "atualizado": "2026-10-25"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Adesivos e vinil": {
    "estados": {
     "RJ": 100,
-    "PI": 100,
-    "SP": 96,
-    "MG": 92,
-    "ES": 88,
+    "SP": 94,
+    "PI": 93,
+    "ES": 89,
+    "MG": 88,
     "MS": 87,
-    "MA": 85,
-    "PR": 83,
-    "MT": 82,
-    "SC": 76,
-    "BA": 76,
-    "PA": 76,
-    "PE": 72,
-    "DF": 70,
-    "RS": 65,
-    "RN": 64,
+    "MA": 84,
+    "PA": 81,
+    "BA": 77,
+    "AL": 76,
+    "MT": 76,
+    "DF": 75,
+    "PR": 74,
+    "RO": 74,
+    "SC": 73,
+    "PE": 69,
+    "RS": 66,
+    "GO": 65,
+    "PB": 63,
     "SE": 62,
-    "GO": 61,
-    "AL": 61,
-    "PB": 60,
-    "CE": 57,
-    "AM": 50,
-    "AP": 12,
-    "AC": 11,
-    "TO": 10,
-    "RO": 7
+    "RN": 58,
+    "AM": 55,
+    "CE": 48,
+    "AP": 15,
+    "TO": 11
    },
    "cidades": [],
    "paises": {},
    "termo": "adesivo personalizado",
-   "atualizado": "2026-10-25"
+   "atualizado": "2026-10-31"
   },
   "Personalizado: Papelaria e convites": {
    "estados": {
@@ -4563,131 +4578,56 @@
   }
  },
  "subindo": {
-  "atualizado": "2026-10-30",
+  "atualizado": "2026-10-31",
   "termos": [
    {
-    "busca": "maker word",
-    "alta": "Aumento repentino",
+    "busca": "maker world",
+    "alta": "Mais 130%",
     "base": "impressão 3d"
    },
    {
-    "busca": "tripo",
-    "alta": "Mais 80%",
+    "busca": "thangs",
+    "alta": "Mais 130%",
     "base": "impressão 3d"
    },
    {
     "busca": "caneta de impressão 3d",
-    "alta": "Mais 60%",
+    "alta": "Mais 40%",
     "base": "impressão 3d"
    },
    {
-    "busca": "ideias de decoração halloween",
-    "alta": "Aumento repentino",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de porta halloween",
-    "alta": "Aumento repentino",
-    "base": "decoração"
-   },
-   {
-    "busca": "vila natalina decoração",
-    "alta": "Mais 4.450%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de halloween simples",
-    "alta": "Mais 4.300%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de novembro azul",
-    "alta": "Mais 3.650%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração halloween para imprimir",
-    "alta": "Mais 3.300%",
-    "base": "decoração"
-   },
-   {
-    "busca": "outubro rosa decoração",
-    "alta": "Mais 2.350%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de halloween para imprimir",
-    "alta": "Mais 2.000%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração porta halloween",
-    "alta": "Mais 2.000%",
+    "busca": "decoração outubro rosa",
+    "alta": "Mais 4.550%",
     "base": "decoração"
    },
    {
     "busca": "decoração novembro azul",
-    "alta": "Mais 1.950%",
+    "alta": "Mais 2.650%",
     "base": "decoração"
    },
    {
-    "busca": "decoração halloween ideias",
-    "alta": "Mais 1.850%",
+    "busca": "decoração para outubro rosa",
+    "alta": "Mais 2.400%",
     "base": "decoração"
    },
    {
-    "busca": "decoração de natal barata e criativa",
+    "busca": "decoração setembro amarelo",
     "alta": "Mais 1.650%",
     "base": "decoração"
    },
    {
-    "busca": "ideias de decoração de natal",
-    "alta": "Mais 1.600%",
-    "base": "decoração"
-   },
-   {
     "busca": "decoração dia das crianças",
-    "alta": "Mais 1.550%",
-    "base": "decoração"
-   },
-   {
-    "busca": "papai noel grande para decoração",
-    "alta": "Mais 1.550%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de árvore de natal",
-    "alta": "Mais 1.450%",
-    "base": "decoração"
-   },
-   {
-    "busca": "papai noel decoração",
-    "alta": "Mais 1.350%",
-    "base": "decoração"
-   },
-   {
-    "busca": "arvore de natal",
-    "alta": "Mais 1.350%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de arvore de natal",
-    "alta": "Mais 1.350%",
-    "base": "decoração"
-   },
-   {
-    "busca": "halloween decoração",
-    "alta": "Mais 1.250%",
+    "alta": "Mais 1.650%",
     "base": "decoração"
    },
    {
     "busca": "decoração arvore de natal",
-    "alta": "Mais 1.150%",
+    "alta": "Mais 1.300%",
     "base": "decoração"
    },
    {
-    "busca": "decoração halloween simples",
-    "alta": "Mais 1.050%",
+    "busca": "decoração halloween",
+    "alta": "Mais 1.200%",
     "base": "decoração"
    },
    {
@@ -4696,13 +4636,83 @@
     "base": "decoração"
    },
    {
-    "busca": "decoração de halloween faça você mesmo",
-    "alta": "Mais 950%",
+    "busca": "decoração de natal",
+    "alta": "Mais 850%",
     "base": "decoração"
    },
    {
-    "busca": "decoração de natal simples",
+    "busca": "vila natalina decoração",
     "alta": "Mais 800%",
+    "base": "decoração"
+   },
+   {
+    "busca": "natal decoração",
+    "alta": "Mais 800%",
+    "base": "decoração"
+   },
+   {
+    "busca": "natal",
+    "alta": "Mais 750%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração natalina",
+    "alta": "Mais 650%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração de natal 2026",
+    "alta": "Mais 600%",
+    "base": "decoração"
+   },
+   {
+    "busca": "quando começa a decoração de natal",
+    "alta": "Mais 600%",
+    "base": "decoração"
+   },
+   {
+    "busca": "vila de natal decoração",
+    "alta": "Mais 350%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração para o dia dos pais",
+    "alta": "Mais 150%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração dia dos pais",
+    "alta": "Mais 120%",
+    "base": "decoração"
+   },
+   {
+    "busca": "zara home",
+    "alta": "Mais 90%",
+    "base": "decoração"
+   },
+   {
+    "busca": "camicado",
+    "alta": "Mais 80%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração anos 80",
+    "alta": "Mais 80%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração anos 2000",
+    "alta": "Mais 60%",
+    "base": "decoração"
+   },
+   {
+    "busca": "flor artificial para decoração",
+    "alta": "Mais 60%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração formatura",
+    "alta": "Mais 60%",
     "base": "decoração"
    }
   ]
