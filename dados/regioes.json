@@ -1860,30 +1860,31 @@
     "RS": 1
    },
    "termo": "ímã de geladeira personalizado",
-   "atualizado": "2026-10-29",
+   "atualizado": "2026-11-04",
    "termo_mundo": "fridge magnet",
    "atualizado_mundo": "2026-11-01"
   },
   "Cozinha e cortadores": {
    "estados": {
-    "SP": 100,
-    "SC": 95,
-    "RJ": 81,
-    "PR": 81,
-    "MG": 68,
-    "GO": 68,
-    "BA": 54,
-    "RS": 13,
-    "RN": 9,
-    "MS": 9,
-    "PE": 9,
-    "AL": 9,
-    "CE": 9,
-    "DF": 9,
-    "PB": 4,
-    "MT": 4,
-    "PA": 4,
-    "ES": 4
+    "MT": 100,
+    "DF": 88,
+    "SP": 84,
+    "PR": 69,
+    "RJ": 65,
+    "CE": 65,
+    "SC": 61,
+    "RS": 57,
+    "MG": 53,
+    "PB": 11,
+    "RN": 7,
+    "ES": 7,
+    "AL": 7,
+    "MS": 7,
+    "PE": 7,
+    "GO": 7,
+    "BA": 3,
+    "PA": 3,
+    "MA": 3
    },
    "cidades": [],
    "paises": {
@@ -1933,37 +1934,37 @@
     "RU": 1
    },
    "termo": "cortador de biscoito",
-   "atualizado": "2026-10-29",
+   "atualizado": "2026-11-04",
    "termo_mundo": "cookie cutter",
    "atualizado_mundo": "2026-11-01"
   },
   "Banheiro": {
    "estados": {
     "SP": 100,
-    "SC": 94,
-    "MG": 92,
+    "SC": 95,
+    "MG": 93,
     "PR": 85,
-    "RJ": 83,
+    "RJ": 85,
     "RS": 78,
-    "GO": 74,
-    "MS": 69,
-    "MT": 69,
-    "ES": 68,
-    "DF": 67,
-    "PE": 63,
-    "SE": 61,
-    "PB": 61,
+    "DF": 75,
+    "GO": 75,
+    "ES": 74,
+    "MT": 62,
     "BA": 60,
-    "RN": 56,
+    "RO": 57,
+    "RN": 57,
+    "PE": 56,
+    "PB": 52,
+    "MS": 52,
+    "SE": 50,
     "AL": 49,
-    "CE": 47,
-    "AM": 39,
-    "PI": 38,
-    "MA": 32,
-    "PA": 32,
-    "AC": 7,
-    "TO": 7,
-    "RO": 7
+    "CE": 48,
+    "PI": 46,
+    "MA": 43,
+    "AM": 42,
+    "PA": 34,
+    "AC": 6,
+    "TO": 5
    },
    "cidades": [],
    "paises": {
@@ -1999,34 +2000,35 @@
     "TR": 1
    },
    "termo": "saboneteira",
-   "atualizado": "2026-10-29",
+   "atualizado": "2026-11-04",
    "termo_mundo": "soap dish",
    "atualizado_mundo": "2026-11-01"
   },
   "Bar e vinho": {
    "estados": {
-    "PB": 100,
-    "MS": 90,
-    "AL": 88,
-    "SC": 83,
-    "SP": 72,
-    "RJ": 70,
-    "MG": 65,
-    "DF": 63,
-    "ES": 62,
-    "RS": 62,
-    "RN": 59,
-    "PR": 57,
-    "BA": 55,
-    "MT": 45,
-    "GO": 42,
-    "MA": 39,
-    "CE": 37,
-    "PE": 36,
-    "SE": 9,
-    "TO": 6,
-    "PA": 3,
-    "AM": 3
+    "TO": 100,
+    "AL": 65,
+    "RN": 64,
+    "SC": 58,
+    "MS": 56,
+    "SP": 51,
+    "RJ": 51,
+    "ES": 50,
+    "MG": 48,
+    "BA": 43,
+    "DF": 43,
+    "RS": 43,
+    "PB": 41,
+    "PR": 41,
+    "CE": 34,
+    "MT": 32,
+    "MA": 31,
+    "PE": 29,
+    "GO": 27,
+    "SE": 7,
+    "RO": 3,
+    "AM": 2,
+    "PA": 2
    },
    "cidades": [],
    "paises": {
@@ -2049,19 +2051,19 @@
     "DK": 2
    },
    "termo": "porta vinho",
-   "atualizado": "2026-10-29",
+   "atualizado": "2026-11-04",
    "termo_mundo": "wine holder",
    "atualizado_mundo": "2026-11-01"
   },
   "Cofres": {
    "estados": {
     "BA": 100,
-    "MG": 50,
-    "SP": 20,
-    "PE": 10,
-    "PB": 10,
-    "PA": 10,
-    "CE": 10
+    "MG": 81,
+    "SP": 27,
+    "PE": 18,
+    "PB": 18,
+    "PA": 9,
+    "CE": 9
    },
    "cidades": [],
    "paises": {
@@ -2116,14 +2118,12 @@
     "JP": 1
    },
    "termo": "cofrinho personalizado",
-   "atualizado": "2026-10-29",
+   "atualizado": "2026-11-04",
    "termo_mundo": "piggy bank",
    "atualizado_mundo": "2026-11-01"
   },
   "Dioramas e suportes 1/64": {
-   "estados": {
-    "SP": 100
-   },
+   "estados": {},
    "cidades": [],
    "paises": {
     "NL": 100,
@@ -2133,7 +2133,7 @@
     "US": 25
    },
    "termo": "diorama 1/64",
-   "atualizado": "2026-10-29",
+   "atualizado": "2026-11-04",
    "termo_mundo": "1/64 diorama",
    "atualizado_mundo": "2026-11-01"
   },
@@ -2152,14 +2152,13 @@
     "CA": 11
    },
    "termo": "miniatura personalizada",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "miniature figure",
    "atualizado_mundo": "2026-11-01"
   },
   "RPG e jogos de tabuleiro": {
    "estados": {
-    "RJ": 100,
-    "SP": 40
+    "SP": 100
    },
    "cidades": [],
    "paises": {
@@ -2170,22 +2169,22 @@
     "CA": 50
    },
    "termo": "miniatura rpg",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "tabletop miniature",
    "atualizado_mundo": "2026-11-01"
   },
   "Brinquedos e fidget": {
    "estados": {
-    "PR": 100,
-    "RJ": 94,
-    "SP": 83,
-    "RS": 77,
-    "SC": 66,
-    "MG": 61,
-    "DF": 5,
-    "PB": 5,
-    "CE": 5,
-    "PE": 5
+    "RJ": 100,
+    "RS": 93,
+    "PR": 93,
+    "SP": 93,
+    "SC": 68,
+    "MG": 62,
+    "MT": 12,
+    "PB": 12,
+    "DF": 6,
+    "GO": 6
    },
    "cidades": [],
    "paises": {
@@ -2241,13 +2240,14 @@
     "JP": 1
    },
    "termo": "fidget toy",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "fidget",
    "atualizado_mundo": "2026-11-01"
   },
   "Pets": {
    "estados": {
-    "AP": 100
+    "SC": 100,
+    "GO": 11
    },
    "cidades": [],
    "paises": {
@@ -2259,7 +2259,7 @@
     "GB": 25
    },
    "termo": "placa de nome pet",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "pet name tag",
    "atualizado_mundo": "2026-11-01"
   },
@@ -2291,31 +2291,27 @@
     "BR": 5
    },
    "termo": "escudo de time 3d",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "football club logo",
    "atualizado_mundo": "2026-11-01"
   },
   "Artigos religiosos": {
    "estados": {
-    "CE": 100,
-    "MG": 94,
-    "GO": 83,
-    "PE": 83,
-    "PR": 66,
-    "BA": 55,
-    "RS": 44,
-    "SP": 44,
+    "DF": 100,
+    "CE": 77,
+    "MG": 72,
+    "BA": 54,
+    "PR": 50,
+    "SP": 36,
     "RJ": 27,
-    "PI": 16,
-    "MS": 11,
-    "MT": 11,
-    "RN": 11,
-    "AL": 11,
-    "MA": 11,
-    "PB": 5,
-    "PA": 5,
-    "DF": 5,
-    "SC": 5
+    "PI": 18,
+    "SE": 13,
+    "MT": 13,
+    "MA": 9,
+    "PA": 4,
+    "GO": 4,
+    "PE": 4,
+    "SC": 4
    },
    "cidades": [],
    "paises": {
@@ -2355,39 +2351,39 @@
     "ID": 1
    },
    "termo": "terço personalizado",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "rosary",
    "atualizado_mundo": "2026-11-01"
   },
   "Natal": {
    "estados": {
-    "RJ": 100,
-    "SP": 99,
-    "MG": 99,
-    "PR": 99,
-    "SC": 90,
-    "RS": 82,
-    "ES": 69,
-    "PE": 68,
-    "AL": 65,
-    "PA": 59,
-    "GO": 55,
-    "DF": 54,
-    "PB": 52,
-    "AM": 51,
-    "MT": 50,
-    "CE": 48,
-    "BA": 35,
-    "MS": 25,
-    "SE": 24,
-    "RO": 21,
-    "RN": 17,
-    "TO": 16,
-    "AC": 14,
-    "AP": 11,
-    "RR": 10,
-    "MA": 10,
-    "PI": 7
+    "SP": 100,
+    "MG": 98,
+    "PR": 95,
+    "RJ": 95,
+    "SC": 87,
+    "RS": 77,
+    "ES": 72,
+    "SE": 65,
+    "AL": 60,
+    "PE": 59,
+    "DF": 57,
+    "GO": 53,
+    "MT": 48,
+    "MS": 48,
+    "PB": 46,
+    "PA": 46,
+    "AM": 43,
+    "PI": 40,
+    "CE": 40,
+    "BA": 38,
+    "RN": 21,
+    "RO": 19,
+    "TO": 14,
+    "AP": 12,
+    "MA": 12,
+    "AC": 11,
+    "RR": 10
    },
    "cidades": [],
    "paises": {
@@ -2416,36 +2412,37 @@
     "BR": 1
    },
    "termo": "enfeite de natal",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "christmas ornament",
    "atualizado_mundo": "2026-11-01"
   },
   "Halloween": {
    "estados": {
     "RS": 100,
-    "SP": 67,
-    "SC": 59,
-    "PR": 53,
-    "PE": 40,
-    "RJ": 36,
-    "MG": 34,
-    "RR": 32,
-    "AP": 32,
-    "BA": 30,
-    "DF": 22,
+    "DF": 74,
+    "SP": 64,
+    "SC": 55,
+    "PR": 49,
+    "RJ": 37,
+    "MG": 33,
+    "AP": 22,
     "RN": 20,
-    "CE": 16,
-    "RO": 16,
-    "GO": 16,
-    "MS": 16,
-    "AM": 16,
-    "PI": 16,
-    "PA": 16,
-    "SE": 14,
-    "AL": 12,
-    "MA": 12,
-    "MT": 10,
-    "PB": 10,
+    "RR": 18,
+    "PE": 16,
+    "PI": 15,
+    "CE": 15,
+    "AM": 15,
+    "PA": 13,
+    "MS": 13,
+    "MA": 13,
+    "GO": 13,
+    "BA": 11,
+    "SE": 11,
+    "RO": 11,
+    "PB": 11,
+    "AL": 11,
+    "MT": 8,
+    "TO": 8,
     "ES": 8
    },
    "cidades": [],
@@ -2483,12 +2480,14 @@
     "VN": 1
    },
    "termo": "decoração de halloween",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "halloween decoration",
    "atualizado_mundo": "2026-11-01"
   },
   "Páscoa e outras datas": {
-   "estados": {},
+   "estados": {
+    "AP": 100
+   },
    "cidades": [],
    "paises": {
     "SH": 100,
@@ -2541,14 +2540,12 @@
     "TR": 1
    },
    "termo": "decoração de páscoa",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "easter",
    "atualizado_mundo": "2026-11-01"
   },
   "Carros e motos": {
-   "estados": {
-    "CE": 100
-   },
+   "estados": {},
    "cidades": [],
    "paises": {
     "NL": 100,
@@ -2572,35 +2569,34 @@
     "SG": 1
    },
    "termo": "acessório para carro 3d",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "car accessory",
    "atualizado_mundo": "2026-11-01"
   },
   "Presentes personalizados": {
    "estados": {
-    "SC": 100,
-    "RS": 90,
-    "MT": 81,
-    "PR": 78,
+    "RS": 100,
+    "SC": 98,
+    "MT": 94,
+    "MG": 79,
     "SP": 77,
-    "MG": 77,
-    "DF": 73,
-    "RJ": 68,
-    "MS": 57,
-    "PE": 55,
-    "PB": 54,
-    "CE": 52,
-    "GO": 52,
-    "BA": 52,
-    "AL": 8,
-    "TO": 6,
-    "RO": 6,
+    "PR": 74,
+    "DF": 72,
+    "RJ": 72,
+    "PE": 63,
+    "CE": 56,
+    "PB": 55,
+    "BA": 46,
+    "GO": 46,
+    "PA": 39,
+    "RO": 10,
+    "PI": 6,
+    "AL": 6,
     "ES": 6,
-    "PI": 4,
-    "SE": 4,
+    "TO": 6,
+    "MS": 6,
+    "MA": 5,
     "RN": 3,
-    "PA": 3,
-    "MA": 3,
     "AM": 3
    },
    "cidades": [],
@@ -2626,7 +2622,7 @@
     "PL": 1
    },
    "termo": "presente personalizado",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "personalized gift",
    "atualizado_mundo": "2026-11-01"
   },
@@ -2697,14 +2693,16 @@
     "IR": 3
    },
    "termo": "decoração anime",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "anime figure",
    "atualizado_mundo": "2026-11-01"
   },
   "Geek: Games e consoles": {
    "estados": {
     "MG": 100,
-    "SP": 75
+    "SP": 77,
+    "RJ": 77,
+    "RS": 11
    },
    "cidades": [],
    "paises": {
@@ -2714,7 +2712,7 @@
     "US": 25
    },
    "termo": "decoração gamer",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "game controller holder",
    "atualizado_mundo": "2026-11-01"
   },
@@ -2739,7 +2737,7 @@
     "BR": 6
    },
    "termo": "decoração geek",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "movie prop",
    "atualizado_mundo": "2026-11-02"
   },
@@ -2805,16 +2803,16 @@
     "JP": 2
    },
    "termo": "decoração super-herói",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "superhero",
    "atualizado_mundo": "2026-11-02"
   },
   "Geek: Cosplay e réplicas": {
    "estados": {
-    "PR": 100,
-    "SP": 54,
-    "MS": 9,
-    "RS": 9
+    "SC": 100,
+    "RS": 80,
+    "SP": 60,
+    "DF": 10
    },
    "cidades": [],
    "paises": {
@@ -2830,7 +2828,7 @@
     "IT": 3
    },
    "termo": "cosplay 3d",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "cosplay prop",
    "atualizado_mundo": "2026-11-02"
   },
@@ -2843,7 +2841,7 @@
     "GB": 20
    },
    "termo": "expositor de funko",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "figure display stand",
    "atualizado_mundo": "2026-11-02"
   },
@@ -2862,7 +2860,7 @@
     "IN": 14
    },
    "termo": "luminária geek",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "character lamp",
    "atualizado_mundo": "2026-11-02"
   },
@@ -2941,7 +2939,7 @@
     "JP": 4
    },
    "termo": "quadro pixel art",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "pixel art",
    "atualizado_mundo": "2026-11-02"
   },
@@ -2958,7 +2956,7 @@
     "IN": 12
    },
    "termo": "decoração espacial",
-   "atualizado": "2026-10-30",
+   "atualizado": "2026-11-04",
    "termo_mundo": "science decor",
    "atualizado_mundo": "2026-11-02"
   },
@@ -4559,95 +4557,100 @@
   }
  },
  "subindo": {
-  "atualizado": "2026-11-03",
+  "atualizado": "2026-11-04",
   "termos": [
    {
-    "busca": "snapmaker u1",
+    "busca": "makerword",
     "alta": "Mais 120%",
     "base": "impressão 3d"
    },
    {
-    "busca": "tripo",
-    "alta": "Mais 80%",
+    "busca": "thangs",
+    "alta": "Mais 70%",
     "base": "impressão 3d"
    },
    {
     "busca": "caneta de impressão 3d",
-    "alta": "Mais 70%",
+    "alta": "Mais 60%",
     "base": "impressão 3d"
    },
    {
-    "busca": "makerword",
-    "alta": "Mais 70%",
+    "busca": "printables",
+    "alta": "Mais 50%",
     "base": "impressão 3d"
-   },
-   {
-    "busca": "decoração novembro azul",
-    "alta": "Aumento repentino",
-    "base": "decoração"
    },
    {
     "busca": "decoração outubro rosa",
-    "alta": "Mais 3.200%",
+    "alta": "Mais 3.600%",
     "base": "decoração"
    },
    {
-    "busca": "decoração para outubro rosa",
-    "alta": "Mais 2.500%",
+    "busca": "decoração novembro azul",
+    "alta": "Mais 2.700%",
     "base": "decoração"
    },
    {
     "busca": "decoração setembro amarelo",
-    "alta": "Mais 1.850%",
+    "alta": "Mais 2.300%",
     "base": "decoração"
    },
    {
-    "busca": "decoração dia das crianças",
+    "busca": "decoração para outubro rosa",
     "alta": "Mais 1.650%",
     "base": "decoração"
    },
    {
-    "busca": "halloween decoração",
-    "alta": "Mais 1.250%",
+    "busca": "decoração dia das crianças",
+    "alta": "Mais 1.500%",
     "base": "decoração"
    },
    {
     "busca": "decoração arvore de natal",
-    "alta": "Mais 1.200%",
+    "alta": "Mais 1.500%",
+    "base": "decoração"
+   },
+   {
+    "busca": "halloween decoração",
+    "alta": "Mais 1.350%",
     "base": "decoração"
    },
    {
     "busca": "decoração de arvore de natal",
-    "alta": "Mais 1.150%",
+    "alta": "Mais 1.300%",
+    "base": "decoração"
+   },
+   {
+    "busca": "papai noel decoração",
+    "alta": "Mais 1.250%",
     "base": "decoração"
    },
    {
     "busca": "decoração de halloween",
-    "alta": "Mais 1.100%",
+    "alta": "Mais 1.050%",
     "base": "decoração"
    },
    {
     "busca": "decoração de natal",
-    "alta": "Mais 850%",
+    "alta": "Mais 950%",
     "base": "decoração"
    },
    {
-    "busca": "decoração natal",
-    "alta": "Mais 800%",
+    "busca": "natal decoração",
+    "alta": "Mais 900%",
     "base": "decoração"
    },
    {
     "busca": "natal",
-    "alta": "Mais 800%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de natal 2026",
-    "alta": "Mais 700%",
+    "alta": "Mais 850%",
     "base": "decoração"
    },
    {
     "busca": "decoração natal 2026",
+    "alta": "Mais 650%",
+    "base": "decoração"
+   },
+   {
+    "busca": "vila natalina decoração",
     "alta": "Mais 650%",
     "base": "decoração"
    },
@@ -4657,33 +4660,23 @@
     "base": "decoração"
    },
    {
+    "busca": "decoração de natal 2026",
+    "alta": "Mais 600%",
+    "base": "decoração"
+   },
+   {
     "busca": "decoração ano novo",
     "alta": "Mais 300%",
     "base": "decoração"
    },
    {
     "busca": "quando começa a decoração de natal",
-    "alta": "Mais 250%",
-    "base": "decoração"
-   },
-   {
-    "busca": "vila natalina decoração",
-    "alta": "Mais 250%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração para o dia dos pais",
-    "alta": "Mais 100%",
-    "base": "decoração"
-   },
-   {
-    "busca": "zara home",
-    "alta": "Mais 80%",
+    "alta": "Mais 300%",
     "base": "decoração"
    },
    {
     "busca": "decoração anos 80",
-    "alta": "Mais 70%",
+    "alta": "Mais 80%",
     "base": "decoração"
    },
    {
@@ -4692,13 +4685,13 @@
     "base": "decoração"
    },
    {
-    "busca": "decoração dia dos pais",
+    "busca": "decoração de casamento simples e elegante",
     "alta": "Mais 50%",
     "base": "decoração"
    },
    {
     "busca": "flor artificial para decoração",
-    "alta": "Mais 40%",
+    "alta": "Mais 50%",
     "base": "decoração"
    }
   ]
