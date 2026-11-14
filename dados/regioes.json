@@ -2179,9 +2179,8 @@
   },
   "RPG e jogos de tabuleiro": {
    "estados": {
-    "RJ": 100,
     "SP": 100,
-    "PE": 25
+    "PR": 33
    },
    "cidades": [],
    "paises": {
@@ -2192,24 +2191,24 @@
     "CA": 33
    },
    "termo": "miniatura rpg",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "tabletop miniature",
    "atualizado_mundo": "2026-11-12"
   },
   "Brinquedos e fidget": {
    "estados": {
     "PR": 100,
-    "SP": 83,
-    "RJ": 83,
-    "SC": 72,
-    "RS": 61,
-    "BA": 55,
-    "MG": 44,
-    "PB": 11,
-    "MT": 5,
-    "CE": 5,
-    "DF": 5,
-    "GO": 5
+    "SP": 87,
+    "RJ": 81,
+    "RS": 81,
+    "SC": 75,
+    "BA": 56,
+    "MG": 56,
+    "RN": 25,
+    "DF": 6,
+    "PB": 6,
+    "ES": 6,
+    "CE": 6
    },
    "cidades": [],
    "paises": {
@@ -2265,7 +2264,7 @@
     "JP": 1
    },
    "termo": "fidget toy",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "fidget",
    "atualizado_mundo": "2026-11-12"
   },
@@ -2280,7 +2279,7 @@
     "CA": 25
    },
    "termo": "placa de nome pet",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "pet name tag",
    "atualizado_mundo": "2026-11-12"
   },
@@ -2310,30 +2309,27 @@
     "BR": 6
    },
    "termo": "escudo de time 3d",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "football club logo",
    "atualizado_mundo": "2026-11-12"
   },
   "Artigos religiosos": {
    "estados": {
-    "SE": 100,
-    "AM": 80,
-    "CE": 33,
-    "MG": 27,
-    "BA": 27,
-    "PR": 21,
-    "SP": 17,
-    "RJ": 13,
-    "RN": 5,
-    "MS": 3,
-    "MT": 3,
-    "PB": 3,
-    "PA": 3,
-    "DF": 1,
-    "GO": 1,
-    "SC": 1,
+    "PI": 100,
+    "MG": 26,
+    "CE": 24,
+    "GO": 24,
+    "PR": 24,
+    "BA": 22,
+    "SP": 14,
+    "RJ": 10,
+    "PB": 5,
+    "RN": 3,
+    "DF": 3,
     "PE": 1,
-    "MA": 1
+    "PA": 1,
+    "SC": 1,
+    "MT": 1
    },
    "cidades": [],
    "paises": {
@@ -2372,7 +2368,7 @@
     "ID": 1
    },
    "termo": "terço personalizado",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "rosary",
    "atualizado_mundo": "2026-11-12"
   },
@@ -2380,31 +2376,31 @@
    "estados": {
     "MG": 100,
     "SP": 99,
-    "RJ": 97,
-    "PR": 91,
-    "SC": 88,
-    "ES": 82,
-    "RS": 76,
-    "DF": 61,
-    "SE": 60,
-    "MS": 60,
-    "RO": 58,
-    "AL": 57,
-    "PE": 57,
-    "GO": 53,
-    "PB": 49,
-    "PA": 44,
-    "MT": 44,
-    "CE": 41,
-    "BA": 38,
-    "PI": 36,
-    "RN": 24,
-    "AM": 22,
-    "RR": 20,
-    "AP": 15,
-    "MA": 13,
-    "TO": 12,
-    "AC": 10
+    "PR": 95,
+    "RJ": 89,
+    "SC": 85,
+    "RS": 78,
+    "ES": 71,
+    "DF": 64,
+    "RO": 60,
+    "MS": 56,
+    "PE": 55,
+    "SE": 54,
+    "GO": 51,
+    "AL": 48,
+    "MT": 46,
+    "PA": 45,
+    "PB": 42,
+    "AM": 42,
+    "CE": 40,
+    "BA": 40,
+    "RN": 39,
+    "PI": 35,
+    "AP": 20,
+    "RR": 19,
+    "MA": 15,
+    "TO": 14,
+    "AC": 12
    },
    "cidades": [],
    "paises": {
@@ -2433,36 +2429,33 @@
     "ID": 1
    },
    "termo": "enfeite de natal",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "christmas ornament",
    "atualizado_mundo": "2026-11-12"
   },
   "Halloween": {
    "estados": {
     "RS": 100,
-    "SP": 63,
-    "PR": 50,
-    "SC": 49,
-    "DF": 49,
-    "PA": 42,
-    "PE": 36,
-    "MG": 33,
-    "RJ": 26,
-    "BA": 25,
-    "RN": 14,
-    "MS": 11,
-    "PI": 11,
-    "CE": 11,
-    "SE": 11,
-    "MA": 11,
-    "GO": 9,
-    "AM": 9,
-    "PB": 7,
-    "RO": 7,
-    "ES": 7,
-    "TO": 7,
-    "AL": 7,
-    "MT": 6
+    "SP": 71,
+    "PR": 62,
+    "DF": 57,
+    "SC": 55,
+    "MG": 39,
+    "RJ": 35,
+    "PE": 33,
+    "BA": 28,
+    "GO": 28,
+    "PA": 7,
+    "CE": 5,
+    "PI": 5,
+    "SE": 5,
+    "AM": 5,
+    "RN": 5,
+    "PB": 3,
+    "MA": 3,
+    "MT": 3,
+    "ES": 1,
+    "MS": 1
    },
    "cidades": [],
    "paises": {
@@ -2499,7 +2492,7 @@
     "PL": 1
    },
    "termo": "decoração de halloween",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "halloween decoration",
    "atualizado_mundo": "2026-11-12"
   },
@@ -2555,14 +2548,12 @@
     "TR": 1
    },
    "termo": "decoração de páscoa",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "easter",
    "atualizado_mundo": "2026-11-12"
   },
   "Carros e motos": {
-   "estados": {
-    "CE": 100
-   },
+   "estados": {},
    "cidades": [],
    "paises": {
     "NL": 100,
@@ -2583,36 +2574,36 @@
     "ID": 1
    },
    "termo": "acessório para carro 3d",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "car accessory",
    "atualizado_mundo": "2026-11-12"
   },
   "Presentes personalizados": {
    "estados": {
     "SC": 100,
-    "RS": 94,
-    "DF": 87,
+    "MT": 89,
+    "RS": 89,
     "MG": 81,
-    "PR": 80,
-    "SP": 78,
-    "MT": 72,
-    "RJ": 70,
-    "CE": 63,
-    "PB": 63,
-    "GO": 61,
-    "BA": 52,
-    "PE": 52,
-    "PA": 47,
-    "RO": 12,
-    "TO": 9,
-    "MS": 9,
-    "ES": 9,
-    "PI": 7,
-    "AL": 7,
-    "MA": 5,
-    "RN": 5,
-    "SE": 5,
-    "AM": 3
+    "PR": 79,
+    "MS": 77,
+    "SP": 76,
+    "RJ": 67,
+    "DF": 57,
+    "CE": 54,
+    "PE": 50,
+    "BA": 44,
+    "GO": 42,
+    "PA": 37,
+    "ES": 11,
+    "TO": 10,
+    "MA": 8,
+    "SE": 6,
+    "PI": 6,
+    "RN": 6,
+    "PB": 6,
+    "AL": 6,
+    "RO": 5,
+    "AM": 5
    },
    "cidades": [],
    "paises": {
@@ -2642,12 +2633,14 @@
     "FR": 1
    },
    "termo": "presente personalizado",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "personalized gift",
    "atualizado_mundo": "2026-11-12"
   },
   "Geek: Anime e mangá": {
-   "estados": {},
+   "estados": {
+    "SP": 100
+   },
    "cidades": [],
    "paises": {
     "NL": 100,
@@ -2712,16 +2705,14 @@
     "SH": 1
    },
    "termo": "decoração anime",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "anime figure",
    "atualizado_mundo": "2026-11-12"
   },
   "Geek: Games e consoles": {
    "estados": {
-    "PE": 100,
-    "SP": 53,
-    "RJ": 46,
-    "MG": 30
+    "SP": 100,
+    "RS": 14
    },
    "cidades": [],
    "paises": {
@@ -2731,7 +2722,7 @@
     "DE": 33
    },
    "termo": "decoração gamer",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "game controller holder",
    "atualizado_mundo": "2026-11-12"
   },
@@ -2755,7 +2746,7 @@
     "ID": 6
    },
    "termo": "decoração geek",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "movie prop",
    "atualizado_mundo": "2026-11-12"
   },
@@ -2821,17 +2812,13 @@
     "JP": 1
    },
    "termo": "decoração super-herói",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "superhero",
    "atualizado_mundo": "2026-11-12"
   },
   "Geek: Cosplay e réplicas": {
    "estados": {
-    "SC": 100,
-    "PR": 63,
-    "MG": 54,
-    "SP": 45,
-    "RN": 18
+    "SP": 100
    },
    "cidades": [],
    "paises": {
@@ -2846,7 +2833,7 @@
     "IT": 3
    },
    "termo": "cosplay 3d",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "cosplay prop",
    "atualizado_mundo": "2026-11-12"
   },
@@ -2859,7 +2846,7 @@
     "GB": 20
    },
    "termo": "expositor de funko",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "figure display stand",
    "atualizado_mundo": "2026-11-12"
   },
@@ -2878,7 +2865,7 @@
     "IN": 16
    },
    "termo": "luminária geek",
-   "atualizado": "2026-11-09",
+   "atualizado": "2026-11-14",
    "termo_mundo": "character lamp",
    "atualizado_mundo": "2026-11-12"
   },
@@ -2956,12 +2943,14 @@
     "JP": 3
    },
    "termo": "quadro pixel art",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "pixel art",
    "atualizado_mundo": "2026-11-12"
   },
   "Geek: Nerd e ciência": {
-   "estados": {},
+   "estados": {
+    "SC": 100
+   },
    "cidades": [],
    "paises": {
     "NL": 100,
@@ -2975,14 +2964,14 @@
     "IN": 14
    },
    "termo": "decoração espacial",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "science decor",
    "atualizado_mundo": "2026-11-12"
   },
   "Profissão: Odontologia": {
    "estados": {
-    "SP": 100,
-    "MT": 50
+    "PB": 100,
+    "ES": 100
    },
    "cidades": [],
    "paises": {
@@ -3032,30 +3021,27 @@
     "JP": 2
    },
    "termo": "presente para dentista",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "tooth",
    "atualizado_mundo": "2026-11-12"
   },
   "Profissão: Medicina": {
    "estados": {
     "GO": 100,
-    "SC": 63,
-    "MG": 52,
-    "RJ": 47,
-    "BA": 47,
-    "PR": 47,
-    "SP": 36,
-    "TO": 21,
-    "PI": 15,
-    "RN": 10,
-    "MS": 10,
-    "MT": 5,
-    "MA": 5,
-    "PB": 5,
+    "MG": 55,
+    "SP": 38,
+    "RJ": 33,
+    "AL": 11,
     "PA": 5,
-    "DF": 5,
-    "CE": 5,
-    "PE": 5
+    "MA": 5,
+    "MS": 5,
+    "ES": 5,
+    "BA": 5,
+    "MT": 5,
+    "PE": 5,
+    "SC": 5,
+    "PR": 5,
+    "RS": 5
    },
    "cidades": [],
    "paises": {
@@ -3109,12 +3095,15 @@
     "TR": 1
    },
    "termo": "presente para médico",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "stethoscope",
    "atualizado_mundo": "2026-11-12"
   },
   "Profissão: Enfermagem": {
-   "estados": {},
+   "estados": {
+    "SP": 100,
+    "ES": 100
+   },
    "cidades": [],
    "paises": {
     "SH": 100,
@@ -3159,7 +3148,7 @@
     "JP": 1
    },
    "termo": "presente para enfermeira",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "nurse",
    "atualizado_mundo": "2026-11-12"
   },
@@ -3228,7 +3217,7 @@
     "JP": 4
    },
    "termo": "presente para psicóloga",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "brain",
    "atualizado_mundo": "2026-11-12"
   },
@@ -3285,12 +3274,14 @@
     "IR": 2
    },
    "termo": "presente para fisioterapeuta",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "spine",
    "atualizado_mundo": "2026-11-13"
   },
   "Profissão: Nutrição": {
-   "estados": {},
+   "estados": {
+    "SP": 100
+   },
    "cidades": [],
    "paises": {
     "SH": 100,
@@ -3346,7 +3337,7 @@
     "JP": 2
    },
    "termo": "presente para nutricionista",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "nutrition",
    "atualizado_mundo": "2026-11-12"
   },
@@ -3402,7 +3393,7 @@
     "JP": 2
    },
    "termo": "presente para veterinário",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "veterinary",
    "atualizado_mundo": "2026-11-12"
   },
@@ -3448,7 +3439,7 @@
     "IT": 1
    },
    "termo": "presente para farmacêutico",
-   "atualizado": "2026-11-10",
+   "atualizado": "2026-11-14",
    "termo_mundo": "pharmacy",
    "atualizado_mundo": "2026-11-13"
   },
@@ -3908,74 +3899,73 @@
    "cidades": [],
    "paises": {
     "DK": 100,
-    "FR": 30,
-    "CM": 26,
-    "NO": 26,
-    "SH": 24,
-    "CI": 23,
-    "CA": 14,
-    "BD": 14,
-    "PH": 13,
-    "BE": 13,
-    "TN": 12,
-    "HK": 12,
-    "ID": 11,
-    "GB": 11,
-    "MA": 11,
-    "MY": 10,
-    "DZ": 10,
-    "US": 9,
-    "IE": 9,
-    "SG": 9,
+    "FR": 28,
+    "CM": 25,
+    "NO": 24,
+    "SH": 23,
+    "CI": 22,
+    "BD": 12,
+    "CA": 12,
+    "PH": 12,
+    "BE": 12,
+    "TN": 11,
+    "HK": 11,
+    "GB": 10,
+    "ID": 10,
+    "MA": 10,
+    "DZ": 9,
+    "MY": 9,
+    "US": 8,
+    "IE": 8,
+    "SG": 8,
     "LK": 8,
-    "NL": 8,
-    "NP": 8,
-    "NG": 8,
     "CH": 8,
+    "NG": 7,
     "IN": 7,
-    "ZA": 7,
+    "NP": 7,
     "KE": 7,
-    "PK": 7,
+    "NL": 7,
+    "ZA": 6,
+    "PK": 6,
     "RO": 6,
     "BG": 6,
     "TH": 6,
-    "AE": 6,
-    "KR": 5,
-    "AU": 5,
-    "VN": 5,
+    "AE": 5,
     "NZ": 5,
-    "HU": 5,
-    "RS": 5,
+    "AU": 5,
+    "KR": 5,
+    "VN": 5,
     "SE": 5,
+    "HU": 5,
     "PT": 4,
     "CZ": 4,
     "DE": 4,
-    "GR": 4,
     "IQ": 4,
-    "FI": 4,
+    "GR": 4,
+    "FI": 3,
     "PL": 3,
-    "UA": 3,
     "AT": 3,
+    "UA": 3,
     "TW": 3,
-    "EG": 3,
     "IL": 3,
-    "SA": 3,
+    "EG": 3,
+    "SA": 2,
     "RU": 2,
     "ES": 2,
     "AR": 2,
-    "CL": 2,
     "IT": 2,
     "BR": 2,
-    "MX": 2,
-    "IR": 2,
-    "CO": 1,
+    "IR": 1,
+    "CL": 1,
+    "MX": 1,
     "TR": 1,
+    "CO": 1,
     "JP": 1
    },
    "termo": "presente para programador",
    "atualizado": "2026-11-10",
    "termo_mundo": "programmer",
-   "atualizado_mundo": "2026-11-09"
+   "atualizado_mundo": "2026-11-14"
   },
   "Profissão: Formatura (geral)": {
    "estados": {
@@ -4004,144 +3994,141 @@
    "cidades": [],
    "paises": {
     "KE": 100,
-    "ZW": 93,
-    "JM": 52,
-    "UG": 47,
-    "ZM": 45,
-    "TT": 45,
-    "GH": 44,
-    "IE": 40,
-    "ZA": 31,
-    "LK": 30,
-    "TZ": 29,
-    "SG": 28,
-    "AU": 28,
-    "US": 27,
-    "SH": 26,
-    "IN": 23,
-    "NG": 22,
-    "PH": 22,
-    "NZ": 21,
-    "GB": 18,
-    "MY": 15,
+    "ZW": 79,
+    "JM": 49,
+    "UG": 45,
+    "ZM": 41,
+    "TT": 41,
+    "GH": 40,
+    "IE": 35,
+    "ZA": 28,
+    "LK": 27,
+    "TZ": 27,
+    "US": 25,
+    "AU": 24,
+    "SG": 24,
+    "SH": 23,
+    "IN": 20,
+    "NG": 19,
+    "NZ": 19,
+    "PH": 19,
+    "GB": 17,
     "HK": 14,
-    "CA": 14,
-    "NP": 11,
-    "PK": 11,
-    "AE": 11,
-    "BD": 9,
-    "NL": 8,
+    "MY": 13,
+    "CA": 13,
+    "NP": 10,
+    "AE": 9,
+    "PK": 9,
+    "BD": 8,
+    "NL": 7,
     "ID": 6,
-    "KR": 6,
+    "KR": 5,
     "TH": 4,
-    "VN": 4,
-    "EG": 4,
-    "SA": 3,
+    "VN": 3,
+    "EG": 3,
+    "SA": 2,
     "BE": 2,
     "DE": 2,
-    "TW": 1,
     "IT": 1,
+    "TW": 1,
     "FR": 1,
-    "BR": 1,
-    "JP": 1,
-    "ES": 1,
-    "MX": 1,
-    "PL": 1
+    "BR": 1
    },
    "termo": "lembrancinha de formatura",
    "atualizado": "2026-11-10",
    "termo_mundo": "graduation",
-   "atualizado_mundo": "2026-11-09"
+   "atualizado_mundo": "2026-11-14"
   },
   "Profissão: Influenciadores e criadores": {
    "estados": {},
    "cidades": [],
    "paises": {
     "NL": 100,
-    "DE": 22,
-    "AU": 11,
-    "GB": 11,
-    "CA": 8,
+    "DE": 21,
+    "AU": 16,
+    "GB": 10,
     "US": 8,
+    "CA": 8,
     "IN": 5
    },
    "termo": "presente para influenciadora",
    "atualizado": "2026-11-10",
    "termo_mundo": "phone tripod mount",
-   "atualizado_mundo": "2026-11-09"
+   "atualizado_mundo": "2026-11-14"
   },
   "Profissão: Streamers e setup gamer": {
    "estados": {},
    "cidades": [],
    "paises": {
-    "DK": 100,
-    "US": 97,
-    "NL": 89,
-    "CA": 85,
-    "NZ": 81,
+    "US": 100,
+    "DK": 98,
+    "CA": 86,
+    "NZ": 85,
+    "NL": 84,
     "AU": 76,
-    "AR": 76,
-    "NO": 74,
-    "UY": 71,
+    "NO": 75,
+    "AR": 72,
     "GB": 70,
-    "PR": 68,
     "DE": 68,
-    "NG": 67,
-    "PE": 66,
-    "SE": 65,
-    "SV": 64,
-    "SG": 63,
+    "PR": 68,
+    "NG": 68,
+    "UY": 66,
+    "SE": 66,
+    "SV": 63,
     "PH": 63,
-    "CL": 63,
-    "BE": 58,
-    "CR": 56,
-    "AT": 56,
-    "FI": 51,
-    "PY": 51,
-    "ES": 50,
-    "IE": 50,
-    "BO": 50,
-    "MY": 49,
-    "NP": 49,
+    "CL": 62,
+    "PE": 60,
+    "SG": 60,
+    "BE": 56,
+    "AT": 53,
+    "CR": 52,
+    "BO": 51,
+    "IE": 51,
+    "FI": 50,
+    "NP": 50,
+    "MY": 48,
+    "PY": 48,
+    "ES": 47,
     "LT": 46,
-    "MX": 46,
-    "VE": 45,
-    "CH": 44,
-    "PT": 43,
-    "CO": 42,
-    "TH": 41,
-    "ZA": 40,
-    "EC": 40,
-    "FR": 40,
-    "CZ": 39,
-    "PL": 38,
-    "GT": 37,
-    "VN": 36,
-    "BR": 36,
-    "DO": 35,
-    "HR": 33,
+    "GH": 45,
+    "PT": 44,
+    "VE": 43,
+    "MX": 43,
+    "CH": 43,
+    "ZA": 41,
+    "PL": 40,
+    "CO": 39,
+    "EC": 38,
+    "GT": 38,
+    "FR": 38,
+    "CZ": 37,
+    "VN": 35,
+    "TH": 34,
+    "BG": 33,
     "HU": 33,
-    "BG": 32,
+    "HR": 33,
+    "DO": 33,
+    "BR": 32,
     "AE": 32,
-    "RS": 32,
+    "RS": 31,
     "IL": 30,
-    "SK": 30,
-    "MA": 30,
+    "SK": 29,
     "HK": 29,
-    "SH": 28,
-    "RO": 28,
-    "ID": 27,
-    "GR": 24,
-    "KE": 24,
-    "IT": 22,
-    "TW": 16,
-    "KR": 16,
+    "MA": 28,
+    "SH": 27,
+    "RO": 26,
+    "ID": 26,
+    "KE": 25,
+    "GR": 25,
+    "IT": 24,
     "SA": 16,
     "BD": 15,
+    "TW": 15,
+    "KR": 15,
     "PK": 14,
+    "EG": 11,
     "IN": 10,
-    "EG": 10,
-    "TR": 10,
+    "TR": 9,
     "RU": 9,
     "UA": 8,
     "JP": 6,
@@ -4150,7 +4137,7 @@
    "termo": "decoração setup streamer",
    "atualizado": "2026-11-10",
    "termo_mundo": "streamer",
-   "atualizado_mundo": "2026-11-09"
+   "atualizado_mundo": "2026-11-14"
   },
   "Personalizado: DTF e estampas": {
    "estados": {
@@ -4568,37 +4555,27 @@
   }
  },
  "subindo": {
-  "atualizado": "2026-11-13",
+  "atualizado": "2026-11-14",
   "termos": [
    {
-    "busca": "snapmaker u1",
-    "alta": "Aumento repentino",
-    "base": "impressão 3d"
-   },
-   {
-    "busca": "caneta acrilica para impressão 3d",
-    "alta": "Mais 130%",
-    "base": "impressão 3d"
-   },
-   {
-    "busca": "impressoes 3d",
+    "busca": "tripo",
     "alta": "Mais 90%",
     "base": "impressão 3d"
    },
    {
     "busca": "caneta de impressão 3d",
-    "alta": "Mais 70%",
+    "alta": "Mais 60%",
     "base": "impressão 3d"
    },
    {
-    "busca": "maker world",
+    "busca": "snapmaker u1",
     "alta": "Mais 50%",
     "base": "impressão 3d"
    },
    {
-    "busca": "decoração de natal para imprimir",
-    "alta": "Aumento repentino",
-    "base": "decoração"
+    "busca": "caneta acrilica para impressão 3d",
+    "alta": "Mais 50%",
+    "base": "impressão 3d"
    },
    {
     "busca": "novembro azul decoração",
@@ -4606,63 +4583,38 @@
     "base": "decoração"
    },
    {
-    "busca": "arvore de natal grande",
-    "alta": "Mais 4.800%",
+    "busca": "decoração de natal para imprimir",
+    "alta": "Aumento repentino",
     "base": "decoração"
    },
    {
     "busca": "outubro rosa decoração",
-    "alta": "Mais 2.550%",
-    "base": "decoração"
-   },
-   {
-    "busca": "papai noel decoração",
-    "alta": "Mais 2.150%",
-    "base": "decoração"
-   },
-   {
-    "busca": "guirlanda de natal",
-    "alta": "Mais 2.100%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração setembro amarelo",
-    "alta": "Mais 1.900%",
-    "base": "decoração"
-   },
-   {
-    "busca": "arvore de natal",
-    "alta": "Mais 1.700%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de árvore de natal",
-    "alta": "Mais 1.650%",
-    "base": "decoração"
-   },
-   {
-    "busca": "enfeites de natal",
-    "alta": "Mais 1.650%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração arvore de natal",
-    "alta": "Mais 1.600%",
+    "alta": "Mais 2.400%",
     "base": "decoração"
    },
    {
     "busca": "vila natalina decoração",
-    "alta": "Mais 1.550%",
+    "alta": "Mais 1.850%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração de árvore de natal",
+    "alta": "Mais 1.800%",
     "base": "decoração"
    },
    {
     "busca": "decoração dia das crianças",
-    "alta": "Mais 1.450%",
+    "alta": "Mais 1.700%",
     "base": "decoração"
    },
    {
-    "busca": "decoração para outubro rosa",
-    "alta": "Mais 1.350%",
+    "busca": "decoração arvore de natal",
+    "alta": "Mais 1.650%",
+    "base": "decoração"
+   },
+   {
+    "busca": "papai noel decoração",
+    "alta": "Mais 1.300%",
     "base": "decoração"
    },
    {
@@ -4671,42 +4623,47 @@
     "base": "decoração"
    },
    {
-    "busca": "decoração de mesa de natal",
+    "busca": "decoração setembro amarelo",
     "alta": "Mais 1.200%",
     "base": "decoração"
    },
    {
     "busca": "natal",
+    "alta": "Mais 1.200%",
+    "base": "decoração"
+   },
+   {
+    "busca": "natal decoração",
     "alta": "Mais 1.150%",
     "base": "decoração"
    },
    {
-    "busca": "decoração natal",
-    "alta": "Mais 1.150%",
-    "base": "decoração"
-   },
-   {
-    "busca": "halloween decoração",
+    "busca": "decoração de mesa de natal",
     "alta": "Mais 1.050%",
     "base": "decoração"
    },
    {
     "busca": "decoração de halloween",
+    "alta": "Mais 1.050%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração halloween",
+    "alta": "Mais 1.050%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração para outubro rosa",
     "alta": "Mais 1.000%",
     "base": "decoração"
    },
    {
     "busca": "decoração natalina",
-    "alta": "Mais 950%",
+    "alta": "Mais 800%",
     "base": "decoração"
    },
    {
-    "busca": "decoracao de natal",
-    "alta": "Mais 850%",
-    "base": "decoração"
-   },
-   {
-    "busca": "vila de natal decoração",
+    "busca": "decoração natal 2026",
     "alta": "Mais 750%",
     "base": "decoração"
    },
@@ -4716,8 +4673,18 @@
     "base": "decoração"
    },
    {
-    "busca": "decoração natal 2026",
-    "alta": "Mais 750%",
+    "busca": "quando começa a decoração de natal",
+    "alta": "Mais 450%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração ano novo",
+    "alta": "Mais 450%",
+    "base": "decoração"
+   },
+   {
+    "busca": "vila de natal decoração",
+    "alta": "Mais 450%",
     "base": "decoração"
    }
   ]
