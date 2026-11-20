@@ -3845,9 +3845,9 @@
   },
   "Profissão: Segurança: polícia e bombeiros": {
    "estados": {
-    "MG": 100,
-    "SP": 33,
-    "PB": 16
+    "RO": 100,
+    "MG": 9,
+    "SP": 3
    },
    "cidades": [],
    "paises": {
@@ -3902,7 +3902,7 @@
     "JP": 1
    },
    "termo": "presente para policial",
-   "atualizado": "2026-11-15",
+   "atualizado": "2026-11-20",
    "termo_mundo": "police",
    "atualizado_mundo": "2026-11-18"
   },
@@ -3979,34 +3979,35 @@
     "JP": 1
    },
    "termo": "presente para programador",
-   "atualizado": "2026-11-15",
+   "atualizado": "2026-11-20",
    "termo_mundo": "programmer",
    "atualizado_mundo": "2026-11-19"
   },
   "Profissão: Formatura (geral)": {
    "estados": {
-    "PE": 100,
-    "PB": 87,
-    "BA": 44,
-    "PA": 40,
-    "MG": 25,
-    "SC": 20,
-    "RS": 20,
-    "PI": 18,
-    "RJ": 18,
+    "PB": 100,
+    "PE": 96,
+    "PI": 93,
+    "DF": 40,
+    "BA": 39,
+    "MG": 32,
+    "CE": 29,
+    "RS": 24,
+    "SC": 22,
     "RN": 18,
-    "MA": 16,
-    "AL": 12,
+    "MA": 14,
+    "AL": 14,
+    "RJ": 11,
     "SP": 11,
-    "CE": 7,
-    "SE": 7,
-    "AM": 5,
-    "MT": 5,
-    "GO": 3,
+    "SE": 9,
+    "TO": 8,
+    "GO": 4,
+    "AM": 4,
+    "PA": 4,
+    "MS": 4,
     "ES": 3,
-    "MS": 1,
-    "DF": 1,
-    "PR": 1
+    "MT": 3,
+    "PR": 3
    },
    "cidades": [],
    "paises": {
@@ -4051,7 +4052,7 @@
     "FR": 1
    },
    "termo": "lembrancinha de formatura",
-   "atualizado": "2026-11-15",
+   "atualizado": "2026-11-20",
    "termo_mundo": "graduation",
    "atualizado_mundo": "2026-11-19"
   },
@@ -4068,7 +4069,7 @@
     "IN": 5
    },
    "termo": "presente para influenciadora",
-   "atualizado": "2026-11-15",
+   "atualizado": "2026-11-20",
    "termo_mundo": "phone tripod mount",
    "atualizado_mundo": "2026-11-19"
   },
@@ -4148,121 +4149,123 @@
     "IR": 3
    },
    "termo": "decoração setup streamer",
-   "atualizado": "2026-11-15",
+   "atualizado": "2026-11-20",
    "termo_mundo": "streamer",
    "atualizado_mundo": "2026-11-19"
   },
   "Personalizado: DTF e estampas": {
    "estados": {
-    "RJ": 100,
-    "SP": 80,
-    "PR": 66,
-    "MG": 66,
-    "AL": 13,
-    "PB": 13,
-    "MT": 13,
-    "ES": 6,
-    "RN": 6,
-    "SC": 6,
-    "GO": 6,
-    "PE": 6,
-    "BA": 6,
-    "RS": 6,
-    "CE": 6,
-    "PA": 6
+    "PE": 100,
+    "SP": 92,
+    "RJ": 85,
+    "PR": 85,
+    "MG": 71,
+    "SC": 71,
+    "TO": 28,
+    "AL": 21,
+    "RN": 14,
+    "MT": 7,
+    "ES": 7,
+    "GO": 7,
+    "CE": 7,
+    "BA": 7,
+    "RS": 7,
+    "DF": 7,
+    "PA": 7
    },
    "cidades": [],
    "paises": {},
    "termo": "dtf personalizado",
-   "atualizado": "2026-11-15"
+   "atualizado": "2026-11-20"
   },
   "Personalizado: Camisetas e moletons": {
    "estados": {
+    "SP": 100,
     "TO": 100,
-    "SP": 81,
-    "RS": 81,
-    "PR": 76,
-    "MT": 71,
-    "SC": 66,
-    "MS": 64,
-    "DF": 55,
-    "RO": 53,
-    "GO": 48,
-    "MG": 34,
-    "ES": 24,
-    "PB": 21,
-    "RJ": 18,
-    "BA": 18,
-    "PA": 13,
-    "PE": 13,
-    "PI": 4,
-    "RN": 2,
-    "AL": 2,
+    "RS": 99,
+    "PR": 93,
+    "MT": 92,
+    "SC": 90,
+    "DF": 89,
+    "MS": 66,
+    "GO": 57,
+    "MG": 41,
+    "ES": 27,
+    "RJ": 23,
+    "BA": 22,
+    "PA": 18,
+    "PE": 14,
+    "RO": 9,
+    "PI": 5,
+    "PB": 3,
+    "RN": 3,
+    "AM": 2,
+    "AL": 1,
     "CE": 1,
-    "MA": 1,
-    "AM": 1
+    "MA": 1
    },
    "cidades": [],
    "paises": {},
    "termo": "camiseta personalizada",
-   "atualizado": "2026-11-15"
+   "atualizado": "2026-11-20"
   },
   "Personalizado: Uniformes": {
    "estados": {
-    "MT": 100,
-    "MG": 45,
-    "SP": 32,
-    "RS": 30,
-    "PE": 30,
-    "RJ": 25,
-    "PR": 22,
-    "BA": 22,
-    "ES": 7,
-    "MS": 2,
-    "AM": 2,
-    "GO": 2,
-    "SC": 2,
-    "PA": 2,
-    "CE": 2
+    "MG": 100,
+    "SP": 82,
+    "RJ": 70,
+    "SC": 64,
+    "RS": 52,
+    "BA": 52,
+    "ES": 17,
+    "MT": 17,
+    "AM": 11,
+    "GO": 11,
+    "PA": 11,
+    "PR": 5,
+    "CE": 5,
+    "MA": 5,
+    "DF": 5
    },
    "cidades": [],
    "paises": {},
    "termo": "uniforme personalizado",
-   "atualizado": "2026-11-15"
+   "atualizado": "2026-11-20"
   },
   "Personalizado: Canecas e copos": {
    "estados": {
-    "RO": 100,
-    "MG": 98,
-    "SC": 96,
-    "RJ": 95,
-    "ES": 91,
-    "PR": 89,
-    "MT": 87,
-    "BA": 83,
-    "SP": 82,
-    "GO": 81,
-    "PE": 78,
-    "PA": 78,
-    "DF": 77,
-    "CE": 76,
-    "PB": 76,
-    "RS": 73,
-    "PI": 69,
-    "MA": 69,
-    "MS": 67,
-    "AL": 66,
-    "AM": 62,
+    "AC": 100,
+    "MG": 76,
+    "RJ": 75,
+    "SC": 73,
+    "RO": 72,
+    "ES": 72,
+    "SP": 64,
+    "BA": 64,
+    "MT": 64,
+    "PR": 63,
+    "MS": 62,
+    "GO": 61,
+    "DF": 60,
+    "PE": 59,
+    "PB": 59,
+    "RS": 58,
+    "CE": 58,
+    "MA": 56,
+    "PA": 56,
+    "PI": 56,
     "RN": 54,
-    "SE": 52,
+    "AL": 52,
+    "AM": 46,
+    "SE": 33,
     "TO": 13,
-    "AP": 10,
-    "RR": 9
+    "RR": 9,
+    "AP": 8
    },
    "cidades": [],
    "paises": {},
    "termo": "caneca personalizada",
-   "atualizado": "2026-11-15"
+   "atualizado": "2026-11-20"
   },
   "Personalizado: Garrafas e squeezes": {
    "estados": {
@@ -4271,145 +4274,139 @@
    "cidades": [],
    "paises": {},
    "termo": "squeeze personalizado",
-   "atualizado": "2026-11-15"
+   "atualizado": "2026-11-20"
   },
   "Personalizado: Ecobags e sacolas": {
    "estados": {
-    "RJ": 100,
-    "ES": 82,
-    "SP": 73,
-    "DF": 70,
-    "RS": 61,
-    "CE": 55,
-    "MG": 55,
-    "PE": 52,
-    "BA": 52,
-    "SC": 41,
-    "PR": 35,
-    "AL": 14,
-    "RN": 11,
-    "MS": 8,
-    "SE": 8,
-    "AM": 5,
-    "PA": 5,
-    "PB": 5,
-    "MA": 2,
-    "GO": 2
-   },
-   "cidades": [],
-   "paises": {},
-   "termo": "ecobag personalizada",
-   "atualizado": "2026-11-15"
-  },
-  "Personalizado: Almofadas e têxteis": {
-   "estados": {
-    "AM": 100,
-    "SC": 46,
-    "PE": 43,
-    "SP": 36,
-    "RJ": 36,
-    "MG": 33,
-    "PR": 30,
-    "RS": 26,
-    "MA": 6,
-    "ES": 3,
-    "PB": 3,
-    "MT": 3,
-    "DF": 3,
-    "PA": 3,
-    "BA": 3
-   },
-   "cidades": [],
-   "paises": {},
-   "termo": "almofada personalizada",
-   "atualizado": "2026-11-15"
-  },
-  "Personalizado: Bonés e acessórios": {
-   "estados": {
     "AL": 100,
+    "RJ": 84,
+    "ES": 60,
+    "SP": 58,
+    "RS": 54,
+    "PA": 50,
     "PE": 47,
-    "MG": 36,
-    "RJ": 31,
-    "SC": 31,
-    "BA": 28,
-    "SP": 23,
-    "PR": 23,
-    "PI": 7,
-    "RN": 7,
-    "SE": 5,
-    "RS": 5,
-    "CE": 5,
-    "MA": 5,
-    "ES": 2,
-    "GO": 2
-   },
-   "cidades": [],
-   "paises": {},
-   "termo": "boné personalizado",
-   "atualizado": "2026-11-15"
-  },
-  "Personalizado: Quadros, pôsteres e azulejos": {
-   "estados": {
-    "MS": 100,
-    "MT": 83,
-    "RS": 67,
-    "SP": 67,
-    "RJ": 67,
-    "MG": 67,
-    "ES": 64,
-    "PR": 59,
-    "BA": 54,
-    "GO": 45,
-    "CE": 43,
-    "SC": 43,
+    "SC": 47,
+    "BA": 43,
+    "MG": 39,
+    "CE": 34,
+    "PR": 32,
     "DF": 8,
-    "PB": 8,
     "RN": 8,
-    "PI": 5,
-    "SE": 5,
-    "PE": 5,
-    "AM": 5,
-    "PA": 5,
+    "SE": 6,
+    "PB": 6,
+    "AM": 4,
+    "GO": 4,
+    "MT": 2,
     "MA": 2
    },
    "cidades": [],
    "paises": {},
+   "termo": "ecobag personalizada",
+   "atualizado": "2026-11-20"
+  },
+  "Personalizado: Almofadas e têxteis": {
+   "estados": {
+    "SC": 100,
+    "MG": 91,
+    "SP": 91,
+    "RJ": 75,
+    "MT": 8,
+    "DF": 8,
+    "RS": 8,
+    "PA": 8,
+    "PE": 8,
+    "BA": 8,
+    "PR": 8,
+    "CE": 8,
+    "GO": 8
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "almofada personalizada",
+   "atualizado": "2026-11-20"
+  },
+  "Personalizado: Bonés e acessórios": {
+   "estados": {
+    "GO": 100,
+    "SC": 51,
+    "PE": 48,
+    "MG": 37,
+    "BA": 34,
+    "RJ": 34,
+    "SP": 28,
+    "RS": 25,
+    "PR": 22,
+    "AL": 5,
+    "RN": 5,
+    "PB": 5,
+    "ES": 5,
+    "MS": 2,
+    "CE": 2,
+    "MA": 2,
+    "PA": 2,
+    "DF": 2
+   },
+   "cidades": [],
+   "paises": {},
+   "termo": "boné personalizado",
+   "atualizado": "2026-11-20"
+  },
+  "Personalizado: Quadros, pôsteres e azulejos": {
+   "estados": {
+    "AC": 100,
+    "MT": 8,
+    "ES": 7,
+    "DF": 7,
+    "RJ": 7,
+    "SP": 7,
+    "RS": 7,
+    "MG": 6,
+    "PR": 6,
+    "SC": 6,
+    "BA": 5,
+    "GO": 4,
+    "CE": 4,
+    "MS": 1
+   },
+   "cidades": [],
+   "paises": {},
    "termo": "quadro personalizado",
-   "atualizado": "2026-11-15"
+   "atualizado": "2026-11-20"
   },
   "Personalizado: Adesivos e vinil": {
    "estados": {
     "MA": 100,
-    "SP": 100,
-    "RJ": 97,
-    "MG": 94,
-    "AL": 93,
-    "MT": 91,
-    "PI": 88,
-    "MS": 88,
-    "TO": 87,
-    "ES": 87,
-    "PB": 86,
-    "DF": 82,
-    "PE": 81,
-    "PA": 77,
-    "PR": 76,
-    "BA": 75,
-    "SC": 73,
-    "RS": 71,
-    "GO": 67,
-    "RN": 57,
-    "CE": 55,
-    "AM": 48,
-    "AC": 19,
-    "AP": 13,
-    "SE": 12,
-    "RO": 7
+    "MG": 97,
+    "SP": 94,
+    "PI": 92,
+    "RJ": 89,
+    "TO": 85,
+    "PE": 83,
+    "PA": 81,
+    "PB": 79,
+    "RO": 78,
+    "MT": 76,
+    "MS": 76,
+    "PR": 74,
+    "ES": 74,
+    "BA": 72,
+    "SE": 69,
+    "RS": 67,
+    "SC": 67,
+    "GO": 61,
+    "DF": 60,
+    "AL": 59,
+    "CE": 52,
+    "RN": 51,
+    "AM": 43,
+    "AP": 19,
+    "RR": 15,
+    "AC": 8
    },
    "cidades": [],
    "paises": {},
    "termo": "adesivo personalizado",
-   "atualizado": "2026-11-15"
+   "atualizado": "2026-11-20"
   },
   "Personalizado: Papelaria e convites": {
    "estados": {
@@ -4575,76 +4572,76 @@
   }
  },
  "subindo": {
-  "atualizado": "2026-11-19",
+  "atualizado": "2026-11-20",
   "termos": [
    {
     "busca": "caneta de impressão 3d",
+    "alta": "Mais 70%",
+    "base": "impressão 3d"
+   },
+   {
+    "busca": "caneta acrilica para impressão 3d",
     "alta": "Mais 50%",
     "base": "impressão 3d"
    },
    {
-    "busca": "decoração para outubro rosa",
-    "alta": "Aumento repentino",
-    "base": "decoração"
-   },
-   {
-    "busca": "vila natalina decoração",
-    "alta": "Aumento repentino",
-    "base": "decoração"
-   },
-   {
     "busca": "decoração de natal para escritorio",
-    "alta": "Mais 3.900%",
+    "alta": "Mais 4.150%",
     "base": "decoração"
    },
    {
-    "busca": "decoração de natal externa",
-    "alta": "Mais 2.650%",
+    "busca": "decoração de natal simples e bonita",
+    "alta": "Mais 3.700%",
     "base": "decoração"
    },
    {
-    "busca": "decoração outubro rosa",
-    "alta": "Mais 2.500%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de porta natal",
-    "alta": "Mais 2.300%",
-    "base": "decoração"
-   },
-   {
-    "busca": "papai noel decoração",
-    "alta": "Mais 1.950%",
-    "base": "decoração"
-   },
-   {
-    "busca": "decoração de árvore de natal",
-    "alta": "Mais 1.850%",
-    "base": "decoração"
-   },
-   {
-    "busca": "novembro azul decoração",
-    "alta": "Mais 1.700%",
+    "busca": "decoração novembro azul",
+    "alta": "Mais 2.850%",
     "base": "decoração"
    },
    {
     "busca": "decoração de natal para imprimir",
-    "alta": "Mais 1.600%",
+    "alta": "Mais 2.350%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração de porta natal",
+    "alta": "Mais 2.100%",
+    "base": "decoração"
+   },
+   {
+    "busca": "papai noel decoração",
+    "alta": "Mais 2.000%",
+    "base": "decoração"
+   },
+   {
+    "busca": "outubro rosa decoração",
+    "alta": "Mais 2.000%",
     "base": "decoração"
    },
    {
     "busca": "decoração arvore de natal",
-    "alta": "Mais 1.550%",
+    "alta": "Mais 1.700%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração de árvore de natal",
+    "alta": "Mais 1.600%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração para outubro rosa",
+    "alta": "Mais 1.500%",
     "base": "decoração"
    },
    {
     "busca": "decoração de mesa de natal",
-    "alta": "Mais 1.350%",
+    "alta": "Mais 1.300%",
     "base": "decoração"
    },
    {
     "busca": "natal decoração",
-    "alta": "Mais 1.300%",
+    "alta": "Mais 1.250%",
     "base": "decoração"
    },
    {
@@ -4653,13 +4650,18 @@
     "base": "decoração"
    },
    {
-    "busca": "natal",
+    "busca": "vila natalina decoração",
     "alta": "Mais 1.250%",
     "base": "decoração"
    },
    {
     "busca": "decoração dia das crianças",
-    "alta": "Mais 1.250%",
+    "alta": "Mais 1.050%",
+    "base": "decoração"
+   },
+   {
+    "busca": "decoração de natal externa",
+    "alta": "Mais 1.000%",
     "base": "decoração"
    },
    {
@@ -4668,23 +4670,23 @@
     "base": "decoração"
    },
    {
-    "busca": "halloween decoração",
+    "busca": "decoração halloween",
     "alta": "Mais 950%",
     "base": "decoração"
    },
    {
-    "busca": "decoração setembro amarelo",
-    "alta": "Mais 850%",
+    "busca": "decoração natalina",
+    "alta": "Mais 900%",
     "base": "decoração"
    },
    {
-    "busca": "decoração natalina",
+    "busca": "decoração de natal barata e criativa",
     "alta": "Mais 850%",
     "base": "decoração"
    },
    {
     "busca": "decoração de natal 2026",
-    "alta": "Mais 750%",
+    "alta": "Mais 700%",
     "base": "decoração"
    },
    {
@@ -4693,17 +4695,17 @@
     "base": "decoração"
    },
    {
-    "busca": "decoração de natal barata e criativa",
+    "busca": "decoração setembro amarelo",
     "alta": "Mais 650%",
     "base": "decoração"
    },
    {
     "busca": "decoração ano novo",
-    "alta": "Mais 550%",
+    "alta": "Mais 500%",
     "base": "decoração"
    },
    {
-    "busca": "vila de natal decoração",
+    "busca": "quando começa a decoração de natal",
     "alta": "Mais 500%",
     "base": "decoração"
    }
